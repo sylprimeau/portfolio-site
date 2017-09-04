@@ -1,0 +1,292 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"><!-- InstanceBegin template="/Templates/template-mapper.dwt" codeOutsideHTMLIsLocked="false" -->
+
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta name="Keywords" content="picture, dictionary, visual, photo, photos, audio, sound, pronunciation, spelling, hover, mouse, learn, English, words" />
+<meta name="Description" content="The Online Photo Dictionary is an interactive picture dictionary with photos and sound. Hover your mouse over each item to see its spelling and click it to hear its pronunciation!" />
+<!-- InstanceBeginEditable name="doctitle" -->
+<title>The Online Photo Dictionary: dashboard</title>
+<!-- InstanceEndEditable -->
+
+<link rel="stylesheet" type="text/css" href="../css/tooltip.css" />
+<link rel="stylesheet" type="text/css" href="../css/global.css"  />
+
+
+<script type="text/javascript" src="../js/cvi_tip_lib.js"></script>
+<script type="text/javascript" src="../js/cvi_map_lib.js"></script>
+<script type="text/javascript" src="../js/mapper.js"></script>
+
+<!-- InstanceBeginEditable name="head" -->
+
+<script type="text/javascript">
+
+	cvi_map.defaultOpacity = 0; //INT 0-100 (% opacity)
+	cvi_map.defaultAreacolor = '#00ff00'; //STR '#000000'-'#ffffff'
+	cvi_map.defaultBordercolor 	= '#0000ff'; 	//STR '#000000'-'#ffffff'
+	cvi_map.defaultNofade = true; //BOOLEAN
+	cvi_map.defaultNoborder = true; //BOOLEAN
+
+<!--
+function ById(v) {return(document.getElementById(v));}
+window.onload = function() {
+	cvi_map.add(ById('mainphoto'),{opacity: 40, areacolor: '#00FF00', noborder: true});
+}
+-->
+</script>
+
+
+<script>
+
+// Mouseover/ Click sound effect- by JavaScript Kit (www.javascriptkit.com)
+// Visit JavaScript Kit at http://www.javascriptkit.com/ for full source code
+
+//** Usage: Instantiate script by calling: var uniquevar=createsoundbite("soundfile1", "fallbackfile2", "fallebacksound3", etc)
+//** Call: uniquevar.playclip() to play sound
+
+var html5_audiotypes={ //define list of audio file extensions and their associated audio types. Add to it if your specified audio file isn't on this list:
+	"mp3": "audio/mpeg",
+	"mp4": "audio/mp4",
+	"ogg": "audio/ogg",
+	"wav": "audio/wav"
+}
+
+function createsoundbite(sound){
+	var html5audio=document.createElement('audio')
+	if (html5audio.canPlayType){ //check support for HTML5 audio
+		for (var i=0; i<arguments.length; i++){
+			var sourceel=document.createElement('source')
+			sourceel.setAttribute('src', arguments[i])
+			if (arguments[i].match(/\.(\w+)$/i))
+				sourceel.setAttribute('type', html5_audiotypes[RegExp.$1])
+			html5audio.appendChild(sourceel)
+		}
+		html5audio.load()
+		html5audio.playclip=function(){
+			html5audio.pause()
+			html5audio.currentTime=0
+			html5audio.play()
+		}
+		return html5audio
+	}
+	else{
+		return {playclip:function(){throw new Error("Your browser doesn't support HTML5 audio unfortunately")}}
+	}
+}
+
+
+//Initialize sound clips with 1 fallback file each:
+//Replace X with sound's name and use find and replace to fill out the remainder of commands -- syntax is: var clickX=createsoundbite("sounds/X.mp3, sounds/X.ogg")
+
+
+var clicksidemirror=createsoundbite("sounds/sidemirror.mp3", "sounds/sidemirror.ogg")
+var clickclutchpedal=createsoundbite("sounds/clutchpedal.mp3", "sounds/clutchpedal.ogg")
+var clickbrakepedal=createsoundbite("sounds/brakepedal.mp3", "sounds/brakepedal.ogg")
+var clickgaspedal=createsoundbite("sounds/gaspedal.mp3", "sounds/gaspedal.ogg")
+var clickfootrest=createsoundbite("sounds/footrest.mp3", "sounds/footrest.ogg")
+var clickfloormat=createsoundbite("sounds/floormat.mp3", "sounds/floormat.ogg")
+var clicktemperatureguage=createsoundbite("sounds/temperatureguage.mp3", "sounds/temperatureguage.ogg")
+var clickfuelguage=createsoundbite("sounds/fuelguage.mp3", "sounds/fuelguage.ogg")
+var clicktachometer=createsoundbite("sounds/tachometer.mp3", "sounds/tachometer.ogg")
+var clickspeedometer=createsoundbite("sounds/speedometer.mp3", "sounds/speedometer.ogg")
+var clickgearshifter=createsoundbite("sounds/gearshifter.mp3", "sounds/gearshifter.ogg")
+var clickhandbrake=createsoundbite("sounds/handbrake.mp3", "sounds/handbrake.ogg")
+var clickhazardlightswitch=createsoundbite("sounds/hazardlightswitch.mp3", "sounds/hazardlightswitch.ogg")
+var clickheadlightswitch=createsoundbite("sounds/headlightswitch.mp3", "sounds/headlightswitch.ogg")
+var clickglovebox=createsoundbite("sounds/glovebox.mp3", "sounds/glovebox.ogg")
+var clickreardefogswitch=createsoundbite("sounds/reardefogswitch.mp3", "sounds/reardefogswitch.ogg")
+var clickairvent=createsoundbite("sounds/airvent.mp3", "sounds/airvent.ogg")
+var clickpowerlockbutton=createsoundbite("sounds/powerlockbutton.mp3", "sounds/powerlockbutton.ogg")
+var clickdoorhandle=createsoundbite("sounds/doorhandle.mp3", "sounds/doorhandle.ogg")
+var clickspeaker=createsoundbite("sounds/speaker.mp3", "sounds/speaker.ogg")
+var clicksidewindowdefrostervent=createsoundbite("sounds/sidewindowdefrostervent.mp3", "sounds/sidewindowdefrostervent.ogg")
+var clickcruisecontrol=createsoundbite("sounds/cruisecontrol.mp3", "sounds/cruisecontrol.ogg")
+var clickhornandairbag=createsoundbite("sounds/hornandairbag.mp3", "sounds/hornandairbag.ogg")
+var clicknavigationsystemwithradioandTV=createsoundbite("sounds/navigationsystemwithradioandTV.mp3", "sounds/navigationsystemwithradioandTV.ogg")
+var clickclimatecontrol=createsoundbite("sounds/climatecontrol.mp3", "sounds/climatecontrol.ogg")
+var clickradiovolumecontrol=createsoundbite("sounds/radiovolumecontrol.mp3", "sounds/radiovolumecontrol.ogg")
+var clickradiostationselector=createsoundbite("sounds/radiostationselector.mp3", "sounds/radiostationselector.ogg")
+var clickdriversseat=createsoundbite("sounds/driversseat.mp3", "sounds/driversseat.ogg")
+var clickpassengerseat=createsoundbite("sounds/passengerseat.mp3","sounds/passengerseat.ogg")
+var clicksidecompartment=createsoundbite("sounds/sidecompartment.mp3", "sounds/sidecompartment.ogg")
+var clickdoorgrip=createsoundbite("sounds/doorgrip.mp3", "sounds/doorgrip.ogg")
+var clicksteeringwheel=createsoundbite("sounds/steeringwheel.mp3", "sounds/steeringwheel.ogg")
+
+
+</script>
+
+
+<!-- Google Analytics code -->
+<script type="text/javascript">
+
+  var _gaq = _gaq || [];
+  _gaq.push(['_setAccount', 'UA-27459311-1']);
+  _gaq.push(['_trackPageview']);
+
+  (function() {
+    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+  })();
+
+</script>
+<style type="text/css">
+<!--
+body {
+	background-color: #000000;
+}
+-->
+</style>
+<!-- InstanceEndEditable -->
+</head>
+
+
+<!-- DON'T FORGET TO REMOVE SPACES FROM FILENAMES TO PLAY SOUNDS PROPERLY !!!! -->
+
+
+<body class="twoColFixLtHdr">
+
+<!-- THE FOLLOWING IS CODE FROM FACEBOOK -- A SCRIPT TO RUN THE COMMENTS BOX -->
+<div id="fb-root"></div>
+<script>(function(d, s, id) {
+  var js, fjs = d.getElementsByTagName(s)[0];
+  if (d.getElementById(id)) return;
+  js = d.createElement(s); js.id = id;
+  js.src = "//connect.facebook.net/en_US/all.js#xfbml=1&appId=485516258134980";
+  fjs.parentNode.insertBefore(js, fjs);
+}(document, 'script', 'facebook-jssdk'));</script>
+
+<div id="container">
+  <div id="header" >
+    <div id="icons"><a href="../index.html"><img src="../images/icon_set/onebit_01.png" width="48" height="48" /></a> <a href="../help/help.html"><img src="../images/icon_set/onebit_37.png" width="48" height="48" /></a></div>
+    <h1 align="center"><a href="frontpage.html"><img src="../images/Photo-Dictionary-logo.png" alt="The Online Photo Dictionary" width="650" height="67" /></a><br />
+    </h1>
+    <h1 align="center"><a href="../en/frontpage.html"><img src="../images/United_Kingdom.png" alt="English" width="60" height="45" hspace="5" vspace="10" /></a><a href="../jp/frontpage.html"><img src="../images/Japan2.png" alt="日本語" width="60" height="45" hspace="5" vspace="10" /></a></h1>
+
+<!-- THE FOLLOWING IS ADSENSE CODE FOR TOP BANNER -->
+<script type="text/javascript"><!--
+google_ad_client = "ca-pub-8761395630506939";
+/* OPD - top banner */
+google_ad_slot = "2407538890";
+google_ad_width = 468;
+google_ad_height = 60;
+//-->
+</script>
+<script type="text/javascript"
+src="http://pagead2.googlesyndication.com/pagead/show_ads.js">
+</script>
+    
+  </div>
+  
+  <div id="sidebar1"><!-- InstanceBeginEditable name="EditRegion4" -->
+    <a  onmouseover="extAreaOver('mainphoto','sidemirror');" onmouseout="extAreaOut('mainphoto','sidemirror');" onclick="clicksidemirror.playclip()">side mirror</a><br />
+  <a  onmouseover="extAreaOver('mainphoto','clutchpedal');" onmouseout="extAreaOut('mainphoto','clutchpedal');" onclick="clickclutchpedal.playclip()">clutch pedal</a><br />
+  <a  onmouseover="extAreaOver('mainphoto','brakepedal');" onmouseout="extAreaOut('mainphoto','brakepedal');" onclick="clickbrakepedal.playclip()">brake pedal</a><br />
+  <a  onmouseover="extAreaOver('mainphoto','gaspedal');" onmouseout="extAreaOut('mainphoto','gaspedal');" onclick="clickgaspedal.playclip()">gas pedal</a><br />
+  <a  onmouseover="extAreaOver('mainphoto','footrest');" onmouseout="extAreaOut('mainphoto','footrest');" onclick="clickfootrest.playclip()">foot rest</a><br />
+  <a  onmouseover="extAreaOver('mainphoto','floormat');" onmouseout="extAreaOut('mainphoto','floormat');" onclick="clickfloormat.playclip()">floor mat</a><br />
+  <a  onmouseover="extAreaOver('mainphoto','temperatureguage');" onmouseout="extAreaOut('mainphoto','temperatureguage');" onclick="clicktemperatureguage.playclip()">temperature guage</a><br />
+  <a  onmouseover="extAreaOver('mainphoto','fuelguage');" onmouseout="extAreaOut('mainphoto','fuelguage');" onclick="clickfuelguage.playclip()">fuel guage</a><br />
+  <a  onmouseover="extAreaOver('mainphoto','tachometer');" onmouseout="extAreaOut('mainphoto','tachometer');" onclick="clicktachometer.playclip()">tachometer</a><br />
+  <a  onmouseover="extAreaOver('mainphoto','speedometer');" onmouseout="extAreaOut('mainphoto','speedometer');" onclick="clickspeedometer.playclip()">speedometer</a><br />
+  <a  onmouseover="extAreaOver('mainphoto','gearshifter');" onmouseout="extAreaOut('mainphoto','gearshifter');" onclick="clickgearshifter.playclip()">gear shifter</a><br />
+  <a  onmouseover="extAreaOver('mainphoto','handbrake');" onmouseout="extAreaOut('mainphoto','handbrake');" onclick="clickhandbrake.playclip()">hand brake</a><br />
+  <a  onmouseover="extAreaOver('mainphoto','hazardlightswitch');" onmouseout="extAreaOut('mainphoto','hazardlightswitch');" onclick="clickhazardlightswitch.playclip()">hazard light switch</a><br />
+  <a  onmouseover="extAreaOver('mainphoto','headlightswitch');" onmouseout="extAreaOut('mainphoto','headlightswitch');" onclick="clickheadlightswitch.playclip()">headlight switch</a><br />
+  <a  onmouseover="extAreaOver('mainphoto','glovebox');" onmouseout="extAreaOut('mainphoto','glovebox');" onclick="clickglovebox.playclip()">glove box</a><br />
+  <a  onmouseover="extAreaOver('mainphoto','reardefogswitch');" onmouseout="extAreaOut('mainphoto','reardefogswitch');" onclick="clickreardefogswitch.playclip()">rear defog switch</a><br />
+  <a  onmouseover="extAreaOver('mainphoto','airvent1');extAreaOver('mainphoto','airvent2');extAreaOver('mainphoto','airvent3');" onmouseout="extAreaOut('mainphoto','airvent1');extAreaOut('mainphoto','airvent2');extAreaOut('mainphoto','airvent3');" onclick="clickairvent.playclip()">air vent</a><br />
+  <a  onmouseover="extAreaOver('mainphoto','powerlockbutton');" onmouseout="extAreaOut('mainphoto','powerlockbutton');" onclick="clickpowerlockbutton.playclip()">power lock button</a><br />
+  <a  onmouseover="extAreaOver('mainphoto','doorhandle');" onmouseout="extAreaOut('mainphoto','doorhandle');" onclick="clickdoorhandle.playclip()">door handle</a><br />
+  <a  onmouseover="extAreaOver('mainphoto','speaker');" onmouseout="extAreaOut('mainphoto','speaker');" onclick="clickspeaker.playclip()">speaker</a><br />
+  <a  onmouseover="extAreaOver('mainphoto','sidewindowdefrostervent');" onmouseout="extAreaOut('mainphoto','sidewindowdefrostervent');" onclick="clicksidewindowdefrostervent.playclip()">side window defroster vent</a><br />
+  <a  onmouseover="extAreaOver('mainphoto','cruisecontrol');" onmouseout="extAreaOut('mainphoto','cruisecontrol');" onclick="clickcruisecontrol.playclip()">cruise control</a><br />
+  <a  onmouseover="extAreaOver('mainphoto','hornandairbag');" onmouseout="extAreaOut('mainphoto','hornandairbag');" onclick="clickhornandairbag.playclip()">horn and airbag</a><br />
+  <a  onmouseover="extAreaOver('mainphoto','navigationsystemwithradioandTV');" onmouseout="extAreaOut('mainphoto','navigationsystemwithradioandTV');" onclick="clicknavigationsystemwithradioandTV.playclip()">navigation system with radio and TV</a><br />
+  <a  onmouseover="extAreaOver('mainphoto','climatecontrol');" onmouseout="extAreaOut('mainphoto','climatecontrol');" onclick="clickclimatecontrol.playclip()">climate control</a><br />
+  <a  onmouseover="extAreaOver('mainphoto','radiovolumecontrol');" onmouseout="extAreaOut('mainphoto','radiovolumecontrol');" onclick="clickradiovolumecontrol.playclip()">radio volume control</a><br />
+  <a  onmouseover="extAreaOver('mainphoto','radiostationselector');" onmouseout="extAreaOut('mainphoto','radiostationselector');" onclick="clickradiostationselector.playclip()">radio station selector</a><br />
+  <a  onmouseover="extAreaOver('mainphoto','driversseat');" onmouseout="extAreaOut('mainphoto','driversseat');" onclick="clickdriversseat.playclip()">driver's seat</a><br />
+  <a  onmouseover="extAreaOver('mainphoto','passengerseat');" onmouseout="extAreaOut('mainphoto','passengerseat');" onclick="clickpassengerseat.playclip()">passenger seat</a><br />
+  <a  onmouseover="extAreaOver('mainphoto','sidecompartment');" onmouseout="extAreaOut('mainphoto','sidecompartment');" onclick="clicksidecompartment.playclip()">side compartment</a><br />
+  <a  onmouseover="extAreaOver('mainphoto','doorgrip');" onmouseout="extAreaOut('mainphoto','doorgrip');" onclick="clickdoorgrip.playclip()">door grip</a><br />
+  <a  onmouseover="extAreaOver('mainphoto','steeringwheel');" onmouseout="extAreaOut('mainphoto','steeringwheel');" onclick="clicksteeringwheel.playclip()">steering wheel</a><br />
+<!-- InstanceEndEditable --></div>
+  <div id="mainContent">
+  <!-- InstanceBeginEditable name="EditRegion3" -->
+      <h1>Car Dashboard</h1>
+    <p><img src="../images/dashboard.jpg" name="mainphoto" width="1000" height="750" border="0" usemap="#Map" id="mainphoto" /></p>
+    <p>
+      <map name="Map" id="Map">
+        <area shape="poly" coords="1,99,18,98,41,98,52,99,60,101,66,104,72,108,78,115,83,122,87,129,91,137,94,148,96,156,97,162,101,165,102,165,98,223,55,228,49,228,42,228,28,229,4,229,1,228" onmouseover="cvi_tip._show(event);" onmouseout="cvi_tip._hide(event);" onmousemove="cvi_tip._move(event);" href="#nogo" tooltip="side mirror" alt="side mirror" onclick="clicksidemirror.playclip()" id="sidemirror" />
+  <area shape="poly" coords="444,510,456,508,468,509,474,511,476,520,473,534,472,542,465,549,456,549,448,549,444,542,440,527,440,516" onmouseover="cvi_tip._show(event);" onmouseout="cvi_tip._hide(event);" onmousemove="cvi_tip._move(event);" href="#nogo" tooltip="clutch pedal" alt="clutch pedal" onclick="clickclutchpedal.playclip()" id="clutchpedal" />
+  <area shape="poly" coords="526,507,535,507,548,506,556,508,560,515,561,524,560,530,556,539,553,547,550,549,541,550,532,548,527,540,522,524,523,513" onmouseover="cvi_tip._show(event);" onmouseout="cvi_tip._hide(event);" onmousemove="cvi_tip._move(event);" href="#nogo" tooltip="brake pedal" alt="brake pedal" onclick="clickbrakepedal.playclip()" id="brakepedal" />
+  <area shape="poly" coords="621,473,627,477,629,486,615,623,611,629,602,629,572,628,575,623,580,615,583,608,586,598,592,534,593,530,595,525,598,488,606,484,616,478" onmouseover="cvi_tip._show(event);" onmouseout="cvi_tip._hide(event);" onmousemove="cvi_tip._move(event);" href="#nogo" tooltip="gas pedal" alt="gas pedal" onclick="clickgaspedal.playclip()" id="gaspedal" />
+  <area shape="poly" coords="297,478,292,578,291,589,291,597,292,634,297,644,300,645,304,642,311,641,367,640,374,638,379,502,374,492,369,485,361,480,354,479,349,476" onmouseover="cvi_tip._show(event);" onmouseout="cvi_tip._hide(event);" onmousemove="cvi_tip._move(event);" href="#nogo" tooltip="foot rest" alt="foot rest" onclick="clickfootrest.playclip()" id="footrest" />
+  <area shape="poly" coords="382,638,389,633,396,627,402,621,406,615,410,608,414,600,417,593,421,588,426,585,431,584,532,584,541,588,547,591,548,596,549,607,549,617,549,623,552,629,556,632,564,635,574,635,614,637,617,638,613,639" onmouseover="cvi_tip._show(event);" onmouseout="cvi_tip._hide(event);" onmousemove="cvi_tip._move(event);" href="#nogo" tooltip="floor mat" alt="floor mat" onclick="clickfloormat.playclip()" id="floormat" />
+  <area shape="circle" coords="468,205,19" onmouseover="cvi_tip._show(event);" onmouseout="cvi_tip._hide(event);" onmousemove="cvi_tip._move(event);" href="#nogo" tooltip="temperature guage" alt="temperature guage" onclick="clicktemperatureguage.playclip()" id="temperatureguage" />
+  <area shape="circle" coords="510,205,19" onmouseover="cvi_tip._show(event);" onmouseout="cvi_tip._hide(event);" onmousemove="cvi_tip._move(event);" href="#nogo" tooltip="fuel guage" alt="fuel guage" onclick="clickfuelguage.playclip()" id="fuelguage" />
+  <area shape="poly" coords="381,286,375,281,370,273,366,262,364,248,366,240,370,231,374,224,379,217,385,213,391,208,401,205,409,204,418,204,424,205,432,208,439,211,444,215,448,220,452,226,457,233,458,239,458,246,459,249,450,251,443,253,435,255,430,260,421,266,417,273,414,279,409,282,400,282,388,285" onmouseover="cvi_tip._show(event);" onmouseout="cvi_tip._hide(event);" onmousemove="cvi_tip._move(event);" href="#nogo" tooltip="tachometer" alt="tachometer" onclick="clicktachometer.playclip()" id="tachometer" />
+  <area shape="poly" coords="519,250,519,244,520,236,523,227,529,220,535,214,542,210,548,207,557,205,565,204,573,204,582,206,587,209,594,211,598,216,602,220,608,228,612,238,613,248,613,260,609,269,606,277,600,283,595,286,588,285,576,284,565,281,560,280,552,273,543,265,534,259,525,253" onmouseover="cvi_tip._show(event);" onmouseout="cvi_tip._hide(event);" onmousemove="cvi_tip._move(event);" href="#nogo" tooltip="speedometer" alt="speedometer" onclick="clickspeedometer.playclip()" id="speedometer" />
+  <area shape="poly" coords="876,504,885,506,893,509,900,516,903,523,906,528,904,537,903,544,900,553,892,559,887,563,882,565,884,574,885,579,886,588,886,608,900,627,904,640,911,649,914,663,914,671,907,676,895,678,879,678,856,678,838,678,826,676,815,676,810,671,803,662,797,654,792,646,786,634,779,622,776,609,776,601,793,595,810,593,824,592,833,590,838,577,848,563,852,559,850,555,846,546,842,537,842,526,846,517,855,508,867,504" onmouseover="cvi_tip._show(event);" onmouseout="cvi_tip._hide(event);" onmousemove="cvi_tip._move(event);" href="#nogo" tooltip="gear shifter" alt="gear shifter" onclick="clickgearshifter.playclip()" id="gearshifter" />
+  <area shape="poly" coords="867,748,853,710,853,706,860,702,858,698,865,694,874,692,879,692,882,696,883,699,890,699,895,700,920,748" onmouseover="cvi_tip._show(event);" onmouseout="cvi_tip._hide(event);" onmousemove="cvi_tip._move(event);" href="#nogo" tooltip="hand brake" alt="hand brake" onclick="clickhandbrake.playclip()" id="handbrake" />
+  <area shape="poly" coords="813,408,827,432,800,432" onmouseover="cvi_tip._show(event);" onmouseout="cvi_tip._hide(event);" onmousemove="cvi_tip._move(event);" href="#nogo" tooltip="hazard light switch" alt="hazard light switch" onclick="clickhazardlightswitch.playclip()" id="hazardlightswitch" />
+  <area shape="poly" coords="239,353,245,353,254,353,255,390,250,390,242,390" onmouseover="cvi_tip._show(event);" onmouseout="cvi_tip._hide(event);" onmousemove="cvi_tip._move(event);" href="#nogo" tooltip="headlight switch" alt="headlight switch" onclick="clickheadlightswitch.playclip()" id="headlightswitch" />
+  <area shape="poly" coords="998,326,980,326,969,326,962,327,955,331,950,336,949,343,947,351,945,368,945,377,943,389,941,406,939,419,937,431,936,444,933,451,997,451" onmouseover="cvi_tip._show(event);" onmouseout="cvi_tip._hide(event);" onmousemove="cvi_tip._move(event);" href="#nogo" tooltip="glove box" alt="glove box" onclick="clickglovebox.playclip()" id="glovebox" />
+  <area shape="poly" coords="761,514,783,512,785,526,761,527" onmouseover="cvi_tip._show(event);" onmouseout="cvi_tip._hide(event);" onmousemove="cvi_tip._move(event);" href="#nogo" tooltip="rear defog switch" alt="rear defog switch" onclick="clickreardefogswitch.playclip()" id="reardefogswitch" />
+  <area shape="circle" coords="241,259,43" onmouseover="cvi_tip._show(event);" onmouseout="cvi_tip._hide(event);" onmousemove="cvi_tip._move(event);" href="#nogo" tooltip="air vent" alt="air vent" onclick="clickairvent.playclip()" id="airvent1" />
+  <area shape="circle" coords="743,237,42" onmouseover="cvi_tip._show(event);" onmouseout="cvi_tip._hide(event);" onmousemove="cvi_tip._move(event);" href="#nogo" tooltip="air vent" alt="air vent" onclick="clickairvent.playclip()" id="airvent2" />
+  <area shape="circle" coords="872,238,42" onmouseover="cvi_tip._show(event);" onmouseout="cvi_tip._hide(event);" onmousemove="cvi_tip._move(event);" href="#nogo" tooltip="air vent" alt="air vent" onclick="clickairvent.playclip()" id="airvent3" />
+  <area shape="poly" coords="81,342,91,364,96,372,103,385,105,389,89,393,90,388,81,378,75,378,74,379,59,351,66,348" onmouseover="cvi_tip._show(event);" onmouseout="cvi_tip._hide(event);" onmousemove="cvi_tip._move(event);" href="#nogo" tooltip="power lock button" alt="power lock button" onclick="clickpowerlockbutton.playclip()" id="powerlockbutton" />
+  <area shape="poly" coords="1,380,13,371,26,379,34,385,44,387,52,387,61,384,66,381,70,379,77,378,82,381,88,388,89,394,26,420,13,424,5,429,1,431" onmouseover="cvi_tip._show(event);" onmouseout="cvi_tip._hide(event);" onmousemove="cvi_tip._move(event);" href="#nogo" tooltip="door handle" alt="door handle" onclick="clickdoorhandle.playclip()" id="doorhandle" />
+  <area shape="poly" coords="204,157,209,151,215,147,225,145,228,149,230,155,234,161,236,168,239,176,239,186,238,191,237,195,232,199,228,203,223,207,218,209,213,207,207,202,204,183,200,171,200,164" onmouseover="cvi_tip._show(event);" onmouseout="cvi_tip._hide(event);" onmousemove="cvi_tip._move(event);" href="#nogo" tooltip="speaker" alt="speaker" onclick="clickspeaker.playclip()" id="speaker" />
+  <area shape="poly" coords="271,200,281,197,289,196,296,196,304,196,310,197,312,199,306,203,300,204,292,207,284,208,279,208,272,207,266,204" onmouseover="cvi_tip._show(event);" onmouseout="cvi_tip._hide(event);" onmousemove="cvi_tip._move(event);" href="#nogo" tooltip="side window defroster vent" alt="side window defroster vent" onclick="clicksidewindowdefrostervent.playclip()" id="sidewindowdefrostervent" />
+  <area shape="poly" coords="335,371,345,368,356,364,365,361,374,360,379,361,387,364,394,371,401,376,406,385,410,390,403,389,397,386,388,380,383,379,379,382,373,383,364,386,356,389,349,392,341,390,337,383,334,375" onmouseover="cvi_tip._show(event);" onmouseout="cvi_tip._hide(event);" onmousemove="cvi_tip._move(event);" href="#nogo" tooltip="cruise control" alt="cruise control" onclick="clickcruisecontrol.playclip()" id="cruisecontrol" />
+  <area shape="circle" coords="486,332,58" onmouseover="cvi_tip._show(event);" onmouseout="cvi_tip._hide(event);" onmousemove="cvi_tip._move(event);" href="#nogo" tooltip="horn and airbag" alt="horn and airbag" onclick="clickhornandairbag.playclip()" id="hornandairbag" />
+  <area shape="poly" coords="710,288,906,288,912,289,916,295,919,305,919,322,920,339,920,367,919,386,919,402,707,402,700,312,699,295,704,291" onmouseover="cvi_tip._show(event);" onmouseout="cvi_tip._hide(event);" onmousemove="cvi_tip._move(event);" href="#nogo" tooltip="navigation system with radio and TV" alt="navigation system with radio and TV" onclick="clicknavigationsystemwithradioandTV.playclip()" id="navigationsystemwithradioandTV" />
+  <area shape="poly" coords="711,443,909,442,904,482,900,502,899,514,893,512,888,506,878,504,866,505,858,505,853,509,850,512,828,512,828,513,784,514,783,512,768,514,761,515,727,514,713,486" onmouseover="cvi_tip._show(event);" onmouseout="cvi_tip._hide(event);" onmousemove="cvi_tip._move(event);" href="#nogo" tooltip="climate control" alt="climate control" onclick="clickclimatecontrol.playclip()" id="climatecontrol" />
+  <area shape="poly" coords="604,314,621,315,622,319,622,323,621,326,605,326,604,320" onmouseover="cvi_tip._show(event);" onmouseout="cvi_tip._hide(event);" onmousemove="cvi_tip._move(event);" href="#nogo" tooltip="radio volume control" alt="radio volume control" onclick="clickradiovolumecontrol.playclip()" id="radiovolumecontrol" />
+  <area shape="poly" coords="350,317,367,317,367,328,349,328,349,322" onmouseover="cvi_tip._show(event);" onmouseout="cvi_tip._hide(event);" onmousemove="cvi_tip._move(event);" href="#nogo" tooltip="radio station selector" alt="radio station selector" onclick="clickradiostationselector.playclip()" id="radiostationselector" />
+  <area shape="poly" coords="194,748,203,737,219,717,242,694,259,682,269,677,282,674,293,672,297,660,300,646,303,641,378,639,635,639,646,640,652,645,656,653,660,664,662,671,669,670,681,671,692,675,701,681,710,689,724,703,734,716,746,732,756,748" onmouseover="cvi_tip._show(event);" onmouseout="cvi_tip._hide(event);" onmousemove="cvi_tip._move(event);" href="#nogo" tooltip="driver's seat" alt="driver's seat" onclick="clickdriversseat.playclip()" id="driversseat" />
+  <area shape="poly" coords="216,611,218,621,220,632,220,644,221,649,174,747,49,747,97,677,119,643,140,611,161,582,171,566,193,555,199,566,204,576,210,591,213,600" onmouseover="cvi_tip._show(event);" onmouseout="cvi_tip._hide(event);" onmousemove="cvi_tip._move(event);" href="#nogo" tooltip="side compartment" alt="side compartment" onclick="clicksidecompartment.playclip()" id="sidecompartment" />
+  <area shape="poly" coords="114,403,129,400,138,401,144,404,145,443,145,471,142,508,139,533,137,550,133,560,129,571,127,576,118,561,110,556,100,554,93,554,89,554,98,536,100,522,104,496,108,471,111,438,112,418" onmouseover="cvi_tip._show(event);" onmouseout="cvi_tip._hide(event);" onmousemove="cvi_tip._move(event);" href="#nogo" tooltip="door grip" alt="door grip" onclick="clickdoorgrip.playclip()" id="doorgrip" />
+  <area shape="poly" coords="644,188,651,197,658,205,664,217,671,228,675,239,680,254,685,271,688,284,691,299,691,319,690,336,690,346,688,357,686,367,683,378,680,390,676,403,670,416,664,428,653,440,643,453,631,464,622,473,615,479,609,486,598,489,590,494,574,496,408,497,392,497,379,492,364,482,350,473,337,460,325,447,317,438,306,421,297,409,293,398,290,381,285,365,283,354,281,343,280,326,280,304,281,284,286,265,292,248,301,228,307,214,317,199,325,190,340,173,356,158,375,146,397,134,418,125,438,119,463,114,481,114,500,115,519,116,540,122,560,128,577,135,597,145,615,160,627,170,641,184,634,191,627,196,620,202,612,207,606,198,598,191,591,182,585,176,579,173,571,167,563,164,557,161,551,158,539,153,525,149,513,145,501,144,493,144,485,144,474,145,463,146,453,148,446,149,423,157,408,163,397,170,381,180,370,189,363,201,355,216,347,225,342,234,332,246,324,256,316,271,315,286,316,293,319,368,326,385,335,406,342,417,351,426,361,437,371,448,382,455,395,463,405,464,418,466,437,466,445,466,540,462,562,462,575,462,581,459,595,450,607,437,617,426,630,411,636,399,641,386,644,376,649,363,644,356,636,355,622,354,608,354,598,353,591,353,583,354,578,356,575,364,573,375,568,386,559,395,552,402,546,408,537,416,531,420,527,427,527,440,529,452,534,463,535,462,437,466,444,460,447,449,445,435,446,422,445,420,434,411,427,406,416,397,410,389,404,381,400,375,398,365,395,361,393,356,380,354,356,355,342,356,332,357,325,362,320,366,318,366,317,293,327,295,343,294,361,291,370,291,384,288,395,286,407,282,411,282,418,271,428,261,435,257,450,250,469,246,489,244,502,246,515,249,529,254,542,263,549,271,560,277,565,279,582,282,589,283,599,284,608,286,620,288,637,289,645,294,651,289,654,278,652,267,646,258,639,247,632,238,623,231,619,222,613,208,641,187" onmouseover="cvi_tip._show(event);" onmouseout="cvi_tip._hide(event);" onmousemove="cvi_tip._move(event);" href="#nogo" tooltip="steering wheel" alt="steering wheel" onclick="clicksteeringwheel.playclip()" id="steeringwheel" />
+  <area shape="poly" coords="997,615,986,618,980,620,976,627,973,640,972,649,972,655,972,659,968,661,966,668,964,674,963,680,961,684,994,739,997,731,998,618" onmouseover="cvi_tip._show(event);" onmouseout="cvi_tip._hide(event);" onmousemove="cvi_tip._move(event);" href="#nogo" tooltip="passenger seat" alt="passenger seat" onclick="clickpassengerseat.playclip()" id="passengerseat" />
+      </map>
+    </p>
+  <!-- InstanceEndEditable -->
+  <!-- end #mainContent -->
+</div>
+  <!-- This clearing element should immediately follow the #mainContent div in order to force the #container div to contain all child floats -->
+  <div id="footer">
+    <p align="center">Move your mouse over the objects to see their descriptions. Click to hear the pronunciation!</p>
+    <p align="center">If you can't hear the sound when you click, check your browser. You need Internet Explorer 9+, Firefox 3.5+, Chrome/Safari 3+ or Opera 10.5+!</p>
+    <p align="center">Thank you for using the Online Photo Dictionary! It's fun to use this picture dictionary when you're studying and learning English!</p>
+    <p align="center">Use it to learn new vocabulary, learn the spelling of English words and improve your listening skills by clicking on the image to hear the pronunciation!</p>
+    <p align="center">Useful for students of all levels - improve your ESL, EFL, TOEIC, TOEFL, EILTS scores too!</p>
+    <p align="center"><a href="../help/privacy.html">Click here for privacy policy</a></p>
+    <!-- NEXT LINE IS THE FACEBOOK COMMENT BOX CODE -->
+<p>
+    <div style="clear: both; width: 500px; margin: 0pt auto;"> 
+      <div class="fb-like" data-href="http://www.onlinephotodictionary.com" data-send="true" data-width="400" data-show-faces="false" data-colorscheme="dark"></div>
+      <div class="fb-comments" data-href="http://www.onlinephotodictionary.com" data-num-posts="2" data-width="470" data-colorscheme="dark"></div>
+    </div>
+</p>
+  </div>
+<!-- end #container --></div>
+
+<!-- script so that Google counts time for one-page visits -->
+<script type="text/javascript">
+(function (tos) {
+  window.setInterval(function () {
+    tos = (function (t) {
+      return t[0] == 50 ? (parseInt(t[1]) + 1) + ':00' : (t[1] || '0') + ':' + (parseInt(t[0]) + 10);
+    })(tos.split(':').reverse());
+    window.pageTracker ? pageTracker._trackEvent('Time', 'Log', tos) : _gaq.push(['_trackEvent', 'Time', 'Log', tos]);
+  }, 10000);
+})('00');
+</script>
+<!-- end of Google one-page visit script -->
+
+</body>
+<!-- InstanceEnd --></html>

@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8">
+	<link rel="stylesheet" type="text/css" href="normalize.css">
+	<link rel="stylesheet" type="text/css" href="pomodoro.css">
+	<title>Syl Primeau - Pomodoro Timer</title>
+</head>
+
+<body>
+	<div id="logo">Il Pomodoro</div>
+	<div id="inner" class="noselect">
+		<div id="setting-break" class="settings">
+			<div id="lbl-break" class="label">BREAK LENGTH</div>
+			<div id="dec-break" class="plus-minus">-</div>
+			<div id="time-break" class="setting-time"></div>
+			<div id="inc-break" class="plus-minus">+</div>
+		</div>
+
+		<div id="setting-session" class="settings">
+			<div id="lbl-session" class="label">SESSION LENGTH</div>
+			<div id="dec-session" class="plus-minus">-</div>
+			<div id="time-session" class="setting-time"></div>
+			<div id="inc-session" class="plus-minus">+</div>
+		</div>
+
+		<div id="timer-border">
+			<div id="timer-sand">
+				<div id="time-remaining"></div>
+			</div>
+		</div>
+
+		<div id="reset">reset</div>
+		<audio id="audio">
+			<source src="chime.mp3" type="audio/mpeg">
+		</audio>
+	</div>
+	<script src="pomodoro.js"></script>
+</body>
+
+</html>

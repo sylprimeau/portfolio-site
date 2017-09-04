@@ -1,0 +1,330 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"><!-- InstanceBegin template="/Templates/template-mapper.dwt" codeOutsideHTMLIsLocked="false" -->
+
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta name="Keywords" content="picture, dictionary, visual, photo, photos, audio, sound, pronunciation, spelling, hover, mouse, learn, English, words" />
+<meta name="Description" content="The Online Photo Dictionary is an interactive picture dictionary with photos and sound. Hover your mouse over each item to see its spelling and click it to hear its pronunciation!" />
+<!-- InstanceBeginEditable name="doctitle" -->
+<title>The Online Photo Dictionary: Body</title>
+<!-- InstanceEndEditable -->
+
+<link rel="stylesheet" type="text/css" href="../css/tooltip.css" />
+<link rel="stylesheet" type="text/css" href="../css/global.css"  />
+
+
+<script type="text/javascript" src="../js/cvi_tip_lib.js"></script>
+<script type="text/javascript" src="../js/cvi_map_lib.js"></script>
+<script type="text/javascript" src="../js/mapper.js"></script>
+
+<!-- InstanceBeginEditable name="head" -->
+
+<script type="text/javascript">
+
+	cvi_map.defaultOpacity = 0; //INT 0-100 (% opacity)
+	cvi_map.defaultAreacolor = '#00ff00'; //STR '#000000'-'#ffffff'
+	cvi_map.defaultBordercolor 	= '#0000ff'; 	//STR '#000000'-'#ffffff'
+	cvi_map.defaultNofade = true; //BOOLEAN
+	cvi_map.defaultNoborder = true; //BOOLEAN
+
+<!--
+function ById(v) {return(document.getElementById(v));}
+window.onload = function() {
+	cvi_map.add(ById('mainphoto'),{opacity: 40, areacolor: '#00FF00', noborder: true});
+}
+-->
+</script>
+
+
+<script>
+
+// Mouseover/ Click sound effect- by JavaScript Kit (www.javascriptkit.com)
+// Visit JavaScript Kit at http://www.javascriptkit.com/ for full source code
+
+//** Usage: Instantiate script by calling: var uniquevar=createsoundbite("soundfile1", "fallbackfile2", "fallebacksound3", etc)
+//** Call: uniquevar.playclip() to play sound
+
+var html5_audiotypes={ //define list of audio file extensions and their associated audio types. Add to it if your specified audio file isn't on this list:
+	"mp3": "audio/mpeg",
+	"mp4": "audio/mp4",
+	"ogg": "audio/ogg",
+	"wav": "audio/wav"
+}
+
+function createsoundbite(sound){
+	var html5audio=document.createElement('audio')
+	if (html5audio.canPlayType){ //check support for HTML5 audio
+		for (var i=0; i<arguments.length; i++){
+			var sourceel=document.createElement('source')
+			sourceel.setAttribute('src', arguments[i])
+			if (arguments[i].match(/\.(\w+)$/i))
+				sourceel.setAttribute('type', html5_audiotypes[RegExp.$1])
+			html5audio.appendChild(sourceel)
+		}
+		html5audio.load()
+		html5audio.playclip=function(){
+			html5audio.pause()
+			html5audio.currentTime=0
+			html5audio.play()
+		}
+		return html5audio
+	}
+	else{
+		return {playclip:function(){throw new Error("Your browser doesn't support HTML5 audio unfortunately")}}
+	}
+}
+
+
+//Initialize sound clips with 1 fallback file each:
+//Replace X with sound's name and use find and replace to fill out the remainder of commands -- syntax is: var clickX=createsoundbite("sounds/X.mp3, sounds/X.ogg")
+
+
+var clickface=createsoundbite("sounds/face.mp3", "sounds/face.ogg")
+var clickhead=createsoundbite("sounds/head.mp3", "sounds/head.ogg")
+var clickear=createsoundbite("sounds/ear.mp3", "sounds/ear.ogg")
+var clickneck=createsoundbite("sounds/neck.mp3", "sounds/neck.ogg")
+var clickchest=createsoundbite("sounds/chest.mp3", "sounds/chest.ogg")
+var clickbreast=createsoundbite("sounds/breast.mp3", "sounds/breast.ogg")
+var clickwaist=createsoundbite("sounds/waist.mp3", "sounds/waist.ogg")
+var clickshoulder=createsoundbite("sounds/shoulder.mp3", "sounds/shoulder.ogg")
+var clickarm=createsoundbite("sounds/arm.mp3", "sounds/arm.ogg")
+var clickupperarm=createsoundbite("sounds/upperarm.mp3", "sounds/upperarm.ogg")
+var clickforearm=createsoundbite("sounds/forearm.mp3", "sounds/forearm.ogg")
+var clickelbow=createsoundbite("sounds/elbow.mp3", "sounds/elbow.ogg")
+var clickwrist=createsoundbite("sounds/wrist.mp3", "sounds/wrist.ogg")
+var clickhand=createsoundbite("sounds/hand.mp3", "sounds/hand.ogg")
+var clickcrookofthearm=createsoundbite("sounds/crookofthearm.mp3", "sounds/crookofthearm.ogg")
+var clickarmpit=createsoundbite("sounds/armpit.mp3", "sounds/armpit.ogg")
+var clickback=createsoundbite("sounds/back.mp3", "sounds/back.ogg")
+var clicksmalloftheback=createsoundbite("sounds/smalloftheback.mp3", "sounds/smalloftheback.ogg")
+var clickstomach=createsoundbite("sounds/stomach.mp3", "sounds/stomach.ogg")
+var clickbellybutton=createsoundbite("sounds/bellybutton.mp3", "sounds/bellybutton.ogg")
+var clickhip=createsoundbite("sounds/hip.mp3", "sounds/hip.ogg")
+var clickbum=createsoundbite("sounds/bum.mp3", "sounds/bum.ogg")
+var clickleg=createsoundbite("sounds/leg.mp3", "sounds/leg.ogg")
+var clickthigh=createsoundbite("sounds/thigh.mp3", "sounds/thigh.ogg")
+var clickhamstring=createsoundbite("sounds/hamstring.mp3", "sounds/hamstring.ogg")
+var clickknee=createsoundbite("sounds/knee.mp3", "sounds/knee.ogg")
+var clickbackoftheknee=createsoundbite("sounds/backoftheknee.mp3", "sounds/backoftheknee.ogg")
+var clickshin=createsoundbite("sounds/shin.mp3", "sounds/shin.ogg")
+var clickcalf=createsoundbite("sounds/calf.mp3", "sounds/calf.ogg")
+var clickankle=createsoundbite("sounds/ankle.mp3", "sounds/ankle.ogg")
+var clickanklebone=createsoundbite("sounds/anklebone.mp3", "sounds/anklebone.ogg")
+var clickachillesheel=createsoundbite("sounds/achillesheel.mp3", "sounds/achillesheel.ogg")
+var clickfoot=createsoundbite("sounds/foot.mp3", "sounds/foot.ogg")
+
+
+</script>
+
+
+<!-- Google Analytics code -->
+<script type="text/javascript">
+
+  var _gaq = _gaq || [];
+  _gaq.push(['_setAccount', 'UA-27459311-1']);
+  _gaq.push(['_trackPageview']);
+
+  (function() {
+    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+  })();
+
+</script>
+<style type="text/css">
+<!--
+body {
+	background-color: #000000;
+}
+-->
+</style>
+<!-- InstanceEndEditable -->
+</head>
+
+
+<!-- DON'T FORGET TO REMOVE SPACES FROM FILENAMES TO PLAY SOUNDS PROPERLY !!!! -->
+
+
+<body class="twoColFixLtHdr">
+
+<!-- THE FOLLOWING IS CODE FROM FACEBOOK -- A SCRIPT TO RUN THE COMMENTS BOX -->
+<div id="fb-root"></div>
+<script>(function(d, s, id) {
+  var js, fjs = d.getElementsByTagName(s)[0];
+  if (d.getElementById(id)) return;
+  js = d.createElement(s); js.id = id;
+  js.src = "//connect.facebook.net/en_US/all.js#xfbml=1&appId=485516258134980";
+  fjs.parentNode.insertBefore(js, fjs);
+}(document, 'script', 'facebook-jssdk'));</script>
+
+<div id="container">
+  <div id="header" >
+    <div id="icons"><a href="../index.html"><img src="../images/icon_set/onebit_01.png" width="48" height="48" /></a> <a href="../help/help.html"><img src="../images/icon_set/onebit_37.png" width="48" height="48" /></a></div>
+    <h1 align="center"><a href="frontpage.html"><img src="../images/Photo-Dictionary-logo.png" alt="The Online Photo Dictionary" width="650" height="67" /></a><br />
+    </h1>
+    <h1 align="center"><a href="../en/frontpage.html"><img src="../images/United_Kingdom.png" alt="English" width="60" height="45" hspace="5" vspace="10" /></a><a href="../jp/frontpage.html"><img src="../images/Japan2.png" alt="日本語" width="60" height="45" hspace="5" vspace="10" /></a></h1>
+
+<!-- THE FOLLOWING IS ADSENSE CODE FOR TOP BANNER -->
+<script type="text/javascript"><!--
+google_ad_client = "ca-pub-8761395630506939";
+/* OPD - top banner */
+google_ad_slot = "2407538890";
+google_ad_width = 468;
+google_ad_height = 60;
+//-->
+</script>
+<script type="text/javascript"
+src="http://pagead2.googlesyndication.com/pagead/show_ads.js">
+</script>
+    
+  </div>
+  
+  <div id="sidebar1"><!-- InstanceBeginEditable name="EditRegion4" -->
+      <a  onmouseover="extAreaOver('mainphoto','head');extAreaOver('mainphoto','head2');" onmouseout="extAreaOut('mainphoto','head');extAreaOut('mainphoto','head2');" onclick="clickhead.playclip()">head</a><br />
+    <a  onmouseover="extAreaOver('mainphoto','face');extAreaOver('mainphoto','face2');" onmouseout="extAreaOut('mainphoto','face');extAreaOut('mainphoto','face2');" onclick="clickface.playclip()">face</a><br />
+      <a  onmouseover="extAreaOver('mainphoto','ear');" onmouseout="extAreaOut('mainphoto','ear');" onclick="clickear.playclip()">ear</a><br />
+      <a  onmouseover="extAreaOver('mainphoto','neck');extAreaOver('mainphoto','neck2');" onmouseout="extAreaOut('mainphoto','neck');extAreaOut('mainphoto','neck2');" onclick="clickneck.playclip()">neck</a><br />
+      <a  onmouseover="extAreaOver('mainphoto','chest');" onmouseout="extAreaOut('mainphoto','chest');" onclick="clickchest.playclip()">chest</a><br />
+      <a  onmouseover="extAreaOver('mainphoto','breast');extAreaOver('mainphoto','breast2');" onmouseout="extAreaOut('mainphoto','breast');extAreaOut('mainphoto','breast2');" onclick="clickbreast.playclip()">breast</a><br />
+      <a  onmouseover="extAreaOver('mainphoto','waist');" onmouseout="extAreaOut('mainphoto','waist');" onclick="clickwaist.playclip()">waist</a><br />
+      <a  onmouseover="extAreaOver('mainphoto','shoulder');" onmouseout="extAreaOut('mainphoto','shoulder');" onclick="clickshoulder.playclip()">shoulder</a><br />
+      <a  onmouseover="extAreaOver('mainphoto','arm');extAreaOver('mainphoto','arm2');extAreaOver('mainphoto','arm3');" onmouseout="extAreaOut('mainphoto','arm');extAreaOut('mainphoto','arm2');extAreaOut('mainphoto','arm3');" onclick="clickarm.playclip()">arm</a><br />
+      <a  onmouseover="extAreaOver('mainphoto','upperarm');" onmouseout="extAreaOut('mainphoto','upperarm');" onclick="clickupperarm.playclip()">upper arm</a><br />
+      <a  onmouseover="extAreaOver('mainphoto','forearm');" onmouseout="extAreaOut('mainphoto','forearm');" onclick="clickforearm.playclip()">forearm</a><br />
+      <a  onmouseover="extAreaOver('mainphoto','elbow');extAreaOver('mainphoto','elbow2');" onmouseout="extAreaOut('mainphoto','elbow');extAreaOut('mainphoto','elbow2');" onclick="clickelbow.playclip()">elbow</a><br />
+      <a  onmouseover="extAreaOver('mainphoto','wrist');extAreaOver('mainphoto','wrist2');extAreaOver('mainphoto','wrist3');" onmouseout="extAreaOut('mainphoto','wrist');extAreaOut('mainphoto','wrist2');extAreaOut('mainphoto','wrist3');" onclick="clickwrist.playclip()">wrist</a><br />
+      <a  onmouseover="extAreaOver('mainphoto','hand');extAreaOver('mainphoto','hand2');extAreaOver('mainphoto','hand3');" onmouseout="extAreaOut('mainphoto','hand');extAreaOut('mainphoto','hand2');extAreaOut('mainphoto','hand3');" onclick="clickhand.playclip()">hand</a><br />
+      <a  onmouseover="extAreaOver('mainphoto','crookofthearm');extAreaOver('mainphoto','crookofthearm2');" onmouseout="extAreaOut('mainphoto','crookofthearm');extAreaOut('mainphoto','crookofthearm2');" onclick="clickcrookofthearm.playclip()">crook of the arm</a><br />
+      <a  onmouseover="extAreaOver('mainphoto','armpit');" onmouseout="extAreaOut('mainphoto','armpit');" onclick="clickarmpit.playclip()">armpit</a><br />
+      <a  onmouseover="extAreaOver('mainphoto','back');" onmouseout="extAreaOut('mainphoto','back');" onclick="clickback.playclip()">back</a><br />
+      <a  onmouseover="extAreaOver('mainphoto','smalloftheback');" onmouseout="extAreaOut('mainphoto','smalloftheback');" onclick="clicksmalloftheback.playclip()">small of the back</a><br />
+      <a  onmouseover="extAreaOver('mainphoto','stomach');" onmouseout="extAreaOut('mainphoto','stomach');" onclick="clickstomach.playclip()">stomach</a><br />
+      <a  onmouseover="extAreaOver('mainphoto','bellybutton');" onmouseout="extAreaOut('mainphoto','bellybutton');" onclick="clickbellybutton.playclip()">belly button</a><br />
+      <a  onmouseover="extAreaOver('mainphoto','hip');extAreaOver('mainphoto','hip2');" onmouseout="extAreaOut('mainphoto','hip');extAreaOut('mainphoto','hip2');" onclick="clickhip.playclip()">hip</a><br />
+      <a  onmouseover="extAreaOver('mainphoto','bum');" onmouseout="extAreaOut('mainphoto','bum');" onclick="clickbum.playclip()">bum</a><br />
+      <a  onmouseover="extAreaOver('mainphoto','leg');extAreaOver('mainphoto','leg2');extAreaOver('mainphoto','leg3');extAreaOver('mainphoto','leg4');" onmouseout="extAreaOut('mainphoto','leg');extAreaOut('mainphoto','leg2');extAreaOut('mainphoto','leg3');extAreaOut('mainphoto','leg4');" onclick="clickleg.playclip()">leg</a><br />
+      <a  onmouseover="extAreaOver('mainphoto','thigh');extAreaOver('mainphoto','thigh2');" onmouseout="extAreaOut('mainphoto','thigh');extAreaOut('mainphoto','thigh2');" onclick="clickthigh.playclip()">thigh</a><br />
+      <a  onmouseover="extAreaOver('mainphoto','hamstring');extAreaOver('mainphoto','hamstring2');" onmouseout="extAreaOut('mainphoto','hamstring');extAreaOut('mainphoto','hamstring2');" onclick="clickhamstring.playclip()">hamstring</a><br />
+      <a  onmouseover="extAreaOver('mainphoto','knee');extAreaOver('mainphoto','knee2');" onmouseout="extAreaOut('mainphoto','knee');extAreaOut('mainphoto','knee2');" onclick="clickknee.playclip()">knee</a><br />
+      <a  onmouseover="extAreaOver('mainphoto','backoftheknee');extAreaOver('mainphoto','backoftheknee2');extAreaOver('mainphoto','backoftheknee3');" onmouseout="extAreaOut('mainphoto','backoftheknee');extAreaOut('mainphoto','backoftheknee2');extAreaOut('mainphoto','backoftheknee3');" onclick="clickbackoftheknee.playclip()">back of the knee</a><br />
+      <a  onmouseover="extAreaOver('mainphoto','shin');extAreaOver('mainphoto','shin2');" onmouseout="extAreaOut('mainphoto','shin');extAreaOut('mainphoto','shin2');" onclick="clickshin.playclip()">shin</a><br />
+      <a  onmouseover="extAreaOver('mainphoto','calf');extAreaOver('mainphoto','calf2');extAreaOver('mainphoto','calf3');extAreaOver('mainphoto','calf4');" onmouseout="extAreaOut('mainphoto','calf');extAreaOut('mainphoto','calf2');extAreaOut('mainphoto','calf3');extAreaOut('mainphoto','calf4');" onclick="clickcalf.playclip()">calf</a><br />
+      <a  onmouseover="extAreaOver('mainphoto','ankle');extAreaOver('mainphoto','ankle2');extAreaOver('mainphoto','ankle3');extAreaOver('mainphoto','ankle4');" onmouseout="extAreaOut('mainphoto','ankle');extAreaOut('mainphoto','ankle2');extAreaOut('mainphoto','ankle3');extAreaOut('mainphoto','ankle4');" onclick="clickankle.playclip()">ankle</a><br />
+      <a  onmouseover="extAreaOver('mainphoto','anklebone');extAreaOver('mainphoto','anklebone2');extAreaOver('mainphoto','anklebone3');extAreaOver('mainphoto','anklebone4');" onmouseout="extAreaOut('mainphoto','anklebone');extAreaOut('mainphoto','anklebone2');extAreaOut('mainphoto','anklebone3');extAreaOut('mainphoto','anklebone4');" onclick="clickanklebone.playclip()">ankle bone</a><br />
+      <a  onmouseover="extAreaOver('mainphoto','achillesheel');extAreaOver('mainphoto','achillesheel2');extAreaOver('mainphoto','achillesheel3');" onmouseout="extAreaOut('mainphoto','achillesheel');extAreaOut('mainphoto','achillesheel2');extAreaOut('mainphoto','achillesheel3');" onclick="clickachillesheel.playclip()">Achilles heel</a><br />
+      <a  onmouseover="extAreaOver('mainphoto','foot');extAreaOver('mainphoto','foot2');extAreaOver('mainphoto','foot3');extAreaOver('mainphoto','foot4');" onmouseout="extAreaOut('mainphoto','foot');extAreaOut('mainphoto','foot2');extAreaOut('mainphoto','foot3');extAreaOut('mainphoto','foot4');" onclick="clickfoot.playclip()">foot</a><br />
+<!-- InstanceEndEditable --></div>
+  <div id="mainContent">
+  <!-- InstanceBeginEditable name="EditRegion3" -->
+    <h1>Body</h1>
+  <p><img src="../images/body_parts.jpg" alt="The Online Photo Dictionary: body parts, head, face, ear, neck, chest, breast, waist, shoulder, arm, upper arm, forearm, eblow, wrist, hand, crook of the arm, armpit, back, small of the back, stomach, belly button, hip, bum, leg, thigh, hamstring, knee, back of the knee, shin, calf, ankle, ankle bone, Achilles heel, foot" name="mainphoto" width="664" height="1000" border="0" usemap="#Map" id="mainphoto" class="center"/>
+    <map name="Map" id="Map">
+      <area shape="circle" coords="426,842,11" onmouseover="cvi_tip._show(event);" onmouseout="cvi_tip._hide(event);" onmousemove="cvi_tip._move(event);" href="#nogo" tooltip="Achilles heel" alt="Achilles heel" onclick="clickachillesheel.playclip()" id="achillesheel2" />
+      <area shape="circle" coords="406,435,35" onmouseover="cvi_tip._show(event);" onmouseout="cvi_tip._hide(event);" onmousemove="cvi_tip._move(event);" href="#nogo" tooltip="hip" alt="hip" onclick="clickhip.playclip()" id="hip" />
+      <area shape="circle" coords="519,391,13" onmouseover="cvi_tip._show(event);" onmouseout="cvi_tip._hide(event);" onmousemove="cvi_tip._move(event);" href="#nogo" tooltip="wrist" alt="wrist" onclick="clickwrist.playclip()" id="wrist3" />
+      <area shape="circle" coords="600,312,16" onmouseover="cvi_tip._show(event);" onmouseout="cvi_tip._hide(event);" onmousemove="cvi_tip._move(event);" href="#nogo" tooltip="elbow" alt="elbow" onclick="clickelbow.playclip()" id="elbow2" />
+      <area shape="circle" coords="392,249,15" onmouseover="cvi_tip._show(event);" onmouseout="cvi_tip._hide(event);" onmousemove="cvi_tip._move(event);" href="#nogo" tooltip="wrist" alt="wrist" onclick="clickwrist.playclip()" id="wrist2" />
+      <area shape="circle" coords="482,223,26" onmouseover="cvi_tip._show(event);" onmouseout="cvi_tip._hide(event);" onmousemove="cvi_tip._move(event);" href="#nogo" tooltip="shoulder" alt="shoulder" onclick="clickshoulder.playclip()" id="shoulder" />
+      <area shape="circle" coords="294,291,37" onmouseover="cvi_tip._show(event);" onmouseout="cvi_tip._hide(event);" onmousemove="cvi_tip._move(event);" href="#nogo" tooltip="breast" alt="breast" onclick="clickbreast.playclip()" id="breast" />
+      <area shape="circle" coords="216,291,33" onmouseover="cvi_tip._show(event);" onmouseout="cvi_tip._hide(event);" onmousemove="cvi_tip._move(event);" href="#nogo" tooltip="breast" alt="breast" onclick="clickbreast.playclip()" id="breast2" />
+      <area shape="circle" coords="140,653,27" onmouseover="cvi_tip._show(event);" onmouseout="cvi_tip._hide(event);" onmousemove="cvi_tip._move(event);" href="#nogo" tooltip="knee" alt="knee" onclick="clickknee.playclip()" id="knee" />
+      <area shape="circle" coords="303,690,25" onmouseover="cvi_tip._show(event);" onmouseout="cvi_tip._hide(event);" onmousemove="cvi_tip._move(event);" href="#nogo" tooltip="knee" alt="knee" onclick="clickknee.playclip()" id="knee2" />
+      <area shape="circle" coords="427,657,25" onmouseover="cvi_tip._show(event);" onmouseout="cvi_tip._hide(event);" onmousemove="cvi_tip._move(event);" href="#nogo" tooltip="back of the knee" alt="back of the knee" onclick="clickbackoftheknee.playclip()" id="backoftheknee" />
+      <area shape="circle" coords="537,658,20" onmouseover="cvi_tip._show(event);" onmouseout="cvi_tip._hide(event);" onmousemove="cvi_tip._move(event);" href="#nogo" tooltip="back of the knee" alt="back of the knee" onclick="clickbackoftheknee.playclip()" id="backoftheknee2" />
+      <area shape="poly" coords="274,227,292,226,314,225,328,231,330,249,325,266,322,281,300,285,275,287,262,289,245,288,229,286,211,282,211,266,225,253,246,239,262,231" onmouseover="cvi_tip._show(event);" onmouseout="cvi_tip._hide(event);" onmousemove="cvi_tip._move(event);" href="#nogo" tooltip="chest" alt="chest" onclick="clickchest.playclip()" id="chest" />
+      <area shape="circle" coords="578,874,41" onmouseover="cvi_tip._show(event);" onmouseout="cvi_tip._hide(event);" onmousemove="cvi_tip._move(event);" href="#nogo" tooltip="foot" alt="foot" onclick="clickfoot.playclip()" id="foot4" />
+      <area shape="circle" coords="362,370,12" onmouseover="cvi_tip._show(event);" onmouseout="cvi_tip._hide(event);" onmousemove="cvi_tip._move(event);" href="#nogo" tooltip="crook of the arm" alt="crook of the arm" onclick="clickcrookofthearm.playclip()" id="crookofthearm" />
+      <area shape="circle" coords="436,316,13" onmouseover="cvi_tip._show(event);" onmouseout="cvi_tip._hide(event);" onmousemove="cvi_tip._move(event);" href="#nogo" tooltip="crook of the arm" alt="crook of the arm" onclick="clickcrookofthearm.playclip()" id="crookofthearm2" />
+      <area shape="circle" coords="238,409,10" onmouseover="cvi_tip._show(event);" onmouseout="cvi_tip._hide(event);" onmousemove="cvi_tip._move(event);" href="#nogo" tooltip="belly button" alt="belly button" onclick="clickbellybutton.playclip()" id="bellybutton" />
+      <area shape="circle" coords="482,465,60" onmouseover="cvi_tip._show(event);" onmouseout="cvi_tip._hide(event);" onmousemove="cvi_tip._move(event);" href="#nogo" tooltip="bum" alt="bum" onclick="clickbum.playclip()" id="bum" />
+      <area shape="poly" coords="209,368,324,366,320,374,324,384,208,384" onmouseover="cvi_tip._show(event);" onmouseout="cvi_tip._hide(event);" onmousemove="cvi_tip._move(event);" href="#nogo" tooltip="waist" alt="waist" onclick="clickwaist.playclip()" id="waist" />
+      <area shape="poly" coords="318,175,320,180,322,185,322,189,325,192,327,195,328,199,330,203,333,206,335,209,338,211,339,215,332,217,325,218,320,219,313,219,308,218,301,218,296,218,290,220,284,218,287,216,286,210,285,206,284,203,282,200,287,202,294,199,301,193,307,188,312,182" onmouseover="cvi_tip._show(event);" onmouseout="cvi_tip._hide(event);" onmousemove="cvi_tip._move(event);" href="#nogo" tooltip="neck" alt="neck" onclick="clickneck.playclip()" id="neck" />
+      <area shape="poly" coords="482,159,484,165,485,170,486,174,486,179,486,185,488,187,490,190,492,195,488,196,481,197,474,197,471,197,466,197,460,196,461,191,460,186,460,181,457,176,464,173,472,169,477,165" onmouseover="cvi_tip._show(event);" onmouseout="cvi_tip._hide(event);" onmousemove="cvi_tip._move(event);" href="#nogo" tooltip="neck" alt="neck" onclick="clickneck.playclip()" id="neck2" />
+      <area shape="poly" coords="320,141,324,143,327,144,329,145,327,149,325,151,322,151,320,151,317,143" onmouseover="cvi_tip._show(event);" onmouseout="cvi_tip._hide(event);" onmousemove="cvi_tip._move(event);" href="#nogo" tooltip="ear" alt="ear" onclick="clickear.playclip()" id="ear" />
+      <area shape="circle" coords="200,825,8" onmouseover="cvi_tip._show(event);" onmouseout="cvi_tip._hide(event);" onmousemove="cvi_tip._move(event);" href="#nogo" tooltip="ankle bone" alt="ankle bone" onclick="clickanklebone.playclip()" id="anklebone2" />
+      <area shape="circle" coords="397,851,10" onmouseover="cvi_tip._show(event);" onmouseout="cvi_tip._hide(event);" onmousemove="cvi_tip._move(event);" href="#nogo" tooltip="ankle bone" alt="ankle bone" onclick="clickanklebone.playclip()" id="anklebone3" />
+      <area shape="circle" coords="564,833,8" onmouseover="cvi_tip._show(event);" onmouseout="cvi_tip._hide(event);" onmousemove="cvi_tip._move(event);" href="#nogo" tooltip="ankle bone" alt="ankle bone" onclick="clickanklebone.playclip()" id="anklebone4" />
+      <area shape="circle" coords="586,819,12" onmouseover="cvi_tip._show(event);" onmouseout="cvi_tip._hide(event);" onmousemove="cvi_tip._move(event);" href="#nogo" tooltip="Achilles heel" alt="Achilles heel" onclick="clickachillesheel.playclip()" id="achillesheel" />
+      <area shape="circle" coords="210,807,11" onmouseover="cvi_tip._show(event);" onmouseout="cvi_tip._hide(event);" onmousemove="cvi_tip._move(event);" href="#nogo" tooltip="Achilles heel" alt="Achilles heel" onclick="clickachillesheel.playclip()" id="achillesheel3" />
+      <area shape="poly" coords="138,686,144,685,150,685,158,694,162,715,166,738,173,769,178,787,179,803,179,816,175,825,173,808,170,796,166,784,162,772,157,761,152,745,148,732,142,708,140,692" onmouseover="cvi_tip._show(event);" onmouseout="cvi_tip._hide(event);" onmousemove="cvi_tip._move(event);" href="#nogo" tooltip="shin" alt="shin" onclick="clickshin.playclip()" id="shin" />
+      <area shape="poly" coords="189,679,194,689,197,698,199,706,201,715,202,725,203,734,203,742,203,753,203,760,203,767,205,775,205,780,201,780,197,760,190,742,184,716,182,695,184,685" onmouseover="cvi_tip._show(event);" onmouseout="cvi_tip._hide(event);" onmousemove="cvi_tip._move(event);" href="#nogo" tooltip="calf" alt="calf" onclick="clickcalf.playclip()" id="calf" />
+      <area shape="poly" coords="340,690,344,703,348,714,349,726,351,734,351,744,351,762,349,771,347,786,345,802,343,813,341,821,336,772,334,742,335,715,338,703" onmouseover="cvi_tip._show(event);" onmouseout="cvi_tip._hide(event);" onmousemove="cvi_tip._move(event);" href="#nogo" tooltip="calf" alt="calf" onclick="clickcalf.playclip()" id="calf2" />
+      <area shape="poly" coords="428,675,437,677,439,683,440,698,440,709,440,720,440,732,439,739,437,748,433,757,431,768,424,817,417,801,411,785,407,762,401,727,400,706,406,687,414,678" onmouseover="cvi_tip._show(event);" onmouseout="cvi_tip._hide(event);" onmousemove="cvi_tip._move(event);" href="#nogo" tooltip="calf" alt="calf" onclick="clickcalf.playclip()" id="calf3" />
+      <area shape="poly" coords="549,662,555,665,559,670,563,679,567,691,571,704,575,715,577,725,579,732,580,740,581,750,581,760,582,769,584,778,584,785,579,792,572,791,570,788,559,774,552,758,543,748,537,729,530,707,528,686,529,671,540,664" onmouseover="cvi_tip._show(event);" onmouseout="cvi_tip._hide(event);" onmousemove="cvi_tip._move(event);" href="#nogo" tooltip="calf" alt="calf" onclick="clickcalf.playclip()" id="calf4" />
+      <area shape="poly" coords="437,504,448,510,461,516,468,517,466,533,464,547,462,556,461,564,459,575,456,585,455,593,452,602,450,610,449,619,448,638,446,660,430,654,415,650,407,638,403,607,403,585,402,561,404,533,413,512,426,506" onmouseover="cvi_tip._show(event);" onmouseout="cvi_tip._hide(event);" onmousemove="cvi_tip._move(event);" href="#nogo" tooltip="hamstring" alt="hamstring" onclick="clickhamstring.playclip()" id="hamstring" />
+      <area shape="poly" coords="486,512,493,513,505,514,515,513,522,510,528,512,531,521,531,531,531,541,531,553,533,563,534,577,534,586,535,597,536,611,537,622,539,631,541,636,543,644,539,650,531,656,519,653,509,644,502,628,493,593,479,561,482,526" onmouseover="cvi_tip._show(event);" onmouseout="cvi_tip._hide(event);" onmousemove="cvi_tip._move(event);" href="#nogo" tooltip="hamstring" alt="hamstring" onclick="clickhamstring.playclip()" id="hamstring2" />
+      <area shape="poly" coords="178,510,182,508,183,510,186,508,187,504,186,500,188,498,188,501,189,502,192,504,194,506,197,504,199,500,197,496,194,494,192,490,195,486,197,482,200,482,204,482,208,483,213,485,216,486,218,490,221,494,237,508,226,501,242,513,257,525,268,529,262,542,253,562,242,578,228,596,215,611,207,625,198,642,192,654,160,649,148,647,142,641,136,636,135,631,140,612,148,588,156,563,168,535" onmouseover="cvi_tip._show(event);" onmouseout="cvi_tip._hide(event);" onmousemove="cvi_tip._move(event);" href="#nogo" tooltip="thigh" alt="thigh" onclick="clickthigh.playclip()" id="thigh" />
+      <area shape="poly" coords="289,482,291,500,297,507,307,511,313,515,321,519,322,522,323,525,323,532,326,537,326,541,328,545,329,549,331,549,331,545,330,539,333,538,333,517,335,517,345,507,356,495,356,521,356,542,351,563,347,581,347,598,344,619,340,633,339,646,338,659,340,670,332,676,320,678,304,676,292,677,288,669,286,660,284,652,280,636,278,624,274,608,274,596,273,580,270,566,268,552,268,535,268,528,272,504,279,492" onmouseover="cvi_tip._show(event);" onmouseout="cvi_tip._hide(event);" onmousemove="cvi_tip._move(event);" href="#nogo" tooltip="thigh" alt="thigh" onclick="clickthigh.playclip()" id="thigh2" />
+      <area shape="poly" coords="301,717,307,717,313,726,316,744,317,761,318,776,321,796,319,820,315,835,312,850,304,864,301,862,306,844,308,831,309,819,307,806,305,791,304,776,302,762,301,741,300,724,299,717" onmouseover="cvi_tip._show(event);" onmouseout="cvi_tip._hide(event);" onmousemove="cvi_tip._move(event);" href="#nogo" tooltip="shin" alt="shin" onclick="clickshin.playclip()" id="shin2" />
+      <area shape="poly" coords="174,811" href="#" />
+      <area shape="circle" coords="255,430,58" onmouseover="cvi_tip._show(event);" onmouseout="cvi_tip._hide(event);" onmousemove="cvi_tip._move(event);" href="#nogo" tooltip="stomach" alt="stomach" onclick="clickstomach.playclip()" id="stomach" />
+      <area shape="circle" coords="339,442,11" onmouseover="cvi_tip._show(event);" onmouseout="cvi_tip._hide(event);" onmousemove="cvi_tip._move(event);" href="#nogo" tooltip="hip" alt="hip" onclick="clickhip.playclip()" id="hip2" />
+      <area shape="circle" coords="470,377,16" onmouseover="cvi_tip._show(event);" onmouseout="cvi_tip._hide(event);" onmousemove="cvi_tip._move(event);" href="#nogo" tooltip="small of the back" alt="small of the back" onclick="clicksmalloftheback.playclip()" id="smalloftheback" />
+      <area shape="poly" coords="515,227,519,234,524,240,522,247,520,258,519,267,519,271,524,275,527,277,523,285,519,295,516,305,513,311,506,324,502,334,499,340,496,348,490,360,486,365,486,372,485,379,485,386,487,390,489,396,490,402,491,407,486,405,481,403,472,403,465,402,458,401,452,401,444,401,438,402,446,384,450,369,450,360,457,350,463,340,474,327,480,314,488,300,497,280,501,266,499,250,501,238,509,220" onmouseover="cvi_tip._show(event);" onmouseout="cvi_tip._hide(event);" onmousemove="cvi_tip._move(event);" href="#nogo" tooltip="back" alt="back" onclick="clickback.playclip()" id="back" />
+      <area shape="poly" coords="559,309,566,309,580,309,586,313,593,321,594,328,589,336,581,347,575,356,569,361,563,370,553,379,543,388,540,392,532,388,517,380,523,372,531,362,538,353,546,340,552,328,557,312" onmouseover="cvi_tip._show(event);" onmouseout="cvi_tip._hide(event);" onmousemove="cvi_tip._move(event);" href="#nogo" tooltip="forearm" alt="forearm" onclick="clickforearm.playclip()" id="forearm" />
+      <area shape="circle" coords="354,274,11" onmouseover="cvi_tip._show(event);" onmouseout="cvi_tip._hide(event);" onmousemove="cvi_tip._move(event);" href="#nogo" tooltip="armpit" alt="armpit" onclick="clickarmpit.playclip()" id="armpit" />
+      <area shape="circle" coords="360,449,13" onmouseover="cvi_tip._show(event);" onmouseout="cvi_tip._hide(event);" onmousemove="cvi_tip._move(event);" href="#nogo" tooltip="wrist" alt="wrist" onclick="clickwrist.playclip()" id="wrist" />
+      <area shape="circle" coords="187,474,34" onmouseover="cvi_tip._show(event);" onmouseout="cvi_tip._hide(event);" onmousemove="cvi_tip._move(event);" href="#nogo" tooltip="hand" alt="hand" onclick="clickhand.playclip()" id="hand" />
+      <area shape="circle" coords="323,484,33" onmouseover="cvi_tip._show(event);" onmouseout="cvi_tip._hide(event);" onmousemove="cvi_tip._move(event);" href="#nogo" tooltip="hand" alt="hand" onclick="clickhand.playclip()" id="hand2" />
+      <area shape="circle" coords="372,222,27" onmouseover="cvi_tip._show(event);" onmouseout="cvi_tip._hide(event);" onmousemove="cvi_tip._move(event);" href="#nogo" tooltip="hand" alt="hand" onclick="clickhand.playclip()" id="hand3" />
+      <area shape="poly" coords="249,122,258,121,265,119,272,115,277,112,284,111,291,111,296,114,300,119,306,128,310,135,314,140,317,143,318,150,321,154,320,162,320,168,319,173,316,179,309,185,303,191,297,196,294,199,287,202,282,200,278,200,268,188,259,175,252,164,249,158,249,150,249,140,248,130" onmouseover="cvi_tip._show(event);" onmouseout="cvi_tip._hide(event);" onmousemove="cvi_tip._move(event);" href="#nogo" tooltip="face" alt="face" onclick="clickface.playclip()" id="face" />
+      <area shape="poly" coords="555,239,562,248,571,259,577,267,582,275,588,285,592,294,597,300,600,305,592,307,580,307,567,307,561,306,555,299,547,295,539,287,535,280" onmouseover="cvi_tip._show(event);" onmouseout="cvi_tip._hide(event);" onmousemove="cvi_tip._move(event);" href="#nogo" tooltip="upper arm" alt="upper arm" onclick="clickupperarm.playclip()" id="upperarm" />
+      <area shape="circle" coords="186,668,11" onmouseover="cvi_tip._show(event);" onmouseout="cvi_tip._hide(event);" onmousemove="cvi_tip._move(event);" href="#nogo" tooltip="back of the knee" alt="back of the knee" onclick="clickbackoftheknee.playclip()" id="backoftheknee3" />
+      <area shape="circle" coords="329,870,8" onmouseover="cvi_tip._show(event);" onmouseout="cvi_tip._hide(event);" onmousemove="cvi_tip._move(event);" href="#nogo" tooltip="ankle bone" alt="ankle bone" onclick="clickanklebone.playclip()" id="anklebone" />
+      <area shape="circle" coords="425,367,15" onmouseover="cvi_tip._show(event);" onmouseout="cvi_tip._hide(event);" onmousemove="cvi_tip._move(event);" href="#nogo" tooltip="elbow" alt="elbow" onclick="clickelbow.playclip()" id="elbow" />
+      <area shape="poly" coords="453,240,466,236,477,236,490,240,497,247,501,254,501,263,496,279,492,291,486,306,478,317,472,331,462,342,454,355,443,366,438,372,428,375,420,370,414,354,402,333,396,306,391,291,385,271,383,260,387,254,398,251,409,252,415,269,420,287,424,299,430,305,432,309,436,300,442,281,449,260,449,254,448,246" onmouseover="cvi_tip._show(event);" onmouseout="cvi_tip._hide(event);" onmousemove="cvi_tip._move(event);" href="#nogo" tooltip="arm" alt="arm" onclick="clickarm.playclip()" id="arm2" />
+      <area shape="poly" coords="354,271,364,269,374,271,384,277,388,283,387,299,387,312,386,329,383,342,383,352,385,365,385,374,385,384,385,392,383,403,383,414,381,419,377,431,374,437,369,442,358,440,351,437,352,410,353,386,354,376,355,354,350,331,349,305,349,285" onmouseover="cvi_tip._show(event);" onmouseout="cvi_tip._hide(event);" onmousemove="cvi_tip._move(event);" href="#nogo" tooltip="arm" alt="arm" onclick="clickarm.playclip()" id="arm" />
+      <area shape="poly" coords="468,518,477,510,484,512,491,513,503,513,511,513,521,512,524,507,529,502,531,518,531,535,532,547,533,561,535,581,535,599,537,611,537,620,539,627,541,634,542,640,544,646,549,654,553,661,557,667,561,675,567,691,572,705,575,717,577,728,580,747,583,760,583,769,585,778,585,788,588,802,589,810,585,813,575,815,565,818,561,819,561,807,559,795,553,776,547,762,541,748,530,721,519,695,509,674,502,666,498,656,494,647,487,636,480,618,472,589,468,568,464,555,464,551,466,535,468,524" onmouseover="cvi_tip._show(event);" onmouseout="cvi_tip._hide(event);" onmousemove="cvi_tip._move(event);" href="#nogo" tooltip="leg" alt="leg" onclick="clickleg.playclip()" id="leg4" />
+      <area shape="circle" coords="195,816,23" onmouseover="cvi_tip._show(event);" onmouseout="cvi_tip._hide(event);" onmousemove="cvi_tip._move(event);" href="#nogo" tooltip="ankle" alt="ankle" onclick="clickankle.playclip()" id="ankle" />
+      <area shape="circle" coords="177,862,61" onmouseover="cvi_tip._show(event);" onmouseout="cvi_tip._hide(event);" onmousemove="cvi_tip._move(event);" href="#nogo" tooltip="foot" alt="foot" onclick="clickfoot.playclip()" id="foot" />
+      <area shape="poly" coords="197,481,207,484,217,486,221,493,232,504,239,510,247,518,251,521,256,524,266,526,267,531,263,541,258,549,254,559,248,571,241,579,236,586,231,592,223,601,216,610,211,617,204,628,196,644,193,654,190,658,185,667,186,674,190,683,195,691,198,707,201,721,202,732,202,744,203,755,203,767,205,781,207,792,207,798,210,806,203,809,195,811,187,814,179,815,173,817,173,806,169,793,166,782,160,768,154,753,148,732,143,713,140,698,136,683,134,673,132,667,130,662,129,654,128,648,129,644,134,631,139,612,146,591,152,570,160,552,166,537,176,513,177,510,180,509,183,510,185,507,186,502,185,499,187,498,189,502,191,505,195,505,197,502,197,497,195,494,192,489" onmouseover="cvi_tip._show(event);" onmouseout="cvi_tip._hide(event);" onmousemove="cvi_tip._move(event);" href="#nogo" tooltip="leg" alt="leg" onclick="clickleg.playclip()" id="leg2" />
+      <area shape="circle" coords="318,858,18" onmouseover="cvi_tip._show(event);" onmouseout="cvi_tip._hide(event);" onmousemove="cvi_tip._move(event);" href="#nogo" tooltip="ankle" alt="ankle" onclick="clickankle.playclip()" id="ankle2" />
+      <area shape="circle" coords="291,896,52" onmouseover="cvi_tip._show(event);" onmouseout="cvi_tip._hide(event);" onmousemove="cvi_tip._move(event);" href="#nogo" tooltip="foot" alt="foot" onclick="clickfoot.playclip()" id="foot2" />
+      <area shape="poly" coords="288,482,285,485,282,487,279,490,276,495,272,502,271,506,271,513,271,518,270,521,268,526,268,533,267,538,267,547,268,556,269,563,271,572,272,578,273,584,274,593,274,602,274,608,276,613,278,628,281,638,284,651,286,660,288,667,288,673,288,677,290,679,291,683,292,691,293,697,296,700,298,707,298,717,299,728,300,739,300,755,301,767,302,779,304,792,306,804,308,820,307,831,306,840,304,849,302,858,300,862,298,866,297,869,304,870,312,871,320,875,326,876,330,872,333,868,336,864,337,863,335,854,335,843,338,833,339,827,341,820,346,790,349,773,350,763,352,750,351,736,349,727,349,719,345,706,341,689,339,671,338,658,339,648,342,630,344,609,346,603,349,579,352,560,355,542,357,528,357,513,356,500,355,486,353,490,350,494,349,500,345,505,341,510,335,514,332,516,326,516,322,516,318,515,314,514,311,513,311,510,308,509,304,507,300,505,296,503,294,501,296,500,300,499,303,500,307,501,311,502,316,502,320,501,320,499,315,499,310,498,304,494,300,492,296,491,293,490,290,488,290,486,292,483,296,482,292,479" onmouseover="cvi_tip._show(event);" onmouseout="cvi_tip._hide(event);" onmousemove="cvi_tip._move(event);" href="#nogo" tooltip="leg" alt="leg" onclick="clickleg.playclip()" id="leg" />
+      <area shape="circle" coords="407,846,22" onmouseover="cvi_tip._show(event);" onmouseout="cvi_tip._hide(event);" onmousemove="cvi_tip._move(event);" href="#nogo" tooltip="ankle" alt="ankle" onclick="clickankle.playclip()" id="ankle3" />
+      <area shape="circle" coords="409,882,39" onmouseover="cvi_tip._show(event);" onmouseout="cvi_tip._hide(event);" onmousemove="cvi_tip._move(event);" href="#nogo" tooltip="foot" alt="foot" onclick="clickfoot.playclip()" id="foot3" />
+      <area shape="poly" coords="382,469,387,469,386,491,388,494,391,492,394,462,401,460,401,478,403,489,405,496,407,498,407,488,408,458,411,458,422,459,429,461,434,467,440,476,447,487,452,496,460,508,464,516,468,520,464,543,462,557,460,574,455,596,451,607,449,622,448,632,447,644,446,654,445,661,443,666,441,676,441,685,442,712,442,723,441,734,440,743,438,751,434,758,431,772,430,783,430,792,428,801,426,814,426,824,426,832,426,839,420,841,407,843,399,842,392,839,394,827,391,762,391,713,392,693,393,685,394,679,391,667,391,654,392,643,392,622,390,613,387,598,385,583,383,565,381,542,379,524,381,490" onmouseover="cvi_tip._show(event);" onmouseout="cvi_tip._hide(event);" onmousemove="cvi_tip._move(event);" href="#nogo" tooltip="leg" alt="leg" onclick="clickleg.playclip()" id="leg3" />
+      <area shape="circle" coords="578,827,19" onmouseover="cvi_tip._show(event);" onmouseout="cvi_tip._hide(event);" onmousemove="cvi_tip._move(event);" href="#nogo" tooltip="ankle" alt="ankle" onclick="clickankle.playclip()" id="ankle4" />
+      <area shape="poly" coords="554,238,570,258,580,274,591,287,597,300,604,308,606,316,601,324,592,334,584,346,575,358,564,372,554,379,543,388,540,393,518,377,540,351,550,333,554,323,557,318,559,311,558,305,550,299,540,290,535,286,534,283" onmouseover="cvi_tip._show(event);" onmouseout="cvi_tip._hide(event);" onmousemove="cvi_tip._move(event);" href="#nogo" tooltip="arm" alt="arm" onclick="clickarm.playclip()" id="arm3" />
+      <area shape="circle" coords="282,142,66" onmouseover="cvi_tip._show(event);" onmouseout="cvi_tip._hide(event);" onmousemove="cvi_tip._move(event);" href="#nogo" tooltip="head (double-click for 'Head'!)" alt="head" ondblclick="window.open('head.html', '_self')" onclick="clickhead.playclip()" class="icolorff0000" id="head" />
+      <area shape="poly" coords="447,94,451,99,457,104,461,105,467,108,472,111,477,112,480,114,485,120,489,125,492,130,492,135,491,141,487,144,484,151,484,157,480,160,476,165,473,168,464,172,456,176,450,179,446,179,440,175,438,170,436,163,434,159,431,155,431,149,425,144,423,140,422,130,422,123,420,120,423,117,424,112,425,102,425,96,433,90,439,88,443,89" onmouseover="cvi_tip._show(event);" onmouseout="cvi_tip._hide(event);" onmousemove="cvi_tip._move(event);" href="#nogo" tooltip="face" alt="face" onclick="clickface.playclip()" id="face2" />
+      <area shape="circle" coords="459,123,64" onmouseover="cvi_tip._show(event);" onmouseout="cvi_tip._hide(event);" onmousemove="cvi_tip._move(event);" href="#nogo" tooltip="head (double-click for 'Head'!)" alt="head" ondblclick="window.open('head.html', '_self')" onclick="clickhead.playclip()" class="icolorff0000" id="head2" />
+    </map>
+  </p>
+  <p>&nbsp;</p>
+  <!-- InstanceEndEditable -->
+  <!-- end #mainContent -->
+</div>
+  <!-- This clearing element should immediately follow the #mainContent div in order to force the #container div to contain all child floats -->
+  <div id="footer">
+    <p align="center">Move your mouse over the objects to see their descriptions. Click to hear the pronunciation!</p>
+    <p align="center">If you can't hear the sound when you click, check your browser. You need Internet Explorer 9+, Firefox 3.5+, Chrome/Safari 3+ or Opera 10.5+!</p>
+    <p align="center">Thank you for using the Online Photo Dictionary! It's fun to use this picture dictionary when you're studying and learning English!</p>
+    <p align="center">Use it to learn new vocabulary, learn the spelling of English words and improve your listening skills by clicking on the image to hear the pronunciation!</p>
+    <p align="center">Useful for students of all levels - improve your ESL, EFL, TOEIC, TOEFL, EILTS scores too!</p>
+    <p align="center"><a href="../help/privacy.html">Click here for privacy policy</a></p>
+    <!-- NEXT LINE IS THE FACEBOOK COMMENT BOX CODE -->
+<p>
+    <div style="clear: both; width: 500px; margin: 0pt auto;"> 
+      <div class="fb-like" data-href="http://www.onlinephotodictionary.com" data-send="true" data-width="400" data-show-faces="false" data-colorscheme="dark"></div>
+      <div class="fb-comments" data-href="http://www.onlinephotodictionary.com" data-num-posts="2" data-width="470" data-colorscheme="dark"></div>
+    </div>
+</p>
+  </div>
+<!-- end #container --></div>
+
+<!-- script so that Google counts time for one-page visits -->
+<script type="text/javascript">
+(function (tos) {
+  window.setInterval(function () {
+    tos = (function (t) {
+      return t[0] == 50 ? (parseInt(t[1]) + 1) + ':00' : (t[1] || '0') + ':' + (parseInt(t[0]) + 10);
+    })(tos.split(':').reverse());
+    window.pageTracker ? pageTracker._trackEvent('Time', 'Log', tos) : _gaq.push(['_trackEvent', 'Time', 'Log', tos]);
+  }, 10000);
+})('00');
+</script>
+<!-- end of Google one-page visit script -->
+
+</body>
+<!-- InstanceEnd --></html>

@@ -1,0 +1,221 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"><!-- InstanceBegin template="/Templates/template-mapper.dwt" codeOutsideHTMLIsLocked="false" -->
+
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta name="Keywords" content="picture, dictionary, visual, photo, photos, audio, sound, pronunciation, spelling, hover, mouse, learn, English, words" />
+<meta name="Description" content="The Online Photo Dictionary is an interactive picture dictionary with photos and sound. Hover your mouse over each item to see its spelling and click it to hear its pronunciation!" />
+<!-- InstanceBeginEditable name="doctitle" -->
+<title>The Online Photo Dictionary: Eye</title>
+<!-- InstanceEndEditable -->
+
+<link rel="stylesheet" type="text/css" href="../css/tooltip.css" />
+<link rel="stylesheet" type="text/css" href="../css/global.css"  />
+
+
+<script type="text/javascript" src="../js/cvi_tip_lib.js"></script>
+<script type="text/javascript" src="../js/cvi_map_lib.js"></script>
+<script type="text/javascript" src="../js/mapper.js"></script>
+
+<!-- InstanceBeginEditable name="head" -->
+
+<script type="text/javascript">
+
+	cvi_map.defaultOpacity = 0; //INT 0-100 (% opacity)
+	cvi_map.defaultAreacolor = '#00ff00'; //STR '#000000'-'#ffffff'
+	cvi_map.defaultBordercolor 	= '#0000ff'; 	//STR '#000000'-'#ffffff'
+	cvi_map.defaultNofade = true; //BOOLEAN
+	cvi_map.defaultNoborder = true; //BOOLEAN
+
+<!--
+function ById(v) {return(document.getElementById(v));}
+window.onload = function() {
+	cvi_map.add(ById('mainphoto'),{opacity: 40, areacolor: '#00FF00', noborder: true});
+}
+-->
+</script>
+
+
+<script>
+
+// Mouseover/ Click sound effect- by JavaScript Kit (www.javascriptkit.com)
+// Visit JavaScript Kit at http://www.javascriptkit.com/ for full source code
+
+//** Usage: Instantiate script by calling: var uniquevar=createsoundbite("soundfile1", "fallbackfile2", "fallebacksound3", etc)
+//** Call: uniquevar.playclip() to play sound
+
+var html5_audiotypes={ //define list of audio file extensions and their associated audio types. Add to it if your specified audio file isn't on this list:
+	"mp3": "audio/mpeg",
+	"mp4": "audio/mp4",
+	"ogg": "audio/ogg",
+	"wav": "audio/wav"
+}
+
+function createsoundbite(sound){
+	var html5audio=document.createElement('audio')
+	if (html5audio.canPlayType){ //check support for HTML5 audio
+		for (var i=0; i<arguments.length; i++){
+			var sourceel=document.createElement('source')
+			sourceel.setAttribute('src', arguments[i])
+			if (arguments[i].match(/\.(\w+)$/i))
+				sourceel.setAttribute('type', html5_audiotypes[RegExp.$1])
+			html5audio.appendChild(sourceel)
+		}
+		html5audio.load()
+		html5audio.playclip=function(){
+			html5audio.pause()
+			html5audio.currentTime=0
+			html5audio.play()
+		}
+		return html5audio
+	}
+	else{
+		return {playclip:function(){throw new Error("Your browser doesn't support HTML5 audio unfortunately")}}
+	}
+}
+
+
+//Initialize sound clips with 1 fallback file each:
+//Replace X with sound's name and use find and replace to fill out the remainder of commands -- syntax is: var clickX=createsoundbite("sounds/X.mp3, sounds/X.ogg")
+
+
+var clickeyebrow=createsoundbite("sounds/eyebrow.mp3", "sounds/eyebrow.ogg")
+var clickeyelid=createsoundbite("sounds/eyelid.mp3", "sounds/eyelid.ogg")
+var clickeyelids=createsoundbite("sounds/eyelids.mp3", "sounds/eyelids.ogg")
+var clickeyelashes=createsoundbite("sounds/eyelashes.mp3", "sounds/eyelashes.ogg")
+var clickpupil=createsoundbite("sounds/pupil.mp3", "sounds/pupil.ogg")
+var clickiris=createsoundbite("sounds/iris.mp3", "sounds/iris.ogg")
+var clickwhiteoftheeye=createsoundbite("sounds/whiteoftheeye.mp3", "sounds/whiteoftheeye.ogg")
+var clickbridgeofthenose=createsoundbite("sounds/bridgeofthenose.mp3", "sounds/bridgeofthenose.ogg")
+
+
+</script>
+
+
+<!-- Google Analytics code -->
+<script type="text/javascript">
+
+  var _gaq = _gaq || [];
+  _gaq.push(['_setAccount', 'UA-27459311-1']);
+  _gaq.push(['_trackPageview']);
+
+  (function() {
+    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+  })();
+
+</script>
+<style type="text/css">
+<!--
+body {
+	background-color: #000000;
+}
+-->
+</style>
+<!-- InstanceEndEditable -->
+</head>
+
+
+<!-- DON'T FORGET TO REMOVE SPACES FROM FILENAMES TO PLAY SOUNDS PROPERLY !!!! -->
+
+
+<body class="twoColFixLtHdr">
+
+<!-- THE FOLLOWING IS CODE FROM FACEBOOK -- A SCRIPT TO RUN THE COMMENTS BOX -->
+<div id="fb-root"></div>
+<script>(function(d, s, id) {
+  var js, fjs = d.getElementsByTagName(s)[0];
+  if (d.getElementById(id)) return;
+  js = d.createElement(s); js.id = id;
+  js.src = "//connect.facebook.net/en_US/all.js#xfbml=1&appId=485516258134980";
+  fjs.parentNode.insertBefore(js, fjs);
+}(document, 'script', 'facebook-jssdk'));</script>
+
+<div id="container">
+  <div id="header" >
+    <div id="icons"><a href="../index.html"><img src="../images/icon_set/onebit_01.png" width="48" height="48" /></a> <a href="../help/help.html"><img src="../images/icon_set/onebit_37.png" width="48" height="48" /></a></div>
+    <h1 align="center"><a href="frontpage.html"><img src="../images/Photo-Dictionary-logo.png" alt="The Online Photo Dictionary" width="650" height="67" /></a><br />
+    </h1>
+    <h1 align="center"><a href="../en/frontpage.html"><img src="../images/United_Kingdom.png" alt="English" width="60" height="45" hspace="5" vspace="10" /></a><a href="../jp/frontpage.html"><img src="../images/Japan2.png" alt="日本語" width="60" height="45" hspace="5" vspace="10" /></a></h1>
+
+<!-- THE FOLLOWING IS ADSENSE CODE FOR TOP BANNER -->
+<script type="text/javascript"><!--
+google_ad_client = "ca-pub-8761395630506939";
+/* OPD - top banner */
+google_ad_slot = "2407538890";
+google_ad_width = 468;
+google_ad_height = 60;
+//-->
+</script>
+<script type="text/javascript"
+src="http://pagead2.googlesyndication.com/pagead/show_ads.js">
+</script>
+    
+  </div>
+  
+  <div id="sidebar1"><!-- InstanceBeginEditable name="EditRegion4" -->
+      <p>
+      <a  onmouseover="extAreaOver('mainphoto','eyebrow');" onmouseout="extAreaOut('mainphoto','eyebrow');" onclick="clickeyebrow.playclip()">eyebrow</a><br />
+      <a  onmouseover="extAreaOver('mainphoto','eyelid');extAreaOver('mainphoto','eyelid2');" onmouseout="extAreaOut('mainphoto','eyelid');extAreaOut('mainphoto','eyelid2');" onclick="clickeyelids.playclip()">eyelids</a><br />
+      <a  onmouseover="extAreaOver('mainphoto','eyelashes');" onmouseout="extAreaOut('mainphoto','eyelashes');" onclick="clickeyelashes.playclip()">eyelashes</a><br />
+      <a  onmouseover="extAreaOver('mainphoto','pupil');" onmouseout="extAreaOut('mainphoto','pupil');" onclick="clickpupil.playclip()">pupil</a><br />
+      <a  onmouseover="extAreaOver('mainphoto','iris');" onmouseout="extAreaOut('mainphoto','iris');" onclick="clickiris.playclip()">iris</a><br />
+      <a  onmouseover="extAreaOver('mainphoto','whiteoftheeye');" onmouseout="extAreaOut('mainphoto','whiteoftheeye');" onclick="clickwhiteoftheeye.playclip()">white of the eye</a><br />
+      <a  onmouseover="extAreaOver('mainphoto','bridgeofthenose');" onmouseout="extAreaOut('mainphoto','bridgeofthenose');" onclick="clickbridgeofthenose.playclip()">bridge of the nose</a><br />
+    </p>
+<!-- InstanceEndEditable --></div>
+  <div id="mainContent">
+  <!-- InstanceBeginEditable name="EditRegion3" -->
+      <h1>Eye</h1>
+    <p><img src="../images/eye.jpg" alt="The Online Photo Dictionary: eye, eyebrow, eyelid, eyelash, pupil, iris, white of the eye, bridge of the nose" width="1000" height="552" usemap="#Map" id="mainphoto" /></p>
+    <p>
+      <map name="Map" id="Map">
+        <area shape="poly" coords="470,264,482,260,495,258,515,258,525,260,541,264,539,277,536,286,533,294,529,300,521,306,511,310,503,312,489,311,477,302,472,287,469,274" onmouseover="cvi_tip._show(event);" onmouseout="cvi_tip._hide(event);" onmousemove="cvi_tip._move(event);" href="#nogo" tooltip="pupil" alt="pupil" onclick="clickpupil.playclip()" id="pupil" />
+  <area shape="poly" coords="469,263,471,278,473,292,479,303,487,314,502,312,514,311,526,305,536,288,538,277,537,264,550,271,560,274,571,277,578,279,577,292,572,306,569,314,564,324,559,330,549,335,536,340,523,344,510,347,494,349,487,350,475,345,462,334,451,321,443,306,439,287,440,273" onmouseover="cvi_tip._show(event);" onmouseout="cvi_tip._hide(event);" onmousemove="cvi_tip._move(event);" href="#nogo" tooltip="iris" alt="iris" onclick="clickiris.playclip()" id="iris" />
+  <area shape="poly" coords="361,321,380,304,396,294,414,283,434,274,444,269,462,264,479,260,496,257,517,256,534,260,552,265,569,270,585,274,599,279,616,286,633,294,653,300,671,305,677,300,655,290,662,285,648,276,670,260,640,248,626,249,612,246,602,248,602,225,590,229,588,224,578,235,578,217,564,234,556,236,557,222,547,229,544,225,539,233,535,240,530,218,528,235,518,243,513,220,515,243,511,243,502,242,490,242,489,232,466,241,462,234,460,242,457,247,454,239,449,245,442,256,436,239,425,239,416,248,408,245,396,247,389,254,389,261,374,266,378,281,374,291,362,277,365,289,366,300,358,307,346,304,357,312,353,316,346,318,356,323" onmouseover="cvi_tip._show(event);" onmouseout="cvi_tip._hide(event);" onmousemove="cvi_tip._move(event);" href="#nogo" tooltip="eyelashes" alt="eyelashes" onclick="clickeyelashes.playclip()" id="eyelashes" rel="eyelashes2"/>
+  <area shape="poly" coords="371,375,389,374,410,376,419,374,442,371,451,369,455,372,462,365,473,366,473,373,483,370,492,365,506,362,522,358,542,351,557,346,582,336,599,324,609,313,617,306,635,309,625,317,661,313,619,320,612,324,600,329,624,345,601,334,592,334,591,335,613,353,595,342,585,342,571,344,588,370,570,351,562,352,574,388,559,370,551,382,535,369,530,390,524,372,517,370,510,385,500,388,501,402,494,378,490,378,491,396,487,377,482,376,476,409,476,379,470,379,452,406,424,408,431,380,417,382,404,398,390,395,396,382,380,381,367,391,359,395,350,391,361,381" onmouseover="cvi_tip._show(event);" onmouseout="cvi_tip._hide(event);" onmousemove="cvi_tip._move(event);" href="#nogo" tooltip="eyelashes" alt="eyelashes" onclick="clickeyelashes.playclip()" id="eyelashes2" />
+  <area shape="poly" coords="366,374,381,374,393,374,403,374,422,375,441,372,456,371,472,366,483,366,508,361,527,355,544,350,562,344,575,338,588,330,597,321,610,312,619,305,631,303,640,310,643,325,639,348,629,367,614,386,596,401,570,414,545,425,498,432,465,434,433,431,408,423,384,405,366,392" onmouseover="cvi_tip._show(event);" onmouseout="cvi_tip._hide(event);" onmousemove="cvi_tip._move(event);" href="#nogo" tooltip="eyelid" alt="eyelid" onclick="clickeyelid.playclip()" id="eyelid" />
+  <area shape="poly" coords="332,352,341,343,352,330,365,318,378,309,390,298,406,289,423,280,436,274,455,266,474,262,490,258,509,258,529,258,545,262,559,267,574,272,593,276,604,283,615,289,631,296,641,299,662,303,676,305,677,287,674,271,670,255,659,248,646,240,631,228,621,224,604,217,585,215,571,212,553,212,536,212,515,213,498,214,488,217,473,219,460,223,447,226,428,231,415,234,401,240,390,245,375,251,363,260,351,267,341,274,333,284,327,300,324,324" onmouseover="cvi_tip._show(event);" onmouseout="cvi_tip._hide(event);" onmousemove="cvi_tip._move(event);" href="#nogo" tooltip="eyelid" alt="eyelid" onclick="clickeyelid.playclip()" id="eyelid2" />
+  <area shape="poly" coords="439,274,438,285,439,296,443,308,448,317,453,325,457,331,462,335,468,341,476,346,484,350,474,353,461,355,446,355,426,356,409,358,395,356,383,356,372,358,366,358,363,352,359,346,362,335,367,324,370,315,378,309,388,302,395,297,407,290,417,284,429,277" onmouseover="cvi_tip._show(event);" onmouseout="cvi_tip._hide(event);" onmousemove="cvi_tip._move(event);" href="#nogo" tooltip="white of the eye" alt="white of the eye" onclick="clickwhiteoftheeye.playclip()" id="whiteoftheeye" rel="whiteoftheeye2"/>
+  <area shape="poly" coords="578,280,585,281,591,285,596,287,604,290,607,291,607,299,600,304,593,310,587,313,577,317,565,323,569,318,572,311,575,302,577,294,578,286" onmouseover="cvi_tip._show(event);" onmouseout="cvi_tip._hide(event);" onmousemove="cvi_tip._move(event);" href="#nogo" tooltip="white of the eye" alt="white of the eye" onclick="clickwhiteoftheeye.playclip()" id="whiteoftheeye2" />
+  <area shape="poly" coords="192,257" href="#" /><area shape="poly" coords="195,240,227,227,251,214,273,202,295,189,316,183,336,167,354,150,373,135,389,127,406,122,430,113,455,100,482,92,508,86,535,77,558,78,584,79,602,81,630,85,730,99,746,111,693,106,641,103,609,104,583,108,564,113,547,121,536,126,519,134,496,141,477,153,453,163,450,176,429,187,413,197,395,209,376,221,352,237,331,249,304,259,290,268,269,278,254,289,241,299,221,303,206,303,184,296,184,259" onmouseover="cvi_tip._show(event);" onmouseout="cvi_tip._hide(event);" onmousemove="cvi_tip._move(event);" href="#nogo" tooltip="eyebrow" alt="eyebrow" onclick="clickeyebrow.playclip()" id="eyebrow" />
+  <area shape="poly" coords="9,352,180,309,220,333,239,368,239,412,235,437,191,468,134,479,74,484,43,488,26,486,21,464,21,439,12,423,7,419" onmouseover="cvi_tip._show(event);" onmouseout="cvi_tip._hide(event);" onmousemove="cvi_tip._move(event);" href="#nogo" tooltip="bridge of the nose" alt="bridge of the nose" onclick="clickbridgeofthenose.playclip()" id="bridgeofthenose" />
+      </map>
+    </p>
+  <!-- InstanceEndEditable -->
+  <!-- end #mainContent -->
+</div>
+  <!-- This clearing element should immediately follow the #mainContent div in order to force the #container div to contain all child floats -->
+  <div id="footer">
+    <p align="center">Move your mouse over the objects to see their descriptions. Click to hear the pronunciation!</p>
+    <p align="center">If you can't hear the sound when you click, check your browser. You need Internet Explorer 9+, Firefox 3.5+, Chrome/Safari 3+ or Opera 10.5+!</p>
+    <p align="center">Thank you for using the Online Photo Dictionary! It's fun to use this picture dictionary when you're studying and learning English!</p>
+    <p align="center">Use it to learn new vocabulary, learn the spelling of English words and improve your listening skills by clicking on the image to hear the pronunciation!</p>
+    <p align="center">Useful for students of all levels - improve your ESL, EFL, TOEIC, TOEFL, EILTS scores too!</p>
+    <p align="center"><a href="../help/privacy.html">Click here for privacy policy</a></p>
+    <!-- NEXT LINE IS THE FACEBOOK COMMENT BOX CODE -->
+<p>
+    <div style="clear: both; width: 500px; margin: 0pt auto;"> 
+      <div class="fb-like" data-href="http://www.onlinephotodictionary.com" data-send="true" data-width="400" data-show-faces="false" data-colorscheme="dark"></div>
+      <div class="fb-comments" data-href="http://www.onlinephotodictionary.com" data-num-posts="2" data-width="470" data-colorscheme="dark"></div>
+    </div>
+</p>
+  </div>
+<!-- end #container --></div>
+
+<!-- script so that Google counts time for one-page visits -->
+<script type="text/javascript">
+(function (tos) {
+  window.setInterval(function () {
+    tos = (function (t) {
+      return t[0] == 50 ? (parseInt(t[1]) + 1) + ':00' : (t[1] || '0') + ':' + (parseInt(t[0]) + 10);
+    })(tos.split(':').reverse());
+    window.pageTracker ? pageTracker._trackEvent('Time', 'Log', tos) : _gaq.push(['_trackEvent', 'Time', 'Log', tos]);
+  }, 10000);
+})('00');
+</script>
+<!-- end of Google one-page visit script -->
+
+</body>
+<!-- InstanceEnd --></html>

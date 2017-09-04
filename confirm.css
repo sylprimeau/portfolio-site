@@ -1,0 +1,38 @@
+:root {
+	--main-color: #0c2427;
+	--second-color: #c24c3d;
+	--third-color: powderblue;
+
+
+	--primary-text-color: #fff;
+	--second-text-color: black;
+	--neutral-text-color: #aaa;
+
+	
+	--button-hover: #040;
+	--form-button-hover: #742e25;
+	
+	--modal-bg-color: #fff;
+	--project-header-color: #aaa;
+}
+
+* {
+	margin: 0;
+	padding: 0;
+}
+
+body {
+	background-color: var(--main-color);
+}
+
+.confirm-text {
+	color: var(--primary-text-color);
+	text-align: center;
+	width: 100vh;
+	margin: 15vh auto;
+	font-size: 3vh;
+}
+
+p {
+	padding: 2vh;
+}

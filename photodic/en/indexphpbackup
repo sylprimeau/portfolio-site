@@ -1,0 +1,40 @@
+<?php
+
+include("geoip.inc");
+$ip=$_SERVER['REMOTE_ADDR'];
+$gi = geoip_open("GeoIP.dat",GEOIP_STANDARD);
+
+$country_code = geoip_country_code_by_addr($gi, "$ip");
+
+// Country name is not used so commented
+// Get Country Name based on source IP
+//$country = geoip_country_name_by_addr($gi, "$ip");
+
+geoip_close($gi);
+
+switch($country_code)
+
+    {
+        case "FR": header("Location: http://www.onlinephotodictionary.com/en/frontpage_fr.html"); break;
+        case "JP": header("Location: http://www.onlinephotodictionary.com/en/frontpage_jp.html"); break;
+        case "HU": header("Location: http://www.onlinephotodictionary.com/en/frontpage_hu.html"); break;
+        case "KR": header("Location: http://www.onlinephotodictionary.com/en/frontpage_kr.html"); break;
+        case "MX": header("Location: http://www.onlinephotodictionary.com/en/frontpage_sp.html"); break;
+        case "ES": header("Location: http://www.onlinephotodictionary.com/en/frontpage_sp.html"); break;
+        default: header("Location: http://www.onlinephotodictionary.com/en/frontpage_en.html");
+    }
+?>
+
+
+
+/* Once you get all the necessary pages for visitors of different countries set up, you can go ahead and just change the URLs so they redirect to the appropriate pages. You can just add more as needed.
+
+
+
+Check http://www.maxmind.com/app/iso3166 for more country codes.
+
+
+
+Also check here for more info if needed (where I got the script from):http://www.blackhatworld.com/blackhat-seo/making-money/375111-geoip-redirect-script-w-maxmind-free-database-non-javascript-version.html
+
+*/

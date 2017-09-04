@@ -1,0 +1,302 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"><!-- InstanceBegin template="/Templates/template-mapper.dwt" codeOutsideHTMLIsLocked="false" -->
+
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta name="Keywords" content="picture, dictionary, visual, photo, photos, audio, sound, pronunciation, spelling, hover, mouse, learn, English, words" />
+<meta name="Description" content="The Online Photo Dictionary is an interactive picture dictionary with photos and sound. Hover your mouse over each item to see its spelling and click it to hear its pronunciation!" />
+<!-- InstanceBeginEditable name="doctitle" -->
+<title>The Online Photo Dictionary: Dining Room and kitchen</title>
+<!-- InstanceEndEditable -->
+
+<link rel="stylesheet" type="text/css" href="../css/tooltip.css" />
+<link rel="stylesheet" type="text/css" href="../css/global.css"  />
+
+
+<script type="text/javascript" src="../js/cvi_tip_lib.js"></script>
+<script type="text/javascript" src="../js/cvi_map_lib.js"></script>
+<script type="text/javascript" src="../js/mapper.js"></script>
+
+<!-- InstanceBeginEditable name="head" -->
+
+<script type="text/javascript">
+
+	cvi_map.defaultOpacity = 0; //INT 0-100 (% opacity)
+	cvi_map.defaultAreacolor = '#00ff00'; //STR '#000000'-'#ffffff'
+	cvi_map.defaultBordercolor 	= '#0000ff'; 	//STR '#000000'-'#ffffff'
+	cvi_map.defaultNofade = true; //BOOLEAN
+	cvi_map.defaultNoborder = true; //BOOLEAN
+
+<!--
+function ById(v) {return(document.getElementById(v));}
+window.onload = function() {
+	cvi_map.add(ById('mainphoto'),{opacity: 40, areacolor: '#00FF00', noborder: true});
+}
+-->
+</script>
+
+
+<script>
+
+// Mouseover/ Click sound effect- by JavaScript Kit (www.javascriptkit.com)
+// Visit JavaScript Kit at http://www.javascriptkit.com/ for full source code
+
+//** Usage: Instantiate script by calling: var uniquevar=createsoundbite("soundfile1", "fallbackfile2", "fallebacksound3", etc)
+//** Call: uniquevar.playclip() to play sound
+
+var html5_audiotypes={ //define list of audio file extensions and their associated audio types. Add to it if your specified audio file isn't on this list:
+	"mp3": "audio/mpeg",
+	"mp4": "audio/mp4",
+	"ogg": "audio/ogg",
+	"wav": "audio/wav"
+}
+
+function createsoundbite(sound){
+	var html5audio=document.createElement('audio')
+	if (html5audio.canPlayType){ //check support for HTML5 audio
+		for (var i=0; i<arguments.length; i++){
+			var sourceel=document.createElement('source')
+			sourceel.setAttribute('src', arguments[i])
+			if (arguments[i].match(/\.(\w+)$/i))
+				sourceel.setAttribute('type', html5_audiotypes[RegExp.$1])
+			html5audio.appendChild(sourceel)
+		}
+		html5audio.load()
+		html5audio.playclip=function(){
+			html5audio.pause()
+			html5audio.currentTime=0
+			html5audio.play()
+		}
+		return html5audio
+	}
+	else{
+		return {playclip:function(){throw new Error("Your browser doesn't support HTML5 audio unfortunately")}}
+	}
+}
+
+
+//Initialize sound clips with 1 fallback file each:
+//Replace X with sound's name and use find and replace to fill out the remainder of commands -- syntax is: var clickX=createsoundbite("sounds/X.mp3, sounds/X.ogg")
+
+
+var clickwall=createsoundbite("sounds/wall.mp3", "sounds/wall.ogg")
+var clickmirror=createsoundbite("sounds/mirror.mp3", "sounds/mirror.ogg")
+var clickfridge=createsoundbite("sounds/fridge.mp3", "sounds/fridge.ogg")
+var clickdoor=createsoundbite("sounds/door.mp3", "sounds/door.ogg")
+var clickbasket=createsoundbite("sounds/basket.mp3", "sounds/basket.ogg")
+var clickfloor=createsoundbite("sounds/floor.mp3", "sounds/floor.ogg")
+var clickchair=createsoundbite("sounds/chair.mp3", "sounds/chair.ogg")
+var clickcounter=createsoundbite("sounds/counter.mp3", "sounds/counter.ogg")
+var clickfaucet=createsoundbite("sounds/faucet.mp3", "sounds/faucet.ogg")
+var clickcabinets=createsoundbite("sounds/cabinets.mp3", "sounds/cabinets.ogg")
+var clickwoman=createsoundbite("sounds/woman.mp3", "sounds/woman.ogg")
+var clickricecooker=createsoundbite("sounds/ricecooker.mp3", "sounds/ricecooker.ogg")
+var clickpot=createsoundbite("sounds/pot.mp3", "sounds/pot.ogg")
+var clickdishes=createsoundbite("sounds/dishes.mp3", "sounds/dishes.ogg")
+var clickdishrag=createsoundbite("sounds/dishrag.mp3", "sounds/dishrag.ogg")
+var clicktoaster=createsoundbite("sounds/toaster.mp3", "sounds/toaster.ogg")
+var clickcalendar=createsoundbite("sounds/calendar.mp3", "sounds/calendar.ogg")
+var clicktv=createsoundbite("sounds/tv.mp3", "sounds/tv.ogg")
+var clickfruitbowl=createsoundbite("sounds/fruitbowl.mp3", "sounds/fruitbowl.ogg")
+var clickdesserttray=createsoundbite("sounds/desserttray.mp3", "sounds/desserttray.ogg")
+var clicksugarbowl=createsoundbite("sounds/sugarbowl.mp3", "sounds/sugarbowl.ogg")
+var clicksaltandpeppershakerset=createsoundbite("sounds/saltandpeppershakerset.mp3", "sounds/saltandpeppershakerset.ogg")
+var clicksoyasaucedispenser=createsoundbite("sounds/soyasaucedispenser.mp3", "sounds/soyasaucedispenser.ogg")
+var clickbox=createsoundbite("sounds/box.mp3", "sounds/box.ogg")
+var clicklightswitch=createsoundbite("sounds/lightswitch.mp3", "sounds/lightswitch.ogg")
+var clickphotos=createsoundbite("sounds/photos.mp3", "sounds/photos.ogg")
+var clickshelf=createsoundbite("sounds/shelf.mp3", "sounds/shelf.ogg")
+var clickbookcase=createsoundbite("sounds/bookcase.mp3", "sounds/bookcase.ogg")
+var clickbooks=createsoundbite("sounds/books.mp3", "sounds/books.ogg")
+var clicktable=createsoundbite("sounds/table.mp3", "sounds/table.ogg")
+var clickrangehood=createsoundbite("sounds/rangehood.mp3", "sounds/rangehood.ogg")
+
+
+</script>
+
+
+<!-- Google Analytics code -->
+<script type="text/javascript">
+
+  var _gaq = _gaq || [];
+  _gaq.push(['_setAccount', 'UA-27459311-1']);
+  _gaq.push(['_trackPageview']);
+
+  (function() {
+    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+  })();
+
+</script>
+<style type="text/css">
+<!--
+body {
+	background-color: #000000;
+}
+-->
+</style>
+<!-- InstanceEndEditable -->
+</head>
+
+
+<!-- DON'T FORGET TO REMOVE SPACES FROM FILENAMES TO PLAY SOUNDS PROPERLY !!!! -->
+
+
+<body class="twoColFixLtHdr">
+
+<!-- THE FOLLOWING IS CODE FROM FACEBOOK -- A SCRIPT TO RUN THE COMMENTS BOX -->
+<div id="fb-root"></div>
+<script>(function(d, s, id) {
+  var js, fjs = d.getElementsByTagName(s)[0];
+  if (d.getElementById(id)) return;
+  js = d.createElement(s); js.id = id;
+  js.src = "//connect.facebook.net/en_US/all.js#xfbml=1&appId=485516258134980";
+  fjs.parentNode.insertBefore(js, fjs);
+}(document, 'script', 'facebook-jssdk'));</script>
+
+<div id="container">
+  <div id="header" >
+    <div id="icons"><a href="../index.html"><img src="../images/icon_set/onebit_01.png" width="48" height="48" /></a> <a href="../help/help.html"><img src="../images/icon_set/onebit_37.png" width="48" height="48" /></a></div>
+    <h1 align="center"><a href="frontpage.html"><img src="../images/Photo-Dictionary-logo.png" alt="The Online Photo Dictionary" width="650" height="67" /></a><br />
+    </h1>
+    <h1 align="center"><a href="../en/frontpage.html"><img src="../images/United_Kingdom.png" alt="English" width="60" height="45" hspace="5" vspace="10" /></a><a href="../jp/frontpage.html"><img src="../images/Japan2.png" alt="日本語" width="60" height="45" hspace="5" vspace="10" /></a></h1>
+
+<!-- THE FOLLOWING IS ADSENSE CODE FOR TOP BANNER -->
+<script type="text/javascript"><!--
+google_ad_client = "ca-pub-8761395630506939";
+/* OPD - top banner */
+google_ad_slot = "2407538890";
+google_ad_width = 468;
+google_ad_height = 60;
+//-->
+</script>
+<script type="text/javascript"
+src="http://pagead2.googlesyndication.com/pagead/show_ads.js">
+</script>
+    
+  </div>
+  
+  <div id="sidebar1"><!-- InstanceBeginEditable name="EditRegion4" -->
+          <a  onmouseover="extAreaOver('mainphoto','wall1'); extAreaOver('mainphoto','wall2'); extAreaOver('mainphoto','wall3'); extAreaOver('mainphoto','wall4');" onmouseout="extAreaOut('mainphoto','wall1'); extAreaOut('mainphoto','wall2'); extAreaOut('mainphoto','wall3'); extAreaOut('mainphoto','wall4');" onclick="clickwall.playclip()">wall</a><br />
+      <a  onmouseover="extAreaOver('mainphoto','mirror');" onmouseout="extAreaOut('mainphoto','mirror');" onclick="clickmirror.playclip()">mirror</a><br />
+      <a  onmouseover="extAreaOver('mainphoto','fridge');" onmouseout="extAreaOut('mainphoto','fridge');" onclick="clickfridge.playclip()">fridge (or refrigerator)</a><br />
+      <a  onmouseover="extAreaOver('mainphoto','door');" onmouseout="extAreaOut('mainphoto','door');" onclick="clickdoor.playclip()">door</a><br />
+      <a  onmouseover="extAreaOver('mainphoto','basket');" onmouseout="extAreaOut('mainphoto','basket');" onclick="clickbasket.playclip()">basket</a><br />
+      <a  onmouseover="extAreaOver('mainphoto','floor1'); extAreaOver('mainphoto','floor2'); extAreaOver('mainphoto','floor3');" onmouseout="extAreaOut('mainphoto','floor1'); extAreaOut('mainphoto','floor2'); extAreaOut('mainphoto','floor3');" onclick="clickfloor.playclip()">floor</a><br />
+      <a  onmouseover="extAreaOver('mainphoto','chair1'); extAreaOver('mainphoto','chair2'); extAreaOver('mainphoto','chair3'); extAreaOver('mainphoto','chair4'); extAreaOver('mainphoto','chair5');" onmouseout="extAreaOut('mainphoto','chair1'); extAreaOut('mainphoto','chair2'); extAreaOut('mainphoto','chair3'); extAreaOut('mainphoto','chair4'); extAreaOut('mainphoto','chair5');" onclick="clickchair.playclip()">chair</a><br />
+      <a  onmouseover="extAreaOver('mainphoto','counter');extAreaOver('mainphoto','counter2');extAreaOver('mainphoto','counter3');" onmouseout="extAreaOut('mainphoto','counter');extAreaOut('mainphoto','counter2');extAreaOut('mainphoto','counter3');" onclick="clickcounter.playclip()">counter</a><br />
+      <a  onmouseover="extAreaOver('mainphoto','faucet');" onmouseout="extAreaOut('mainphoto','faucet');" onclick="clickfaucet.playclip()">faucet</a><br />
+      <a  onmouseover="extAreaOver('mainphoto','cabinets1') ;extAreaOver('mainphoto','cabinets2'); extAreaOver('mainphoto','cabinets3'); extAreaOver('mainphoto','cabinets4');" onmouseout="extAreaOut('mainphoto','cabinets1'); extAreaOut('mainphoto','cabinets2'); extAreaOut('mainphoto','cabinets3'); extAreaOut('mainphoto','cabinets4');" onclick="clickcabinets.playclip()">cabinets (or cupboards)</a><br />
+      <a  onmouseover="extAreaOver('mainphoto','woman');" onmouseout="extAreaOut('mainphoto','woman');" onclick="clickwoman.playclip()">woman</a><br />
+      <a  onmouseover="extAreaOver('mainphoto','ricecooker');" onmouseout="extAreaOut('mainphoto','ricecooker');" onclick="clickricecooker.playclip()">rice cooker</a><br />
+      <a  onmouseover="extAreaOver('mainphoto','pot');" onmouseout="extAreaOut('mainphoto','pot');" onclick="clickpot.playclip()">pot</a><br />
+      <a  onmouseover="extAreaOver('mainphoto','dishes');" onmouseout="extAreaOut('mainphoto','dishes');" onclick="clickdishes.playclip()">dishes</a><br />
+      <a  onmouseover="extAreaOver('mainphoto','dishrag');" onmouseout="extAreaOut('mainphoto','dishrag');" onclick="clickdishrag.playclip()">dishrag</a><br />
+      <a  onmouseover="extAreaOver('mainphoto','toaster');" onmouseout="extAreaOut('mainphoto','toaster');" onclick="clicktoaster.playclip()">toaster</a><br />
+      <a  onmouseover="extAreaOver('mainphoto','calendar');" onmouseout="extAreaOut('mainphoto','calendar');" onclick="clickcalendar.playclip()">calendar</a><br />
+      <a  onmouseover="extAreaOver('mainphoto','TV');" onmouseout="extAreaOut('mainphoto','TV');" onclick="clickTV.playclip()">TV</a><br />
+      <a  onmouseover="extAreaOver('mainphoto','fruitbowl');" onmouseout="extAreaOut('mainphoto','fruitbowl');" onclick="clickfruitbowl.playclip()">fruit bowl</a><br />
+      <a  onmouseover="extAreaOver('mainphoto','desserttray');" onmouseout="extAreaOut('mainphoto','desserttray');" onclick="clickdesserttray.playclip()">dessert tray</a><br />
+      <a  onmouseover="extAreaOver('mainphoto','sugarbowl');" onmouseout="extAreaOut('mainphoto','sugarbowl');" onclick="clicksugarbowl.playclip()">sugar bowl</a><br />
+      <a  onmouseover="extAreaOver('mainphoto','saltandpeppershakerset');" onmouseout="extAreaOut('mainphoto','saltandpeppershakerset');" onclick="clicksaltandpeppershakerset.playclip()">salt and pepper shaker set</a><br />
+      <a  onmouseover="extAreaOver('mainphoto','soyasaucedispenser');" onmouseout="extAreaOut('mainphoto','soyasaucedispenser');" onclick="clicksoyasaucedispenser.playclip()">soya sauce dispenser</a><br />
+      <a  onmouseover="extAreaOver('mainphoto','box');" onmouseout="extAreaOut('mainphoto','box');" onclick="clickbox.playclip()">box</a><br />
+      <a  onmouseover="extAreaOver('mainphoto','lightswitch');" onmouseout="extAreaOut('mainphoto','lightswitch');" onclick="clicklightswitch.playclip()">light switch</a><br />
+      <a  onmouseover="extAreaOver('mainphoto','photos');" onmouseout="extAreaOut('mainphoto','photos');" onclick="clickphotos.playclip()">photos</a><br />
+      <a  onmouseover="extAreaOver('mainphoto','shelf');" onmouseout="extAreaOut('mainphoto','shelf');" onclick="clickshelf.playclip()">shelf</a><br />
+      <a  onmouseover="extAreaOver('mainphoto','bookcase');" onmouseout="extAreaOut('mainphoto','bookcase');" onclick="clickbookcase.playclip()">bookcase</a><br />
+      <a  onmouseover="extAreaOver('mainphoto','books');" onmouseout="extAreaOut('mainphoto','books');" onclick="clickbooks.playclip()">books</a><br />
+      <a  onmouseover="extAreaOver('mainphoto','table');" onmouseout="extAreaOut('mainphoto','table');" onclick="clicktable.playclip()">table</a><br />
+      <a  onmouseover="extAreaOver('mainphoto','rangehood');" onmouseout="extAreaOut('mainphoto','rangehood');" onclick="clickrangehood.playclip()">range hood</a><br />
+<!-- InstanceEndEditable --></div>
+  <div id="mainContent">
+  <!-- InstanceBeginEditable name="EditRegion3" -->
+        <h1>Dining room and kitchen</h1>
+    <p><img src="../images/dining_room_and_kitchen.jpg" alt="The Online Photo Dictionary: wall, mirror, fridge (refrigerator), door, basket, floor, chair, counter, faucet, cabinets (cupboards), woman, rice cooker, pot, dishes, dishrag, toaster, TV, fruit bowl, dessert tray, sugar bowl, salt and pepper shaker set, soya sauce dispenser, box, light switch, photos, shelf, bookcase, books, table, range hood" name="mainphoto" width="1000" height="655" usemap="#Map" id="mainphoto"/></p>
+    <p>
+      <map name="Map" id="Map">
+        <area shape="poly" coords="609,511,604,518,608,524,614,529,622,532,631,535,637,535,641,530,647,526,653,522,660,523,663,527,672,529,677,532,681,528,686,523,686,519,681,513,680,500,680,493,676,485,667,481,658,479,657,470,651,467,644,465,637,466,634,472,633,478,627,479,618,483,612,489,611,498"  href="#nogo" tooltip="dessert tray" onmouseover="cvi_tip._show(event);" onmouseout="cvi_tip._hide(event);" onmousemove="cvi_tip._move(event);" onclick="clickdesserttray.playclip()" alt="dessert tray" id="desserttray" />
+        <area shape="poly" coords="911,44,933,51,952,63,963,77,971,92,978,117,982,146,981,168,977,196,970,221,955,246,936,263,914,274,895,278,878,280,855,275,832,261,814,240,804,207,803,185,803,156,809,126,819,101,834,75,851,59,884,45" href="#nogo" tooltip="mirror" onmouseover="cvi_tip._show(event);" onmouseout="cvi_tip._hide(event);" onmousemove="cvi_tip._move(event);" onclick="clickmirror.playclip()" alt="mirror" id="mirror" />
+        <area shape="poly" coords="816,360,834,360,835,346,894,346,927,346,928,350,950,350,950,335,988,335,990,384,964,385,962,386,930,386,930,388,900,388,896,384,862,385,862,382,838,384,836,383,817,382" href="#nogo" tooltip="photos" onmouseover="cvi_tip._show(event);" onmouseout="cvi_tip._hide(event);" onmousemove="cvi_tip._move(event);" onclick="clickphotos.playclip()" alt="photos" id="photos" />
+        <area shape="poly" coords="957,243,977,242,975,278,955,278"  href="#nogo" tooltip="light switch" onmouseover="cvi_tip._show(event);" onmouseout="cvi_tip._hide(event);" onmousemove="cvi_tip._move(event);" onclick="clicklightswitch.playclip()" alt="light switch" id="lightswitch" />
+        <area shape="poly" coords="737,-2,998,-2,1000,379,991,376,989,334,949,334,949,348,928,348,927,344,866,344,864,332,882,340,939,340,942,295,920,290,869,292,863,269,872,272,884,273,894,272,905,269,920,266,933,259,942,255,949,248,957,238,959,239,956,277,974,276,978,241,959,241,969,225,972,214,976,199,979,185,981,170,983,155,982,141,981,130,981,117,977,107,973,93,971,84,964,75,954,62,942,55,936,51,920,46,906,45,891,44,874,48,859,54,848,59,838,69,832,77,821,95,818,106,812,122,809,138,807,148,807,161,807,177,806,191,810,212,816,226,822,237,829,245,839,256,846,261,854,264,861,270,869,291,858,290,862,327,866,343,836,344,835,357,815,360,816,368,815,378,816,394,819,399,819,406,819,415,811,416,808,421,798,440,780,476,727,436,728,425,754,429,759,306,724,304"  href="#nogo" tooltip="wall" onmouseover="cvi_tip._show(event);" onmouseout="cvi_tip._hide(event);" onmousemove="cvi_tip._move(event);" onclick="clickwall.playclip()" alt="wall" id="wall1" rel="wall2" />
+        <area shape="poly" coords="618,207,652,207,655,219,654,226,652,235,648,242,648,244,656,248,661,251,661,277,659,279,649,281,639,281,630,280,623,280,617,280,615,275,616,248,625,248,619,247,616,245,614,241,612,232,614,221,615,214"  href="#nogo" tooltip="rice cooker" onmouseover="cvi_tip._show(event);" onmouseout="cvi_tip._hide(event);" onmousemove="cvi_tip._move(event);" onclick="clickricecooker.playclip()" alt="rice cooker" id="ricecooker" />
+        <area shape="poly" coords="593,299,758,307,753,427,587,412"  href="#nogo" tooltip="TV" onmouseover="cvi_tip._show(event);" onmouseout="cvi_tip._hide(event);" onmousemove="cvi_tip._move(event);" onclick="clicktv.playclip()" alt="TV" id="TV" />
+        <area shape="poly" coords="460,377,554,372,565,372,576,374,575,379,575,388,575,399,575,408,569,412,564,415,558,416,555,417,551,415,548,416,544,415,540,417,537,418,532,419,489,420,489,447,481,447,472,447,461,447,453,444,452,438,450,436,447,436,446,426,448,421,449,416,449,407,447,404,442,402,447,398,447,395,446,384,450,380,454,378"  href="#nogo" tooltip="toaster" onmouseover="cvi_tip._show(event);" onmouseout="cvi_tip._hide(event);" onmousemove="cvi_tip._move(event);" onclick="clicktoaster.playclip()" alt="toaster" id="toaster" />
+        <area shape="poly" coords="489,460,489,420,534,420,532,424,530,427,531,432,531,432,532,436,530,439,529,440,532,445,535,446,538,450,538,459"  href="#nogo" tooltip="calendar" onmouseover="cvi_tip._show(event);" onmouseout="cvi_tip._hide(event);" onmousemove="cvi_tip._move(event);" onclick="clickcalendar.playclip()" alt="calendar" id="calendar" />
+        <area shape="poly" coords="412,181,423,185,433,192,436,206,433,217,430,224,426,229,425,231,424,235,421,238,433,247,441,254,450,259,452,270,452,280,448,289,445,303,442,314,441,319,441,325,438,329,437,333,438,338,441,344,438,351,416,352,411,357,409,361,410,369,406,369,396,375,394,369,391,377,388,377,397,354,403,349,373,352,372,345,372,341,390,322,387,318,382,319,377,324,371,326,369,328,369,319,368,308,365,314,365,318,362,324,359,328,355,333,353,336,350,341,347,340,345,335,337,322,335,321,340,308,341,302,344,297,346,281,348,265,349,255,355,242,360,241,371,240,379,237,387,235,387,228,385,216,383,211,382,204,382,197,387,192,396,187,402,180"  href="#nogo" tooltip="woman" onmouseover="cvi_tip._show(event);" onmouseout="cvi_tip._hide(event);" onmousemove="cvi_tip._move(event);" onclick="clickwoman.playclip()" alt="woman" id="woman" />
+        <area shape="poly" coords="117,122,268,123,277,129,280,189,278,189,278,210,281,210,283,253,281,290,279,310,287,319,287,354,269,354,236,400,237,409,246,409,251,515,245,499,246,496,239,487,234,476,228,468,220,453,212,445,207,442,201,439,190,439,181,446,173,456,161,466,153,477,145,486,142,492,141,492,139,493"  href="#nogo" tooltip="fridge (or refriferator)" onmouseover="cvi_tip._show(event);" onmouseout="cvi_tip._hide(event);" onmousemove="cvi_tip._move(event);" onclick="clickfridge.playclip()" alt="fridge (or refrigerator)" id="fridge" />
+        <area shape="poly" coords="710,170,712,132,696,131,682,134,663,125,662,111,678,46,296,38,301,168"  href="#nogo" tooltip="cabinets (or cupboards)" onmouseover="cvi_tip._show(event);" onmouseout="cvi_tip._hide(event);" onmousemove="cvi_tip._move(event);"  onclick="clickcabinets.playclip()" alt="cabinets (or cupboards)" id="cabinets4" />
+        <area shape="poly" coords="373,384,371,363,371,357,372,352,372,346,370,342,373,339,390,322,387,320,384,319,380,320,378,323,372,326,370,328,365,332,361,333,357,337,356,339,356,344,355,347,356,350,356,355,352,350,339,323,333,320,328,322,326,324,323,327,323,330,325,335,328,334,331,338,346,362,352,369,353,374,353,378,352,381,351,385"  href="#nogo" tooltip="faucet" onmouseover="cvi_tip._show(event);" onmouseout="cvi_tip._hide(event);" onmousemove="cvi_tip._move(event);" onclick="clickfaucet.playclip()" alt="faucet" id="faucet" />
+        <area shape="poly" coords="682,2,715,0,711,132,686,135,681,136,661,128,659,114,677,40,681,40"  href="#nogo" tooltip="range hood" onmouseover="cvi_tip._show(event);" onmouseout="cvi_tip._hide(event);" onmousemove="cvi_tip._move(event);" onclick="clickrangehood.playclip()" alt="range hood" id="rangehood" />
+        <area shape="poly" coords="998,414,979,404,841,407,840,408,839,416,885,440,898,450,903,454,908,464,909,468,908,474,906,478,900,487,906,485,912,484,917,484,923,485,928,488,934,489,940,488,949,488,957,488,965,487,978,486,988,485,997,484"  href="#nogo" tooltip="books" onmouseover="cvi_tip._show(event);" onmouseout="cvi_tip._hide(event);" onmousemove="cvi_tip._move(event);" onclick="clickbooks.playclip()" alt="books" id="books" />
+        <area shape="poly" coords="948,497,935,490,999,486,1000,491"  href="#nogo" tooltip="shelf" onmouseover="cvi_tip._show(event);" onmouseout="cvi_tip._hide(event);" onmousemove="cvi_tip._move(event);" onclick="clickshelf.playclip()" alt="shelf" id="shelf" />
+        <area shape="poly" coords="484,635,429,639,429,633,429,619,430,609,427,597,425,589,418,562,413,560,407,559,398,559,388,559,371,562,353,566,333,570,323,573,305,575,295,576,287,575,277,573,272,562,270,554,266,544,261,532,254,519,251,514,247,408,237,407,237,398,269,353,302,354,300,359,299,362,295,360,295,358,291,356,286,356,282,357,277,357,275,358,270,362,271,365,271,368,277,369,284,369,289,366,295,368,298,365,297,363,301,364,300,372,278,374,275,373,296,372,296,370,289,371,286,374,282,373,277,373,273,373,267,374,263,376,260,378,255,386,263,388,280,388,290,383,292,372,301,365,300,384,304,384,311,386,319,386,326,386,330,386,339,384,347,384,355,385,365,385,447,383,447,386,451,397,443,399,444,400,441,400,444,406,443,403,450,404,450,415,450,418,446,423,449,426,449,434,451,435,453,436,453,439,446,440,451,462,455,484"  href="#nogo" tooltip="counter" onmouseover="cvi_tip._show(event);" onmouseout="cvi_tip._hide(event);" onmousemove="cvi_tip._move(event);" onclick="clickcounter.playclip()" alt="counter" id="counter" />
+        <area shape="poly" coords="489,654,447,440,451,440,451,443,454,446,458,447,489,447,489,461,539,460,539,451,545,453,548,456,552,459,558,461,565,464,565,468,566,472,569,473,573,475,578,476,584,477,587,479,589,483,588,486,587,487,587,490,592,492,596,494,598,497,600,498,598,502,600,504,605,507,608,507,605,511,604,515,604,520,607,524,612,528,614,532,619,542,618,543,619,545,621,545,623,545,646,585,710,581,708,587,709,592,708,615,712,618,719,620,725,622,732,620,738,616,739,587,735,583,732,579,732,558,733,555,738,549,739,546,733,541,727,540,722,540,717,541,716,544,714,550,712,545,710,544,710,541,706,538,702,538,700,535,698,532,694,531,688,523,686,520,686,516,685,511,680,508,675,507,671,503,665,501,662,498,661,495,659,491,654,489,658,483,658,479,658,474,658,470,653,468,648,466,643,465,640,465,639,457,641,455,645,449,652,444,655,442,657,433,655,433,719,430,999,640,1002,654"  href="#nogo" tooltip="table" onmouseover="cvi_tip._show(event);" onmouseout="cvi_tip._hide(event);" onmousemove="cvi_tip._move(event);" onclick="clicktable.playclip()" alt="table" id="table" />
+        <area shape="poly" coords="716,545,718,551,718,576,714,579,713,580,709,584,708,614,712,620,718,621,725,622,733,620,739,617,739,586,732,579,732,558,737,550,737,545,733,541,726,541,719,540"  href="#nogo" tooltip="soya sauce dispenser" onmouseover="cvi_tip._show(event);" onmouseout="cvi_tip._hide(event);" onmousemove="cvi_tip._move(event);"onclick="clicksoyasaucedispenser.playclip()" alt="soya sauce dispenser" id="soyasaucedispenser" />
+        <area shape="poly" coords="778,477,808,419,814,417,820,418,827,418,833,417,841,418,890,444,897,450,902,455,906,461,907,466,908,471,906,477,902,483,898,488,894,492,888,497,884,504,879,513,862,540"  href="#nogo" tooltip="chair" onmouseover="cvi_tip._show(event);" onmouseout="cvi_tip._hide(event);" onmousemove="cvi_tip._move(event);"onclick="clickchair.playclip()" alt="chair" id="chair5" />
+        <area shape="poly" coords="864,538,889,497,897,491,904,487,912,485,920,484,929,490,984,515,996,521,998,527,1000,613,992,635"  href="#nogo" tooltip="chair" onmouseover="cvi_tip._show(event);" onmouseout="cvi_tip._hide(event);" onmousemove="cvi_tip._move(event);"onclick="clickchair.playclip()" alt="chair" id="chair3" />
+        <area shape="poly" coords="188,439,196,439,203,440,211,445,218,451,226,464,239,485,245,496,244,497,251,516,258,525,264,539,271,557,276,571,279,575,292,576,300,575,314,574,337,570,355,565,382,560,391,558,409,559,416,560,420,566,423,576,427,596,430,612,429,620,429,632,426,653,378,653,375,634,381,632,387,627,391,620,384,614,377,613,367,614,340,614,310,615,285,618,253,621,210,630,208,615,203,602,199,589,191,576,186,562,180,554,174,557,179,564,185,577,189,590,194,603,201,617,206,631,189,637,187,627,184,618,176,598,168,576,158,547,158,532,153,523,151,518,149,515,146,509,142,504,140,498,142,490,147,484"  href="#nogo" tooltip="chair" onmouseover="cvi_tip._show(event);" onmouseout="cvi_tip._hide(event);" onmousemove="cvi_tip._move(event);"onclick="clickchair.playclip()" alt="chair" rel="chair2" id="chair1"/>
+        <area shape="poly" coords="360,637,361,652,225,653,232,650,249,646,298,639,331,637,348,635"  href="#nogo" tooltip="chair" onmouseover="cvi_tip._show(event);" onmouseout="cvi_tip._hide(event);" onmousemove="cvi_tip._move(event);"onclick="clickchair.playclip()" alt="chair" rel="chair1" id="chair2" />
+        <area shape="poly" coords="66,547,104,542,111,548,117,558,124,567,129,581,133,587,135,597,145,609,154,617,153,621,164,642,190,635,212,628,236,623,262,618,288,616,323,613,351,611,380,612,390,614,391,620,388,626,383,631,379,631,380,656,361,654,362,636,348,635,332,636,301,638,274,642,249,646,224,652,0,653,0,596,29,573,51,558"  href="#nogo" tooltip="chair" onmouseover="cvi_tip._show(event);" onmouseout="cvi_tip._hide(event);" onmousemove="cvi_tip._move(event);" onclick="clickchair.playclip()" alt="chair" id="chair4" />
+        <area shape="poly" coords="80,494,104,493,104,509,116,510,116,512,123,512,131,503,139,503,148,514,157,530,158,541,158,546,168,579,178,599,184,620,188,635,165,642,156,626,154,617,136,598,133,588,129,578,123,566,115,556,106,545,101,544,86,545"  href="#nogo" tooltip="floor" onmouseover="cvi_tip._show(event);" onmouseout="cvi_tip._hide(event);" onmousemove="cvi_tip._move(event);" onclick="clickfloor.playclip()" alt="floor" id="floor1"  rel="floor2,floor3"/>
+        <area shape="poly" coords="176,558,177,555,184,562,188,572,191,580,196,584,199,590,201,600,206,610,208,623,210,628,206,629,199,614,192,600"  href="#nogo" tooltip="floor" onmouseover="cvi_tip._show(event);" onmouseout="cvi_tip._hide(event);" onmousemove="cvi_tip._move(event);" onclick="clickfloor.playclip()" alt="floor"  id="floor2" rel="floor1,floor3" />
+        <area shape="poly" coords="484,635,488,653,427,652,429,640"  href="#nogo" tooltip="floor" onmouseover="cvi_tip._show(event);" onmouseout="cvi_tip._hide(event);" onmousemove="cvi_tip._move(event);" onclick="clickfloor.playclip()" alt="floor" id="floor3" rel="floor1,floor2" />
+        <area shape="poly" coords="949,497,997,492,1001,523"  href="#nogo" tooltip="wall" onmouseover="cvi_tip._show(event);" onmouseout="cvi_tip._hide(event);" onmousemove="cvi_tip._move(event);" onclick="clickwall.playclip()" alt="wall" id="wall2" rel="wall1" />
+        <area shape="poly" coords="-1,596,64,549,79,545,70,431,60,312,35,17,61,29,132,65,144,71,143,44,141,0,-4,-3,-2,164,34,166,31,202,31,221,31,236,38,244,49,243,52,263,53,272,40,279,36,239,32,238,0,244"  href="#nogo" tooltip="wall" onmouseover="cvi_tip._show(event);" onmouseout="cvi_tip._hide(event);" onmousemove="cvi_tip._move(event);" onclick="clickwall.playclip()" alt="wall" id="wall3" />
+        <area shape="poly" coords="133,92"  />
+        <area shape="poly" coords="278,123,272,1,142,0,147,93,165,94,177,94,186,94,197,94,207,92,216,91,219,96,218,103,215,110,211,121"  href="#nogo" tooltip="wall" onmouseover="cvi_tip._show(event);" onmouseout="cvi_tip._hide(event);" onmousemove="cvi_tip._move(event);"onclick="clickwall.playclip()" alt="wall" id="wall4" />
+        <area shape="poly" coords="129,93,137,93,149,93,161,94,173,95,185,95,197,93,211,92,218,91,220,97,219,101,212,122,141,121,136,103,133,98"  href="#nogo" tooltip="basket" onmouseover="cvi_tip._show(event);" onmouseout="cvi_tip._hide(event);" onmousemove="cvi_tip._move(event);"onclick="clickbasket.playclip()" alt="basket" id="basket" />
+        <area shape="poly" coords="693,530,698,531,700,537,703,538,709,540,712,546,715,550,717,554,717,559,718,564,715,567,698,566,691,563,679,547,680,543,684,536"  href="#nogo" tooltip="salt and pepper shaker set" onmouseover="cvi_tip._show(event);" onmouseout="cvi_tip._hide(event);" onmousemove="cvi_tip._move(event);" onclick="clicksaltandpeppershakerset.playclip()" alt="salt and pepper shaker set" id="saltandpeppershakerset" />
+        <area shape="poly" coords="813,376,811,385,822,407,818,416,840,417,839,411,842,409,1001,403,999,383,992,377,991,382,963,382,963,385,929,384,929,386,901,387,896,385,863,385,862,383,836,383,815,382"  href="#nogo" tooltip="book case" onmouseover="cvi_tip._show(event);" onmouseout="cvi_tip._hide(event);" onmousemove="cvi_tip._move(event);" onclick="clickbookcase.playclip()" alt=" book case"  id="bookcase" rel="shelf" />
+        <area shape="poly" coords="655,523,660,523,661,527,666,527,672,529,679,533,680,541,679,551,681,554,682,558,677,561,669,564,660,565,647,565,637,561,632,555,636,549,636,536,639,531"  href="#nogo" tooltip="sugar bowl" onmouseover="cvi_tip._show(event);" onmouseout="cvi_tip._hide(event);" onmousemove="cvi_tip._move(event);" onclick="clicksugarbowl.playclip()" alt="sugar bowl" id="sugarbowl" />
+        <area shape="poly" coords="137,78,92,56,85,57,101,288,112,432,117,512,124,512,137,497,127,339,121,240,117,154,114,119,136,120"  href="#nogo" tooltip="door" onmouseover="cvi_tip._show(event);" onmouseout="cvi_tip._hide(event);" onmousemove="cvi_tip._move(event);" onclick="clickdoor.playclip()" alt="door" id="door" />
+        <area shape="poly" coords="860,292,919,292,942,297,940,341,881,340,864,332"  href="#nogo" tooltip="box" onmouseover="cvi_tip._show(event);" onmouseout="cvi_tip._hide(event);" onmousemove="cvi_tip._move(event);" onclick="clickbox.playclip()" alt="box" id="box" />
+        <area shape="poly" coords="454,377,453,369,467,361,482,360,495,360,504,351,509,351,519,355,525,359,528,365,527,372,516,369,514,374"  href="#nogo" tooltip="dishes" onmouseover="cvi_tip._show(event);" onmouseout="cvi_tip._hide(event);" onmousemove="cvi_tip._move(event);" onclick="clickdishes.playclip()" alt="dishes" id="dishes" />
+        <area shape="poly" coords="519,353,517,341,516,335,502,332,491,331,478,333,469,336,466,341,466,348,462,351,459,353,461,357,465,361,484,361,494,359,500,352"  href="#nogo" tooltip="pot" onmouseover="cvi_tip._show(event);" onmouseout="cvi_tip._hide(event);" onmousemove="cvi_tip._move(event);" onclick="clickpot.playclip()" alt="pot" id="pot" />
+        <area shape="poly" coords="575,408,569,413,566,415,560,416,553,416,546,414,539,416,533,418,532,420,532,425,530,427,531,431,532,434,529,439,537,451,544,453,550,457,557,460,561,463,565,463,567,469,575,474,582,476,587,479,596,480,597,476,596,468,599,468,603,467,607,464,611,464,612,465,614,467,619,466,623,467,628,467,632,464,637,461,643,457,643,451,650,447,655,441,657,437,656,430,658,427,660,424,654,420,652,415,644,412,640,415,636,421,633,415,630,406,622,403,629,414,619,405,625,418,624,423,617,416,604,415,586,413"  href="#nogo" tooltip="fruit bowl" onmouseover="cvi_tip._show(event);" onmouseout="cvi_tip._hide(event);" onmousemove="cvi_tip._move(event);" onclick="clickfruitbowl.playclip()" alt="fruit bowl" id="fruitbowl" />
+        <area shape="poly" coords="305,302,304,338,307,336,315,329,315,339,319,342,324,345,325,350,329,339,327,335,322,335,318,331,321,328,324,323,334,320,339,312,338,306,341,301"  href="#nogo" tooltip="cabinets (or cupboards)" onmouseover="cvi_tip._show(event);" onmouseout="cvi_tip._hide(event);" onmousemove="cvi_tip._move(event);" onclick="clickcabinets.playclip()" alt="cabinets (or cupboards)"  id="cabinets1" rel="cabinets2,cabinets3"/>
+        <area shape="poly" coords="447,300,666,293,669,303,593,300,591,307,584,307,583,324,580,321,580,314,578,313,574,312,573,317,571,319,567,322,563,327,563,335,564,342,562,345,558,344,553,340,552,340,551,332,548,330,542,329,533,328,532,341,529,341,523,340,522,343,518,342,517,338,508,334,501,333,492,332,482,334,473,336,468,340,465,342,465,349,460,353,439,351,442,347,440,344,438,337,437,331,439,328,440,324,443,317,445,307"  href="#nogo" tooltip="cabinets (or cupboards)" onmouseover="cvi_tip._show(event);" onmouseout="cvi_tip._hide(event);" onmousemove="cvi_tip._move(event);" onclick="clickcabinets.playclip()" alt="cabinets (or cupboards)"  id="cabinets2" rel="cabinets1,cabinets3" />
+        <area shape="poly" coords="693,294,707,293,706,304,694,304"  href="#nogo" tooltip="cabinets (or cupboards)" onmouseover="cvi_tip._show(event);" onmouseout="cvi_tip._hide(event);" onmousemove="cvi_tip._move(event);" onclick="clickcabinets.playclip()" alt="cabinets (or cupboards)"  id="cabinets3" rel="cabinets1,cabinets2" />
+        <area shape="poly" coords="276,356,283,357,288,356,293,356,295,361,297,366,293,369,288,366,287,367,283,370,278,369,274,369,271,362"  href="#nogo" tooltip="dishrag" onmouseover="cvi_tip._show(event);" onmouseout="cvi_tip._hide(event);" onmousemove="cvi_tip._move(event);" onclick="clickdishrag.playclip()" alt="dishrag" id="dishrag" />
+        <area shape="poly" coords="304,289,307,288,329,287,329,289,345,289,343,300,305,300"  href="#nogo" tooltip="counter" onmouseover="cvi_tip._show(event);" onmouseout="cvi_tip._hide(event);" onmousemove="cvi_tip._move(event);" onclick="clickcounter.playclip()" alt="counter" id="counter3" rel="counter2" />
+        <area shape="poly" coords="452,283,449,288,447,294,447,297,646,293,667,291,671,289,674,291,677,294,676,290,679,288,683,291,685,293,686,293,686,288,690,288,691,293,707,293,707,282,692,281,682,280,678,278,663,277,658,280,650,282,634,281,624,280,615,278,613,276,603,275,600,277,596,279,586,279,578,281,571,280,559,279,546,280,546,286,530,287,530,280,513,281,509,280,501,278,491,278,488,283,472,283,461,284"  href="#nogo" tooltip="counter" onmouseover="cvi_tip._show(event);" onmouseout="cvi_tip._hide(event);" onmousemove="cvi_tip._move(event);" onclick="clickcounter.playclip()" alt="counter"  id="counter2" rel="counter3" />
+        </map>
+    </p>
+  <!-- InstanceEndEditable -->
+  <!-- end #mainContent -->
+</div>
+  <!-- This clearing element should immediately follow the #mainContent div in order to force the #container div to contain all child floats -->
+  <div id="footer">
+    <p align="center">Move your mouse over the objects to see their descriptions. Click to hear the pronunciation!</p>
+    <p align="center">If you can't hear the sound when you click, check your browser. You need Internet Explorer 9+, Firefox 3.5+, Chrome/Safari 3+ or Opera 10.5+!</p>
+    <p align="center">Thank you for using the Online Photo Dictionary! It's fun to use this picture dictionary when you're studying and learning English!</p>
+    <p align="center">Use it to learn new vocabulary, learn the spelling of English words and improve your listening skills by clicking on the image to hear the pronunciation!</p>
+    <p align="center">Useful for students of all levels - improve your ESL, EFL, TOEIC, TOEFL, EILTS scores too!</p>
+    <p align="center"><a href="../help/privacy.html">Click here for privacy policy</a></p>
+    <!-- NEXT LINE IS THE FACEBOOK COMMENT BOX CODE -->
+<p>
+    <div style="clear: both; width: 500px; margin: 0pt auto;"> 
+      <div class="fb-like" data-href="http://www.onlinephotodictionary.com" data-send="true" data-width="400" data-show-faces="false" data-colorscheme="dark"></div>
+      <div class="fb-comments" data-href="http://www.onlinephotodictionary.com" data-num-posts="2" data-width="470" data-colorscheme="dark"></div>
+    </div>
+</p>
+  </div>
+<!-- end #container --></div>
+
+<!-- script so that Google counts time for one-page visits -->
+<script type="text/javascript">
+(function (tos) {
+  window.setInterval(function () {
+    tos = (function (t) {
+      return t[0] == 50 ? (parseInt(t[1]) + 1) + ':00' : (t[1] || '0') + ':' + (parseInt(t[0]) + 10);
+    })(tos.split(':').reverse());
+    window.pageTracker ? pageTracker._trackEvent('Time', 'Log', tos) : _gaq.push(['_trackEvent', 'Time', 'Log', tos]);
+  }, 10000);
+})('00');
+</script>
+<!-- end of Google one-page visit script -->
+
+</body>
+<!-- InstanceEnd --></html>

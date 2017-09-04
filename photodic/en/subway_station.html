@@ -1,0 +1,238 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"><!-- InstanceBegin template="/Templates/template-mapper.dwt" codeOutsideHTMLIsLocked="false" -->
+
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta name="Keywords" content="picture, dictionary, visual, photo, photos, audio, sound, pronunciation, spelling, hover, mouse, learn, English, words" />
+<meta name="Description" content="The Online Photo Dictionary is an interactive picture dictionary with photos and sound. Hover your mouse over each item to see its spelling and click it to hear its pronunciation!" />
+<!-- InstanceBeginEditable name="doctitle" -->
+<title>The Online Photo Dictionary: Subway station</title>
+<!-- InstanceEndEditable -->
+
+<link rel="stylesheet" type="text/css" href="../css/tooltip.css" />
+<link rel="stylesheet" type="text/css" href="../css/global.css"  />
+
+
+<script type="text/javascript" src="../js/cvi_tip_lib.js"></script>
+<script type="text/javascript" src="../js/cvi_map_lib.js"></script>
+<script type="text/javascript" src="../js/mapper.js"></script>
+
+<!-- InstanceBeginEditable name="head" -->
+
+<script type="text/javascript">
+
+	cvi_map.defaultOpacity = 0; //INT 0-100 (% opacity)
+	cvi_map.defaultAreacolor = '#00ff00'; //STR '#000000'-'#ffffff'
+	cvi_map.defaultBordercolor 	= '#0000ff'; 	//STR '#000000'-'#ffffff'
+	cvi_map.defaultNofade = true; //BOOLEAN
+	cvi_map.defaultNoborder = true; //BOOLEAN
+
+<!--
+function ById(v) {return(document.getElementById(v));}
+window.onload = function() {
+	cvi_map.add(ById('mainphoto'),{opacity: 40, areacolor: '#00FF00', noborder: true});
+}
+-->
+</script>
+
+
+<script>
+
+// Mouseover/ Click sound effect- by JavaScript Kit (www.javascriptkit.com)
+// Visit JavaScript Kit at http://www.javascriptkit.com/ for full source code
+
+//** Usage: Instantiate script by calling: var uniquevar=createsoundbite("soundfile1", "fallbackfile2", "fallebacksound3", etc)
+//** Call: uniquevar.playclip() to play sound
+
+var html5_audiotypes={ //define list of audio file extensions and their associated audio types. Add to it if your specified audio file isn't on this list:
+	"mp3": "audio/mpeg",
+	"mp4": "audio/mp4",
+	"ogg": "audio/ogg",
+	"wav": "audio/wav"
+}
+
+function createsoundbite(sound){
+	var html5audio=document.createElement('audio')
+	if (html5audio.canPlayType){ //check support for HTML5 audio
+		for (var i=0; i<arguments.length; i++){
+			var sourceel=document.createElement('source')
+			sourceel.setAttribute('src', arguments[i])
+			if (arguments[i].match(/\.(\w+)$/i))
+				sourceel.setAttribute('type', html5_audiotypes[RegExp.$1])
+			html5audio.appendChild(sourceel)
+		}
+		html5audio.load()
+		html5audio.playclip=function(){
+			html5audio.pause()
+			html5audio.currentTime=0
+			html5audio.play()
+		}
+		return html5audio
+	}
+	else{
+		return {playclip:function(){throw new Error("Your browser doesn't support HTML5 audio unfortunately")}}
+	}
+}
+
+
+//Initialize sound clips with 1 fallback file each:
+//Replace X with sound's name and use find and replace to fill out the remainder of commands -- syntax is: var clickX=createsoundbite("sounds/X.mp3, sounds/X.ogg")
+
+
+var clickceiling=createsoundbite("sounds/ceiling.mp3", "sounds/ceiling.ogg")
+var clicksupportcolumn=createsoundbite("sounds/supportcolumn.mp3", "sounds/supportcolumn.ogg")
+var clickfirealarm=createsoundbite("sounds/firealarm.mp3", "sounds/firealarm.ogg")
+var clickexitsigns=createsoundbite("sounds/exitsigns.mp3", "sounds/exitsigns.ogg")
+var clickexitsign=createsoundbite("sounds/exitsign.mp3", "sounds/exitsign.ogg")
+var clickplatform=createsoundbite("sounds/platform.mp3", "sounds/platform.ogg")
+var clickescalator=createsoundbite("sounds/escalator.mp3", "sounds/escalator.ogg")
+var clickhandrail=createsoundbite("sounds/handrail.mp3", "sounds/handrail.ogg")
+var clickstaircase=createsoundbite("sounds/staircase.mp3", "sounds/staircase.ogg")
+var clickstair=createsoundbite("sounds/stair.mp3", "sounds/stair.ogg")
+var clickpole=createsoundbite("sounds/pole.mp3", "sounds/pole.ogg")
+var clicksubway=createsoundbite("sounds/subway.mp3", "sounds/subway.ogg")
+var clicklights=createsoundbite("sounds/lights.mp3", "sounds/lights.ogg")
+var clickwall=createsoundbite("sounds/wall.mp3", "sounds/wall.ogg")
+
+
+</script>
+
+
+<!-- Google Analytics code -->
+<script type="text/javascript">
+
+  var _gaq = _gaq || [];
+  _gaq.push(['_setAccount', 'UA-27459311-1']);
+  _gaq.push(['_trackPageview']);
+
+  (function() {
+    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+  })();
+
+</script>
+<style type="text/css">
+<!--
+body {
+	background-color: #000000;
+}
+-->
+</style>
+<!-- InstanceEndEditable -->
+</head>
+
+
+<!-- DON'T FORGET TO REMOVE SPACES FROM FILENAMES TO PLAY SOUNDS PROPERLY !!!! -->
+
+
+<body class="twoColFixLtHdr">
+
+<!-- THE FOLLOWING IS CODE FROM FACEBOOK -- A SCRIPT TO RUN THE COMMENTS BOX -->
+<div id="fb-root"></div>
+<script>(function(d, s, id) {
+  var js, fjs = d.getElementsByTagName(s)[0];
+  if (d.getElementById(id)) return;
+  js = d.createElement(s); js.id = id;
+  js.src = "//connect.facebook.net/en_US/all.js#xfbml=1&appId=485516258134980";
+  fjs.parentNode.insertBefore(js, fjs);
+}(document, 'script', 'facebook-jssdk'));</script>
+
+<div id="container">
+  <div id="header" >
+    <div id="icons"><a href="../index.html"><img src="../images/icon_set/onebit_01.png" width="48" height="48" /></a> <a href="../help/help.html"><img src="../images/icon_set/onebit_37.png" width="48" height="48" /></a></div>
+    <h1 align="center"><a href="frontpage.html"><img src="../images/Photo-Dictionary-logo.png" alt="The Online Photo Dictionary" width="650" height="67" /></a><br />
+    </h1>
+    <h1 align="center"><a href="../en/frontpage.html"><img src="../images/United_Kingdom.png" alt="English" width="60" height="45" hspace="5" vspace="10" /></a><a href="../jp/frontpage.html"><img src="../images/Japan2.png" alt="日本語" width="60" height="45" hspace="5" vspace="10" /></a></h1>
+
+<!-- THE FOLLOWING IS ADSENSE CODE FOR TOP BANNER -->
+<script type="text/javascript"><!--
+google_ad_client = "ca-pub-8761395630506939";
+/* OPD - top banner */
+google_ad_slot = "2407538890";
+google_ad_width = 468;
+google_ad_height = 60;
+//-->
+</script>
+<script type="text/javascript"
+src="http://pagead2.googlesyndication.com/pagead/show_ads.js">
+</script>
+    
+  </div>
+  
+  <div id="sidebar1"><!-- InstanceBeginEditable name="EditRegion4" -->
+     <a  onmouseover="extAreaOver('mainphoto','ceiling');" onmouseout="extAreaOut('mainphoto','ceiling');" onclick="clickceiling.playclip()">ceiling</a><br />
+  <a  onmouseover="extAreaOver('mainphoto','supportcolumn');" onmouseout="extAreaOut('mainphoto','supportcolumn');" onclick="clicksupportcolumn.playclip()">support column</a><br />
+  <a  onmouseover="extAreaOver('mainphoto','firealarm');" onmouseout="extAreaOut('mainphoto','firealarm');" onclick="clickfirealarm.playclip()">fire alarm</a><br />
+  <a  onmouseover="extAreaOver('mainphoto','exitsign');" onmouseout="extAreaOut('mainphoto','exitsign');" onclick="clickexitsign.playclip()">exit signs</a><br />
+  <a  onmouseover="extAreaOver('mainphoto','platform');" onmouseout="extAreaOut('mainphoto','platform');" onclick="clickplatform.playclip()">platform</a><br />
+  <a  onmouseover="extAreaOver('mainphoto','escalator');" onmouseout="extAreaOut('mainphoto','escalator');" onclick="clickescalator.playclip()">escalator</a><br />
+  <a  onmouseover="extAreaOver('mainphoto','handrail');" onmouseout="extAreaOut('mainphoto','handrail');" onclick="clickhandrail.playclip()">handrail</a><br />
+  <a  onmouseover="extAreaOver('mainphoto','staircase');" onmouseout="extAreaOut('mainphoto','staircase');" onclick="clickstaircase.playclip()">staircase (or stairs)</a><br />
+  <a  onmouseover="extAreaOver('mainphoto','pole');" onmouseout="extAreaOut('mainphoto','pole');" onclick="clickpole.playclip()">pole</a><br />
+  <a  onmouseover="extAreaOver('mainphoto','subway');" onmouseout="extAreaOut('mainphoto','subway');" onclick="clicksubway.playclip()">subway</a><br />
+  <a  onmouseover="extAreaOver('mainphoto','lights');" onmouseout="extAreaOut('mainphoto','lights');" onclick="clicklights.playclip()">lights</a><br />
+  <a  onmouseover="extAreaOver('mainphoto','wall');" onmouseout="extAreaOut('mainphoto','wall');" onclick="clickwall.playclip()">wall</a><br />
+  <a  onmouseover="extAreaOver('mainphoto','stair');" onmouseout="extAreaOut('mainphoto','stair');" onclick="clickstair.playclip()">stair</a>
+<!-- InstanceEndEditable --></div>
+  <div id="mainContent">
+  <!-- InstanceBeginEditable name="EditRegion3" -->
+    <h1>Subway station</h1>
+  <p><img src="../images/subway_station.JPG" alt="The Online Photo Dictionary: ceiling, support column, fire alarm, exit signs, platform, escalator, handrail, staircase (stairs), stair, pole, subway, lights, wall" width="1000" height="750" usemap="#Map"   id="mainphoto" /></p>
+  <p>
+    <map name="Map" id="Map">
+      <area shape="poly" coords="191,236,126,365,121,371,119,371,120,476,154,477,154,370,159,368,173,367,176,377,186,375,247,236" onmouseover="cvi_tip._show(event);" onmouseout="cvi_tip._hide(event);" onmousemove="cvi_tip._move(event);" onclick="clickescalator.playclip()" href="#nogo" tooltip="escalator" alt="escalator" id="escalator" />
+      <area shape="poly" coords="235,452,228,457,228,469,342,469,341,452" onmouseover="cvi_tip._show(event);" onmouseout="cvi_tip._hide(event);" onmousemove="cvi_tip._move(event);" onclick="clickstair.playclip()" href="#nogo" tooltip="stair" alt="stair" id="stair" />
+      <area shape="poly" coords="307,213,291,273,276,273,255,338,255,348,252,348,252,358,248,359,248,369,245,370,244,383,240,384,240,395,236,396,235,408,231,410,231,421,227,423,226,437,222,440,222,452,217,456,216,470,342,469,345,213" onmouseover="cvi_tip._show(event);" onmouseout="cvi_tip._hide(event);" onmousemove="cvi_tip._move(event);" onclick="clickstaircase.playclip()" href="#nogo" tooltip="staircase (or stairs)" alt="staircase (or stairs)" id="staircase" />
+      <area shape="poly" coords="285,205,286,204,295,204,296,236,117,234,118,218,169,219,171,201,285,201" onmouseover="cvi_tip._show(event);" onmouseout="cvi_tip._hide(event);" onmousemove="cvi_tip._move(event);" onclick="clickexitsigns.playclip()" href="#nogo" tooltip="exit signs" alt="exit signs" id="exitsign" rel="exitsign2"/>
+      <area shape="poly" coords="17,325,25,325,33,319,42,326,46,327,48,374,43,377,18,376" onmouseover="cvi_tip._show(event);" onmouseout="cvi_tip._hide(event);" onmousemove="cvi_tip._move(event);" onclick="clickfirealarm.playclip()" href="#nogo" tooltip="fire alarm" alt="fire alarm" id="firealarm" />
+      <area shape="poly" coords="205,400,211,398,273,237,276,237,219,400,214,402,214,407,207,408" onmouseover="cvi_tip._show(event);" onmouseout="cvi_tip._hide(event);" onmousemove="cvi_tip._move(event);" onclick="clickhandrail.playclip()" href="#nogo" tooltip="handrail" alt="handrail" id="handrail" />
+      <area shape="poly" coords="439,323,445,322,445,318,452,318,464,310,467,310,469,306,472,306,513,284,517,283,518,277,535,268,539,268,539,266,543,262,568,247,572,248,572,246,580,246,999,9,999,748,987,749,790,748,541,476,485,419,438,369,439,365,441,359,439,346,442,342,442,332,442,327" onmouseover="cvi_tip._show(event);" onmouseout="cvi_tip._hide(event);" onmousemove="cvi_tip._move(event);" onclick="clicksubway.playclip()" href="#nogo" tooltip="subway" alt="subway" id="subway" />
+      <area shape="poly" coords="400,250,451,250,451,254,459,255,458,276,400,274" onmouseover="cvi_tip._show(event);" onmouseout="cvi_tip._hide(event);" onmousemove="cvi_tip._move(event);" onclick="clickexitsign.playclip()" href="#nogo" tooltip="exit sign" alt="exit sign" id="exitsign2" />
+      <area shape="poly" coords="435,304,454,276,458,276,458,269,528,163,527,185,526,185,526,194,522,201,519,201,519,205,442,305" onmouseover="cvi_tip._show(event);" onmouseout="cvi_tip._hide(event);" onmousemove="cvi_tip._move(event);" onclick="clicklights.playclip()" href="#nogo" tooltip="lights" alt="lights" id="lights" rel="lights2"/>
+      <area shape="poly" coords="533,153,625,6,669,6,534,186,533,186" onmouseover="cvi_tip._show(event);" onmouseout="cvi_tip._hide(event);" onmousemove="cvi_tip._move(event);" onclick="clicklights.playclip()" href="#nogo" tooltip="lights" alt="lights" id="lights2" rel="lights"/>
+      <area shape="poly" coords="438,372" href="#" />
+      <area shape="poly" coords="437,371,451,386,465,401,481,420,501,443,525,471,553,507,587,545,629,594,760,749,0,749,1,501,4,501,3,573,8,576,20,577,20,584,46,584,55,578,63,578,69,578,76,578,85,576,98,573,107,570,116,568,121,564,121,560,121,477,153,477,153,493,177,493,215,470,369,470,369,511,383,511,383,493,386,493,386,473,390,474,389,470,400,470,400,465,401,462,400,457,400,455,401,448,420,450,421,447,421,444,416,443,413,439,412,425,414,421,422,420,422,424,425,425,433,425,438,425,441,424,440,421,433,418,433,400,434,396,436,389" onmouseover="cvi_tip._show(event);" onmouseout="cvi_tip._hide(event);" onmousemove="cvi_tip._move(event);" onclick="clickplatform.playclip()" href="#nogo" tooltip="platform" alt="platform" id="platform" />
+      <area shape="poly" coords="0,102,14,100,20,100,21,95,36,95,46,100,57,100,71,102,87,105,99,107,110,111,116,114,117,118,119,283,122,285,123,314,119,315,121,563,118,566,112,569,104,571,95,573,86,576,79,577,71,578,64,578,56,577,46,584,22,584,20,577,10,577,5,575,3,574" onmouseover="cvi_tip._show(event);" onmouseout="cvi_tip._hide(event);" onmousemove="cvi_tip._move(event);" onclick="clicksupportcolumn.playclip()" href="#nogo" tooltip="support column" alt="support column" id="supportcolumn" />
+      <area shape="poly" coords="1,102" href="#" />
+      <area shape="poly" coords="518,0,551,2,999,1,1000,13,582,247,574,247,538,268,517,279,518,282,473,306,469,306,461,314,455,317,451,320,445,320,437,322,439,307,414,307,414,321,407,319,405,277,459,277,459,255,453,255,453,251,400,250,399,214,389,214,382,174,368,174,368,214,297,214,297,204,286,204,286,202,171,201,164,194,119,193,118,114,109,110,97,106,85,104,69,101,53,99,41,99,38,97,34,97,28,96,20,95,2,100,2,2,519,-2,515,129,518,137,522,139,529,142,526,195,516,208,519,234,541,234,542,203,533,194,534,186,534,143,544,138,545,132,545,128,534,124,530,124,523,124,515,126" onmouseover="cvi_tip._show(event);" onmouseout="cvi_tip._hide(event);" onmousemove="cvi_tip._move(event);" onclick="clickceiling.playclip()" href="#nogo" tooltip="ceiling" alt="ceiling" id="ceiling" />
+      <area shape="poly" coords="120,236,191,235,133,349,129,359,127,363,123,368,119,371,119,315,123,315,124,284,119,284" onmouseover="cvi_tip._show(event);" onmouseout="cvi_tip._hide(event);" onmousemove="cvi_tip._move(event);" onclick="clickwall.playclip()" href="#nogo" tooltip="wall" alt="wall" id="wall" />
+      <area shape="poly" coords="368,173,382,174,382,511,369,510" onmouseover="cvi_tip._show(event);" onmouseout="cvi_tip._hide(event);" onmousemove="cvi_tip._move(event);" onclick="clickpole.playclip()" href="#nogo" tooltip="pole" alt="pole" id="pole" />
+    </map>
+  </p>
+  <!-- InstanceEndEditable -->
+  <!-- end #mainContent -->
+</div>
+  <!-- This clearing element should immediately follow the #mainContent div in order to force the #container div to contain all child floats -->
+  <div id="footer">
+    <p align="center">Move your mouse over the objects to see their descriptions. Click to hear the pronunciation!</p>
+    <p align="center">If you can't hear the sound when you click, check your browser. You need Internet Explorer 9+, Firefox 3.5+, Chrome/Safari 3+ or Opera 10.5+!</p>
+    <p align="center">Thank you for using the Online Photo Dictionary! It's fun to use this picture dictionary when you're studying and learning English!</p>
+    <p align="center">Use it to learn new vocabulary, learn the spelling of English words and improve your listening skills by clicking on the image to hear the pronunciation!</p>
+    <p align="center">Useful for students of all levels - improve your ESL, EFL, TOEIC, TOEFL, EILTS scores too!</p>
+    <p align="center"><a href="../help/privacy.html">Click here for privacy policy</a></p>
+    <!-- NEXT LINE IS THE FACEBOOK COMMENT BOX CODE -->
+<p>
+    <div style="clear: both; width: 500px; margin: 0pt auto;"> 
+      <div class="fb-like" data-href="http://www.onlinephotodictionary.com" data-send="true" data-width="400" data-show-faces="false" data-colorscheme="dark"></div>
+      <div class="fb-comments" data-href="http://www.onlinephotodictionary.com" data-num-posts="2" data-width="470" data-colorscheme="dark"></div>
+    </div>
+</p>
+  </div>
+<!-- end #container --></div>
+
+<!-- script so that Google counts time for one-page visits -->
+<script type="text/javascript">
+(function (tos) {
+  window.setInterval(function () {
+    tos = (function (t) {
+      return t[0] == 50 ? (parseInt(t[1]) + 1) + ':00' : (t[1] || '0') + ':' + (parseInt(t[0]) + 10);
+    })(tos.split(':').reverse());
+    window.pageTracker ? pageTracker._trackEvent('Time', 'Log', tos) : _gaq.push(['_trackEvent', 'Time', 'Log', tos]);
+  }, 10000);
+})('00');
+</script>
+<!-- end of Google one-page visit script -->
+
+</body>
+<!-- InstanceEnd --></html>

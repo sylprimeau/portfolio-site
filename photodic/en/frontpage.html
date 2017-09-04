@@ -1,0 +1,230 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta name="Keywords" content="picture, dictionary, visual, photo, photos, audio, sound, pronunciation, spelling, hover, mouse, learn, English, words" />
+<meta name="Description" content="The Online Photo Dictionary is an interactive picture dictionary with photos and sound. Hover your mouse over each item to see its spelling and click it to hear its pronunciation!" />
+
+<title>The Online Photo Dictionary - The picture dictionary with photos!</title>
+
+
+<link rel="stylesheet" type="text/css" href="../css/tooltip.css" />
+<link rel="stylesheet" type="text/css" href="../css/global.css"  />
+
+<script type="text/javascript" src="../js/cvi_tip_lib.js"></script>
+<script type="text/javascript" src="../js/cvi_map_lib.js"></script>
+<script type="text/javascript" src="../js/mapper.js"></script>
+
+
+<script type="text/javascript">
+
+	cvi_map.defaultOpacity = 0; //INT 0-100 (% opacity)
+	cvi_map.defaultAreacolor = '#00ff00'; //STR '#000000'-'#ffffff'
+	cvi_map.defaultBordercolor 	= '#0000ff'; 	//STR '#000000'-'#ffffff'
+	cvi_map.defaultNofade = true; //BOOLEAN
+	cvi_map.defaultNoborder = true; //BOOLEAN
+
+<!--
+function ById(v) {return(document.getElementById(v));}
+window.onload = function() {
+	cvi_map.add(ById('mainphoto'),{opacity: 40, areacolor: '#00FF00', noborder: true});
+}
+-->
+</script>
+
+
+<script>
+
+// Mouseover/ Click sound effect- by JavaScript Kit (www.javascriptkit.com)
+// Visit JavaScript Kit at http://www.javascriptkit.com/ for full source code
+
+//** Usage: Instantiate script by calling: var uniquevar=createsoundbite("soundfile1", "fallbackfile2", "fallebacksound3", etc)
+//** Call: uniquevar.playclip() to play sound
+
+var html5_audiotypes={ //define list of audio file extensions and their associated audio types. Add to it if your specified audio file isn't on this list:
+	"mp3": "audio/mpeg",
+	"mp4": "audio/mp4",
+	"ogg": "audio/ogg",
+	"wav": "audio/wav"
+}
+
+function createsoundbite(sound){
+	var html5audio=document.createElement('audio')
+	if (html5audio.canPlayType){ //check support for HTML5 audio
+		for (var i=0; i<arguments.length; i++){
+			var sourceel=document.createElement('source')
+			sourceel.setAttribute('src', arguments[i])
+			if (arguments[i].match(/\.(\w+)$/i))
+				sourceel.setAttribute('type', html5_audiotypes[RegExp.$1])
+			html5audio.appendChild(sourceel)
+		}
+		html5audio.load()
+		html5audio.playclip=function(){
+			html5audio.pause()
+			html5audio.currentTime=0
+			html5audio.play()
+		}
+		return html5audio
+	}
+	else{
+		return {playclip:function(){throw new Error("Your browser doesn't support HTML5 audio unfortunately")}}
+	}
+}
+
+
+//Initialize sound clips with 1 fallback file each:
+//Replace X with sound's name and use find and replace to fill out the remainder of commands -- syntax is: var clickX=createsoundbite("sounds/X.mp3, sounds/X.ogg")
+
+
+var click
+var click
+var click
+var click
+var click
+
+
+</script>
+
+
+<!-- Google Analytics code -->
+<script type="text/javascript">
+
+  var _gaq = _gaq || [];
+  _gaq.push(['_setAccount', 'UA-27459311-1']);
+  _gaq.push(['_trackPageview']);
+
+  (function() {
+    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+  })();
+
+</script>
+<style type="text/css">
+<!--
+.style1 {
+	color: #FF0000;
+	font-weight: bold;
+}
+.style2 {
+	color: #000000
+}
+.style3 {color: #FF0000}
+-->
+</style>
+</head>
+
+
+<!-- DON'T FORGET TO REMOVE SPACES FROM FILENAMES TO PLAY SOUNDS PROPERLY !!!! -->
+
+
+<body class="twoColFixLtHdr">
+
+<!-- THE FOLLOWING IS CODE FROM FACEBOOK -- A SCRIPT TO RUN THE COMMENTS BOX -->
+<div id="fb-root"></div>
+<script>(function(d, s, id) {
+  var js, fjs = d.getElementsByTagName(s)[0];
+  if (d.getElementById(id)) return;
+  js = d.createElement(s); js.id = id;
+  js.src = "//connect.facebook.net/en_US/all.js#xfbml=1&appId=485516258134980";
+  fjs.parentNode.insertBefore(js, fjs);
+}(document, 'script', 'facebook-jssdk'));</script>
+
+
+<div id="container">
+  <div id="header" >
+    <div id="icons"><a href="../index.html"><img src="../images/icon_set/onebit_01.png" width="48" height="48" /></a> <a href="../help/help.html"><img src="../images/icon_set/onebit_37.png" width="48" height="48" /></a></div>
+    <h1 align="center"><a href="frontpage.html"><img src="../images/Photo-Dictionary-logo.png" alt="The Online Photo Dictionary" width="650" height="67" /></a><br />
+    </h1>
+    <h1 align="center"><a href="../en/frontpage.html"><img src="../images/United_Kingdom.png" alt="English" width="60" height="45" hspace="5" vspace="10" /></a><a href="../jp/frontpage.html"><img src="../images/Japan2.png" alt="日本語" width="60" height="45" hspace="5" vspace="10" /></a></h1>
+  </div>
+  <div id="mainContent" style="background-color:#ffffff; layer-background-color:#ffffff; visibility: visible; margin-left:auto; margin-right:auto">
+      <h1>Now with over <span class="style3">400</span> terms!</h1>
+      <p><span class="style1">NEW!</span>
+        <a href="calendar.html"><br />
+      Calendar</a><br />
+      <a href="calendar.html"><img src="../images/thumbnails/calendar_month-thumb.jpg" width="208" height="130" /></a> </p>
+      
+        <a href="map_of_africa.html">      Africa</a><br />
+      <a href="map_of_africa.html"><img src="../images/thumbnails/map_of_africa-thumb.jpg" width="137" height="130" /></a>    </p>
+    <p><a href="map_of_the_south_america.html">      South America </a><br />
+      <a href="map_of_the_south_america.html"><img src="../images/thumbnails/map_of_south_america-thumb.jpg" width="107" height="130" /></a><br />
+      </p>
+    <p><a href="map_of_north_america.html">      North America </a><br />
+      <a href="map_of_north_america.html"><img src="../images/thumbnails/map_of_north_america-thumb.jpg" width="260" height="130" /></a><br />
+      </p>
+    <p><a href="numbers0to19.html">Numbers 0-19 </a><br />
+      <a href="numbers0to19.html"><img src="../images/thumbnails/numbers0to19-thumb.jpg" width="173" height="130" /></a><br />
+      </p>
+    <p><a href="solar_system.html">      The Solar System</a><br />
+      <a href="solar_system.html"><img src="../images/thumbnails/solarsystem-thumb.jpg" width="173" height="130" /></a><br />
+      </p>
+    <p><a href="dashboard.html">      Car dashboard</a><br />
+      <a href="dashboard.html"><img src="../images/thumbnails/dashboard-thumb.jpg" width="173" height="130" /></a><br />
+      </p>
+    <p><a href="living_room.html">Living room<br />
+    <img src="../images/Living_room.jpg" width="196" height="130" /></a></p>
+      <p><a href="teen_girls_bedroom.html">Teen girl's bedroom<br />
+      <img src="../images/bedroom_teen_girl.jpg" width="177" height="130" /></a></p>
+      <p><a href="dining_room_and_kitchen.html">Kitchen and dining room<br />
+      <img src="../images/dining_room_and_kitchen.jpg" width="200" height="130" /></a></p>
+      <p><a href="fruit_bowl.html">Fruit bowl<br />
+      <img src="../images/fruit_bowl.jpg" width="146" height="130" /></a></p>
+      <p><a href="hotel_room.html">Hotel room<br />
+      <img src="../images/thumbnails/hotel_room-thumb.jpg" width="189" height="130" /></a></p>
+      <p><a href="classroom.html">Classroom<br />
+      <img src="../images/thumbnails/classroom-thumb.JPG" width="173" height="130" /></a></p>
+      <p><a href="subway_station.html">Subway station<br />
+      <img src="../images/thumbnails/subway_station-thumb.JPG" width="173" height="130" /></a></p>
+      <img src="../images/thumbnails/shish_kebab-thumb.jpg" width="173" height="130" /></a></p>
+      <p><a href="bathroom.html">Bathroom<br />
+        <img src="../images/thumbnails/bathroom-thumb.jpg" width="87" height="130" /></a></p>
+      <p><a href="head.html">Head<br />
+      <img src="../images/thumbnails/head-thumb.jpg" width="105" height="130" /></a></p>
+      <p><a href="eye.html">Eye<br />
+      <img src="../images/thumbnails/eye-thumb.jpg" width="236" height="130" /></a></p>
+      <p><a href="fast_food.html">Fast food<br />
+      <img src="../images/thumbnails/fast_food-thumb.jpg" width="174" height="130" /></a></p>
+      <p><a href="vegetables.html">Vegetables<br />
+      <img src="../images/thumbnails/vegetables-thumb.jpg" width="192" height="130" /></a></p>
+      <p><a href="fruits.html">Fruits<br />
+      <img src="../images/thumbnails/fruits-thumb.jpg" width="216" height="130" /></a></p>
+      <p><a href="colors.html">Colors<br />
+      <img src="../images/thumbnails/colors-thumb.jpg" width="141" height="130" /></a></p>
+      <p><a href="body.html">Body<br />
+      <img src="../images/thumbnails/body_parts-thumb.jpg" width="132" height="200" /></a></p>
+      <p>&nbsp;</p>
+    <!-- end #mainContent -->
+</div>
+  <!-- This clearing element should immediately follow the #mainContent div in order to force the #container div to contain all child floats -->
+  <div id="footer">
+    <p align="center">Move your mouse over the objects to see their descriptions. Click to hear the pronunciation!</p>
+    <p align="center">If you can't hear the sound when you click, check your browser. You need Internet Explorer 9+, Firefox 3.5+, Chrome/Safari 3+ or Opera 10.5+!</p>
+    
+    <!-- NEXT LINE IS THE FACEBOOK COMMENT BOX CODE -->
+<p>
+      <div style="clear: both; width: 500px; margin: 0pt auto;"> 
+      <div class="fb-like" data-href="http://www.onlinephotodictionary.com" data-send="true" data-width="400" data-show-faces="false" data-colorscheme="dark"></div>
+      <div class="fb-comments" data-href="http://www.onlinephotodictionary.com" data-num-posts="2" data-width="470" data-colorscheme="dark"></div>
+      </div>
+</p>
+
+  </div>
+<!-- end #container --></div>
+
+<!-- script so that Google counts time for one-page visits -->
+<script type="text/javascript">
+(function (tos) {
+  window.setInterval(function () {
+    tos = (function (t) {
+      return t[0] == 50 ? (parseInt(t[1]) + 1) + ':00' : (t[1] || '0') + ':' + (parseInt(t[0]) + 10);
+    })(tos.split(':').reverse());
+    window.pageTracker ? pageTracker._trackEvent('Time', 'Log', tos) : _gaq.push(['_trackEvent', 'Time', 'Log', tos]);
+  }, 10000);
+})('00');
+</script>
+<!-- end of Google one-page visit script -->
+
+</body>
+</html>

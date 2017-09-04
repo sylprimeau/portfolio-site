@@ -1,0 +1,243 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"><!-- InstanceBegin template="/Templates/template-mapper.dwt" codeOutsideHTMLIsLocked="false" -->
+
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta name="Keywords" content="picture, dictionary, visual, photo, photos, audio, sound, pronunciation, spelling, hover, mouse, learn, English, words" />
+<meta name="Description" content="The Online Photo Dictionary is an interactive picture dictionary with photos and sound. Hover your mouse over each item to see its spelling and click it to hear its pronunciation!" />
+<!-- InstanceBeginEditable name="doctitle" -->
+<title>The Online Photo Dictionary: Colors</title>
+<!-- InstanceEndEditable -->
+
+<link rel="stylesheet" type="text/css" href="../css/tooltip.css" />
+<link rel="stylesheet" type="text/css" href="../css/global.css"  />
+
+
+<script type="text/javascript" src="../js/cvi_tip_lib.js"></script>
+<script type="text/javascript" src="../js/cvi_map_lib.js"></script>
+<script type="text/javascript" src="../js/mapper.js"></script>
+
+<!-- InstanceBeginEditable name="head" -->
+
+<script type="text/javascript">
+
+	cvi_map.defaultOpacity = 0; //INT 0-100 (% opacity)
+	cvi_map.defaultAreacolor = '#00ff00'; //STR '#000000'-'#ffffff'
+	cvi_map.defaultBordercolor 	= '#0000ff'; 	//STR '#000000'-'#ffffff'
+	cvi_map.defaultNofade = true; //BOOLEAN
+	cvi_map.defaultNoborder = true; //BOOLEAN
+
+<!--
+function ById(v) {return(document.getElementById(v));}
+window.onload = function() {
+	cvi_map.add(ById('mainphoto'),{opacity: 40, areacolor: '#00FF00', noborder: true});
+}
+-->
+</script>
+
+
+<script>
+
+// Mouseover/ Click sound effect- by JavaScript Kit (www.javascriptkit.com)
+// Visit JavaScript Kit at http://www.javascriptkit.com/ for full source code
+
+//** Usage: Instantiate script by calling: var uniquevar=createsoundbite("soundfile1", "fallbackfile2", "fallebacksound3", etc)
+//** Call: uniquevar.playclip() to play sound
+
+var html5_audiotypes={ //define list of audio file extensions and their associated audio types. Add to it if your specified audio file isn't on this list:
+	"mp3": "audio/mpeg",
+	"mp4": "audio/mp4",
+	"ogg": "audio/ogg",
+	"wav": "audio/wav"
+}
+
+function createsoundbite(sound){
+	var html5audio=document.createElement('audio')
+	if (html5audio.canPlayType){ //check support for HTML5 audio
+		for (var i=0; i<arguments.length; i++){
+			var sourceel=document.createElement('source')
+			sourceel.setAttribute('src', arguments[i])
+			if (arguments[i].match(/\.(\w+)$/i))
+				sourceel.setAttribute('type', html5_audiotypes[RegExp.$1])
+			html5audio.appendChild(sourceel)
+		}
+		html5audio.load()
+		html5audio.playclip=function(){
+			html5audio.pause()
+			html5audio.currentTime=0
+			html5audio.play()
+		}
+		return html5audio
+	}
+	else{
+		return {playclip:function(){throw new Error("Your browser doesn't support HTML5 audio unfortunately")}}
+	}
+}
+
+
+//Initialize sound clips with 1 fallback file each:
+//Replace X with sound's name and use find and replace to fill out the remainder of commands -- syntax is: var clickX=createsoundbite("sounds/X.mp3, sounds/X.ogg")
+
+
+var clickred=createsoundbite("sounds/red.mp3", "sounds/red.ogg")
+var clickcrimson=createsoundbite("sounds/crimson.mp3", "sounds/crimson.ogg")
+var clickpink=createsoundbite("sounds/pink.mp3", "sounds/pink.ogg")
+var clickblack=createsoundbite("sounds/black.mp3", "sounds/black.ogg")
+var clickbrown=createsoundbite("sounds/brown.mp3", "sounds/brown.ogg")
+var clickwhite=createsoundbite("sounds/white.mp3", "sounds/white.ogg")
+var clickteal=createsoundbite("sounds/teal.mp3", "sounds/teal.ogg")
+var clickgreen=createsoundbite("sounds/green.mp3", "sounds/green.ogg")
+var clickgray=createsoundbite("sounds/gray.mp3", "sounds/gray.ogg")
+var clickmagenta=createsoundbite("sounds/magenta.mp3", "sounds/magenta.ogg")
+var clickpurple=createsoundbite("sounds/purple.mp3", "sounds/purple.ogg")
+var clickturquoise=createsoundbite("sounds/turquoise.mp3", "sounds/turquoise.ogg")
+var clickorange=createsoundbite("sounds/orange.mp3", "sounds/orange.ogg")
+var clickbeige=createsoundbite("sounds/beige.mp3", "sounds/beige.ogg")
+var clickyellow=createsoundbite("sounds/yellow.mp3", "sounds/yellow.ogg")
+var clickblue=createsoundbite("sounds/blue.mp3", "sounds/blue.ogg")
+
+
+</script>
+
+
+<!-- Google Analytics code -->
+<script type="text/javascript">
+
+  var _gaq = _gaq || [];
+  _gaq.push(['_setAccount', 'UA-27459311-1']);
+  _gaq.push(['_trackPageview']);
+
+  (function() {
+    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+  })();
+
+</script>
+<style type="text/css">
+<!--
+body {
+	background-color: #000000;
+}
+-->
+</style>
+<!-- InstanceEndEditable -->
+</head>
+
+
+<!-- DON'T FORGET TO REMOVE SPACES FROM FILENAMES TO PLAY SOUNDS PROPERLY !!!! -->
+
+
+<body class="twoColFixLtHdr">
+
+<!-- THE FOLLOWING IS CODE FROM FACEBOOK -- A SCRIPT TO RUN THE COMMENTS BOX -->
+<div id="fb-root"></div>
+<script>(function(d, s, id) {
+  var js, fjs = d.getElementsByTagName(s)[0];
+  if (d.getElementById(id)) return;
+  js = d.createElement(s); js.id = id;
+  js.src = "//connect.facebook.net/en_US/all.js#xfbml=1&appId=485516258134980";
+  fjs.parentNode.insertBefore(js, fjs);
+}(document, 'script', 'facebook-jssdk'));</script>
+
+<div id="container">
+  <div id="header" >
+    <div id="icons"><a href="../index.html"><img src="../images/icon_set/onebit_01.png" width="48" height="48" /></a> <a href="../help/help.html"><img src="../images/icon_set/onebit_37.png" width="48" height="48" /></a></div>
+    <h1 align="center"><a href="frontpage.html"><img src="../images/Photo-Dictionary-logo.png" alt="The Online Photo Dictionary" width="650" height="67" /></a><br />
+    </h1>
+    <h1 align="center"><a href="../en/frontpage.html"><img src="../images/United_Kingdom.png" alt="English" width="60" height="45" hspace="5" vspace="10" /></a><a href="../jp/frontpage.html"><img src="../images/Japan2.png" alt="日本語" width="60" height="45" hspace="5" vspace="10" /></a></h1>
+
+<!-- THE FOLLOWING IS ADSENSE CODE FOR TOP BANNER -->
+<script type="text/javascript"><!--
+google_ad_client = "ca-pub-8761395630506939";
+/* OPD - top banner */
+google_ad_slot = "2407538890";
+google_ad_width = 468;
+google_ad_height = 60;
+//-->
+</script>
+<script type="text/javascript"
+src="http://pagead2.googlesyndication.com/pagead/show_ads.js">
+</script>
+    
+  </div>
+  
+  <div id="sidebar1"><!-- InstanceBeginEditable name="EditRegion4" -->
+    <a  onmouseover="extAreaOver('mainphoto','red');" onmouseout="extAreaOut('mainphoto','red');" onclick="clickred.playclip()">red</a><br />
+  <a  onmouseover="extAreaOver('mainphoto','crimson');" onmouseout="extAreaOut('mainphoto','crimson');" onclick="clickcrimson.playclip()">crimson</a><br />
+  <a  onmouseover="extAreaOver('mainphoto','pink');" onmouseout="extAreaOut('mainphoto','pink');" onclick="clickpink.playclip()">pink</a><br />
+  <a  onmouseover="extAreaOver('mainphoto','black');" onmouseout="extAreaOut('mainphoto','black');" onclick="clickblack.playclip()">black</a><br />
+  <a  onmouseover="extAreaOver('mainphoto','brown');" onmouseout="extAreaOut('mainphoto','brown');" onclick="clickbrown.playclip()">brown</a><br />
+  <a  onmouseover="extAreaOver('mainphoto','white');" onmouseout="extAreaOut('mainphoto','white');" onclick="clickwhite.playclip()">white</a><br />
+  <a  onmouseover="extAreaOver('mainphoto','teal');" onmouseout="extAreaOut('mainphoto','teal');" onclick="clickteal.playclip()">teal</a><br />
+  <a  onmouseover="extAreaOver('mainphoto','green');" onmouseout="extAreaOut('mainphoto','green');" onclick="clickgreen.playclip()">green</a><br />
+  <a  onmouseover="extAreaOver('mainphoto','gray');" onmouseout="extAreaOut('mainphoto','gray');" onclick="clickgray.playclip()">gray</a><br />
+  <a  onmouseover="extAreaOver('mainphoto','magenta');" onmouseout="extAreaOut('mainphoto','magenta');" onclick="clickmagenta.playclip()">magenta</a><br />
+  <a  onmouseover="extAreaOver('mainphoto','purple');" onmouseout="extAreaOut('mainphoto','purple');" onclick="clickpurple.playclip()">purple</a><br />
+  <a  onmouseover="extAreaOver('mainphoto','turquoise');" onmouseout="extAreaOut('mainphoto','turquoise');" onclick="clickturquoise.playclip()">turquoise</a><br />
+  <a  onmouseover="extAreaOver('mainphoto','orange');" onmouseout="extAreaOut('mainphoto','orange');" onclick="clickorange.playclip()">orange</a><br />
+  <a  onmouseover="extAreaOver('mainphoto','beige');" onmouseout="extAreaOut('mainphoto','beige');" onclick="clickbeige.playclip()">beige</a><br />
+  <a  onmouseover="extAreaOver('mainphoto','yellow');" onmouseout="extAreaOut('mainphoto','yellow');" onclick="clickyellow.playclip()">yellow</a><br />
+  <a  onmouseover="extAreaOver('mainphoto','blue');" onmouseout="extAreaOut('mainphoto','blue');" onclick="clickblue.playclip()">blue</a><br />
+<!-- InstanceEndEditable --></div>
+  <div id="mainContent">
+  <!-- InstanceBeginEditable name="EditRegion3" -->
+      <h1>Colors</h1>
+  <p><img src="../images/colors.jpg" alt="The Online Photo Dictionary: colors, red, crimson, pink, black, brown, white, teal, green, gray, magenta, purple, turquoise, orange, beige, yellow, blue" name="mainphoto" width="800" height="739" border="0" usemap="#mainphotoMap" id="mainphoto" />
+        <map name="mainphotoMap" id="mainphotoMap">
+          <area shape="rect" coords="46,570,176,696" onmouseover="cvi_tip._show(event);" onmouseout="cvi_tip._hide(event);" onmousemove="cvi_tip._move(event);" href="#nogo" tooltip="orange" alt="orange" onclick="clickorange.playclip()" class="iopacity99 icolorff8a00" id="orange" />
+          <area shape="rect" coords="236,570,366,696" onmouseover="cvi_tip._show(event);" onmouseout="cvi_tip._hide(event);" onmousemove="cvi_tip._move(event);" href="#nogo" tooltip="beige" alt="beige" onclick="clickbeige.playclip()" class="iopacity99 icolorffeca9" id="beige" />
+          <area shape="rect" coords="428,571,558,697" onmouseover="cvi_tip._show(event);" onmouseout="cvi_tip._hide(event);" onmousemove="cvi_tip._move(event);" href="#nogo" tooltip="yellow" alt="yellow" onclick="clickyellow.playclip()" class="iopacity99 icolorfcff00" id="yellow" />
+          <area shape="rect" coords="618,571,748,697" onmouseover="cvi_tip._show(event);" onmouseout="cvi_tip._hide(event);" onmousemove="cvi_tip._move(event);" href="#nogo" tooltip="blue" alt="blue" onclick="clickblue.playclip()" class="iopacity99 icolor1e00ff" id="blue" />
+          <area shape="rect" coords="619,393,749,519" onmouseover="cvi_tip._show(event);" onmouseout="cvi_tip._hide(event);" onmousemove="cvi_tip._move(event);" href="#nogo" tooltip="turquoise" alt="turquoise" onclick="clickturquoise.playclip()" class="iopacity99 icolor00baff" id="turquoise" />
+          <area shape="rect" coords="428,394,558,520" onmouseover="cvi_tip._show(event);" onmouseout="cvi_tip._hide(event);" onmousemove="cvi_tip._move(event);" href="#nogo" tooltip="purple" alt="purple" onclick="clickpurple.playclip()" class="iopacity99 icolor6900ab" id="purple" />
+          <area shape="rect" coords="236,394,366,520" onmouseover="cvi_tip._show(event);" onmouseout="cvi_tip._hide(event);" onmousemove="cvi_tip._move(event);" href="#nogo" tooltip="magenta" alt="magenta" onclick="clickmagenta.playclip()" class="iopacity99 icolorff42fd" id="magenta" />
+          <area shape="rect" coords="46,394,176,520" onmouseover="cvi_tip._show(event);" onmouseout="cvi_tip._hide(event);" onmousemove="cvi_tip._move(event);" href="#nogo" tooltip="gray" alt="gray" onclick="clickgray.playclip()" class="iopacity99 icolor787878" id="gray" />
+          <area shape="rect" coords="46,217,176,343" onmouseover="cvi_tip._show(event);" onmouseout="cvi_tip._hide(event);" onmousemove="cvi_tip._move(event);" href="#nogo" tooltip="brown" alt="brown" onclick="clickbrown.playclip()" class="iopacity99 icolor553201" id="brown" />
+          <area shape="rect" coords="236,217,366,343" onmouseover="cvi_tip._show(event);" onmouseout="cvi_tip._hide(event);" onmousemove="cvi_tip._move(event);" href="#nogo" tooltip="white" alt="white" onclick="clickwhite.playclip()" class="iopacity99 icolorffffff" id="white" />
+            
+          <area shape="rect" coords="428,217,558,343" onmouseover="cvi_tip._show(event);" onmouseout="cvi_tip._hide(event);" onmousemove="cvi_tip._move(event);" href="#nogo" tooltip="teal" alt="teal" onclick="clickteal.playclip()" class="iopacity99 icolor187c88" id="teal" />
+          <area shape="rect" coords="618,217,748,343" onmouseover="cvi_tip._show(event);" onmouseout="cvi_tip._hide(event);" onmousemove="cvi_tip._move(event);" href="#nogo" tooltip="green" alt="green" onclick="clickgreen.playclip()" class="iopacity99 icolor0d9003" id="green" />
+          <area shape="rect" coords="237,38,367,164" onmouseover="cvi_tip._show(event);" onmouseout="cvi_tip._hide(event);" onmousemove="cvi_tip._move(event);" href="#nogo" tooltip="crimson" alt="crimson" onclick="clickcrimson.playclip()" class="iopacity99 icolorb20202" id="crimson" />
+          <area shape="rect" coords="427,38,557,164" onmouseover="cvi_tip._show(event);" onmouseout="cvi_tip._hide(event);" onmousemove="cvi_tip._move(event);" href="#nogo" tooltip="pink" alt="pink" onclick="clickpink.playclip()" class="iopacity99 icolorffc6f5" id="pink" />
+          <area shape="rect" coords="619,40,749,166" onmouseover="cvi_tip._show(event);" onmouseout="cvi_tip._hide(event);" onmousemove="cvi_tip._move(event);" href="#nogo" tooltip="black" alt="black" onclick="clickblack.playclip()" class="iopacity99 icolor000000" id="black" />
+          <area shape="rect" coords="45,38,175,164" onmouseover="cvi_tip._show(event);" onmouseout="cvi_tip._hide(event);" onmousemove="cvi_tip._move(event);" href="#nogo" tooltip="red" alt="red" onclick="clickred.playclip()" class="iopacity99 icolorff0000" id="red" />
+                  </map>
+      </p>
+  <p>&nbsp;</p>
+  <!-- InstanceEndEditable -->
+  <!-- end #mainContent -->
+</div>
+  <!-- This clearing element should immediately follow the #mainContent div in order to force the #container div to contain all child floats -->
+  <div id="footer">
+    <p align="center">Move your mouse over the objects to see their descriptions. Click to hear the pronunciation!</p>
+    <p align="center">If you can't hear the sound when you click, check your browser. You need Internet Explorer 9+, Firefox 3.5+, Chrome/Safari 3+ or Opera 10.5+!</p>
+    <p align="center">Thank you for using the Online Photo Dictionary! It's fun to use this picture dictionary when you're studying and learning English!</p>
+    <p align="center">Use it to learn new vocabulary, learn the spelling of English words and improve your listening skills by clicking on the image to hear the pronunciation!</p>
+    <p align="center">Useful for students of all levels - improve your ESL, EFL, TOEIC, TOEFL, EILTS scores too!</p>
+    <p align="center"><a href="../help/privacy.html">Click here for privacy policy</a></p>
+    <!-- NEXT LINE IS THE FACEBOOK COMMENT BOX CODE -->
+<p>
+    <div style="clear: both; width: 500px; margin: 0pt auto;"> 
+      <div class="fb-like" data-href="http://www.onlinephotodictionary.com" data-send="true" data-width="400" data-show-faces="false" data-colorscheme="dark"></div>
+      <div class="fb-comments" data-href="http://www.onlinephotodictionary.com" data-num-posts="2" data-width="470" data-colorscheme="dark"></div>
+    </div>
+</p>
+  </div>
+<!-- end #container --></div>
+
+<!-- script so that Google counts time for one-page visits -->
+<script type="text/javascript">
+(function (tos) {
+  window.setInterval(function () {
+    tos = (function (t) {
+      return t[0] == 50 ? (parseInt(t[1]) + 1) + ':00' : (t[1] || '0') + ':' + (parseInt(t[0]) + 10);
+    })(tos.split(':').reverse());
+    window.pageTracker ? pageTracker._trackEvent('Time', 'Log', tos) : _gaq.push(['_trackEvent', 'Time', 'Log', tos]);
+  }, 10000);
+})('00');
+</script>
+<!-- end of Google one-page visit script -->
+
+</body>
+<!-- InstanceEnd --></html>

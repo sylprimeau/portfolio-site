@@ -1,0 +1,358 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"><!-- InstanceBegin template="/Templates/template-mapper.dwt" codeOutsideHTMLIsLocked="false" -->
+
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta name="Keywords" content="picture, dictionary, visual, photo, photos, audio, sound, pronunciation, spelling, hover, mouse, learn, English, words" />
+<meta name="Description" content="The Online Photo Dictionary is an interactive picture dictionary with photos and sound. Hover your mouse over each item to see its spelling and click it to hear its pronunciation!" />
+<!-- InstanceBeginEditable name="doctitle" -->
+<title>The Online Photo Dictionary: Map of Africa</title>
+<!-- InstanceEndEditable -->
+
+<link rel="stylesheet" type="text/css" href="../css/tooltip.css" />
+<link rel="stylesheet" type="text/css" href="../css/global.css"  />
+
+
+<script type="text/javascript" src="../js/cvi_tip_lib.js"></script>
+<script type="text/javascript" src="../js/cvi_map_lib.js"></script>
+<script type="text/javascript" src="../js/mapper.js"></script>
+
+<!-- InstanceBeginEditable name="head" -->
+
+<script type="text/javascript">
+
+	cvi_map.defaultOpacity = 0; //INT 0-100 (% opacity)
+	cvi_map.defaultAreacolor = '#00ff00'; //STR '#000000'-'#ffffff'
+	cvi_map.defaultBordercolor 	= '#0000ff'; 	//STR '#000000'-'#ffffff'
+	cvi_map.defaultNofade = true; //BOOLEAN
+	cvi_map.defaultNoborder = false; //BOOLEAN
+
+<!--
+function ById(v) {return(document.getElementById(v));}
+window.onload = function() {
+	cvi_map.add(ById('mainphoto'),{opacity: 40, areacolor: '#00FF00', noborder: false});
+}
+-->
+</script>
+
+
+<script>
+
+// Mouseover/ Click sound effect- by JavaScript Kit (www.javascriptkit.com)
+// Visit JavaScript Kit at http://www.javascriptkit.com/ for full source code
+
+//** Usage: Instantiate script by calling: var uniquevar=createsoundbite("soundfile1", "fallbackfile2", "fallebacksound3", etc)
+//** Call: uniquevar.playclip() to play sound
+
+var html5_audiotypes={ //define list of audio file extensions and their associated audio types. Add to it if your specified audio file isn't on this list:
+	"mp3": "audio/mpeg",
+	"mp4": "audio/mp4",
+	"ogg": "audio/ogg",
+	"wav": "audio/wav"
+}
+
+function createsoundbite(sound){
+	var html5audio=document.createElement('audio')
+	if (html5audio.canPlayType){ //check support for HTML5 audio
+		for (var i=0; i<arguments.length; i++){
+			var sourceel=document.createElement('source')
+			sourceel.setAttribute('src', arguments[i])
+			if (arguments[i].match(/\.(\w+)$/i))
+				sourceel.setAttribute('type', html5_audiotypes[RegExp.$1])
+			html5audio.appendChild(sourceel)
+		}
+		html5audio.load()
+		html5audio.playclip=function(){
+			html5audio.pause()
+			html5audio.currentTime=0
+			html5audio.play()
+		}
+		return html5audio
+	}
+	else{
+		return {playclip:function(){throw new Error("Your browser doesn't support HTML5 audio unfortunately")}}
+	}
+}
+
+
+//Initialize sound clips with 1 fallback file each:
+//Replace X with sound's name and use find and replace to fill out the remainder of commands -- syntax is: var clickX=createsoundbite("sounds/X.mp3, sounds/X.ogg")
+
+
+var clickafrica=createsoundbite("sounds/africa.mp3", "sounds/africa.ogg")
+var clickmorocco=createsoundbite("sounds/morocco.mp3", "sounds/morocco.ogg")
+var clickalgeria=createsoundbite("sounds/algeria.mp3", "sounds/algeria.ogg")
+var clicktunisia=createsoundbite("sounds/tunisia.mp3", "sounds/tunisia.ogg")
+var clicklibya=createsoundbite("sounds/libya.mp3", "sounds/libya.ogg")
+var clickegypt=createsoundbite("sounds/egypt.mp3", "sounds/egypt.ogg")
+var clickwesternsahara=createsoundbite("sounds/westernsahara.mp3", "sounds/westernsahara.ogg")
+var clickmauritania=createsoundbite("sounds/mauritania.mp3", "sounds/mauritania.ogg")
+var clicksenegal=createsoundbite("sounds/senegal.mp3", "sounds/senegal.ogg")
+var clickthegambia=createsoundbite("sounds/thegambia.mp3", "sounds/thegambia.ogg")
+var clickguineabissau=createsoundbite("sounds/guineabissau.mp3", "sounds/guineabissau.ogg")
+var clickguinea=createsoundbite("sounds/guinea.mp3", "sounds/guinea.ogg")
+var clickmali=createsoundbite("sounds/mali.mp3", "sounds/mali.ogg")
+var clickburkinafaso=createsoundbite("sounds/burkinafaso.mp3", "sounds/burkinafaso.ogg")
+var clickniger=createsoundbite("sounds/niger.mp3", "sounds/niger.ogg")
+var clickchad=createsoundbite("sounds/chad.mp3", "sounds/chad.ogg")
+var clicksudan=createsoundbite("sounds/sudan.mp3", "sounds/sudan.ogg")
+var clickeritrea=createsoundbite("sounds/eritrea.mp3", "sounds/eritrea.ogg")
+var clickdjibouti=createsoundbite("sounds/djibouti.mp3", "sounds/djibouti.ogg")
+var clickethiopia=createsoundbite("sounds/ethiopia.mp3", "sounds/ethiopia.ogg")
+var clicksomalia=createsoundbite("sounds/somalia.mp3", "sounds/somalia.ogg")
+var clicksierraleone=createsoundbite("sounds/sierraleone.mp3", "sounds/sierraleone.ogg")
+var clickliberia=createsoundbite("sounds/liberia.mp3", "sounds/liberia.ogg")
+var clickcotedivoire=createsoundbite("sounds/cotedivoire.mp3", "sounds/cotedivoire.ogg")
+var clickghana=createsoundbite("sounds/ghana.mp3", "sounds/ghana.ogg")
+var clicktogo=createsoundbite("sounds/togo.mp3", "sounds/togo.ogg")
+var clickbenin=createsoundbite("sounds/benin.mp3", "sounds/benin.ogg")
+var clicknigeria=createsoundbite("sounds/nigeria.mp3", "sounds/nigeria.ogg")
+var clickcameroon=createsoundbite("sounds/cameroon.mp3", "sounds/cameroon.ogg")
+var clickcentralafricanrepublic=createsoundbite("sounds/centralafricanrepublic.mp3", "sounds/centralafricanrepublic.ogg")
+var clickequatorialguinea=createsoundbite("sounds/equatorialguinea.mp3", "sounds/equatorialguinea.ogg")
+var clickgabon=createsoundbite("sounds/gabon.mp3", "sounds/gabon.ogg")
+var clickrepublicofthecongo=createsoundbite("sounds/republicofthecongo.mp3", "sounds/republicofthecongo.ogg")
+var clickdemocraticrepublicofthecongo=createsoundbite("sounds/democraticrepublicofthecongo.mp3", "sounds/democraticrepublicofthecongo.ogg")
+var clickuganda=createsoundbite("sounds/uganda.mp3", "sounds/uganda.ogg")
+var clickkenya=createsoundbite("sounds/kenya.mp3", "sounds/kenya.ogg")
+var clickrwanda=createsoundbite("sounds/rwanda.mp3", "sounds/rwanda.ogg")
+var clickburundi=createsoundbite("sounds/burundi.mp3", "sounds/burundi.ogg")
+var clicktanzania=createsoundbite("sounds/tanzania.mp3", "sounds/tanzania.ogg")
+var clickangola=createsoundbite("sounds/angola.mp3", "sounds/angola.ogg")
+var clickzambia=createsoundbite("sounds/zambia.mp3", "sounds/zambia.ogg")
+var clickmalawi=createsoundbite("sounds/malawi.mp3", "sounds/malawi.ogg")
+var clickmozambique=createsoundbite("sounds/mozambique.mp3", "sounds/mozambique.ogg")
+var clickmadagascar=createsoundbite("sounds/madagascar.mp3", "sounds/madagascar.ogg")
+var clicknamibia=createsoundbite("sounds/namibia.mp3", "sounds/namibia.ogg")
+var clickbotswana=createsoundbite("sounds/botswana.mp3", "sounds/botswana.ogg")
+var clickzimbabwe=createsoundbite("sounds/zimbabwe.mp3", "sounds/zimbabwe.ogg")
+var clickswaziland=createsoundbite("sounds/swaziland.mp3", "sounds/swaziland.ogg")
+var clicklesotho=createsoundbite("sounds/lesotho.mp3", "sounds/lesotho.ogg")
+var clicksouthafrica=createsoundbite("sounds/southafrica.mp3", "sounds/southafrica.ogg")
+
+
+</script>
+
+
+<!-- Google Analytics code -->
+<script type="text/javascript">
+
+  var _gaq = _gaq || [];
+  _gaq.push(['_setAccount', 'UA-27459311-1']);
+  _gaq.push(['_trackPageview']);
+
+  (function() {
+    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+  })();
+
+</script>
+<style type="text/css">
+<!--
+body {
+	background-color: #000000;
+}
+-->
+</style>
+<!-- InstanceEndEditable -->
+</head>
+
+
+<!-- DON'T FORGET TO REMOVE SPACES FROM FILENAMES TO PLAY SOUNDS PROPERLY !!!! -->
+
+
+<body class="twoColFixLtHdr">
+
+<!-- THE FOLLOWING IS CODE FROM FACEBOOK -- A SCRIPT TO RUN THE COMMENTS BOX -->
+<div id="fb-root"></div>
+<script>(function(d, s, id) {
+  var js, fjs = d.getElementsByTagName(s)[0];
+  if (d.getElementById(id)) return;
+  js = d.createElement(s); js.id = id;
+  js.src = "//connect.facebook.net/en_US/all.js#xfbml=1&appId=485516258134980";
+  fjs.parentNode.insertBefore(js, fjs);
+}(document, 'script', 'facebook-jssdk'));</script>
+
+<div id="container">
+  <div id="header" >
+    <div id="icons"><a href="../index.html"><img src="../images/icon_set/onebit_01.png" width="48" height="48" /></a> <a href="../help/help.html"><img src="../images/icon_set/onebit_37.png" width="48" height="48" /></a></div>
+    <h1 align="center"><a href="frontpage.html"><img src="../images/Photo-Dictionary-logo.png" alt="The Online Photo Dictionary" width="650" height="67" /></a><br />
+    </h1>
+    <h1 align="center"><a href="../en/frontpage.html"><img src="../images/United_Kingdom.png" alt="English" width="60" height="45" hspace="5" vspace="10" /></a><a href="../jp/frontpage.html"><img src="../images/Japan2.png" alt="日本語" width="60" height="45" hspace="5" vspace="10" /></a></h1>
+
+<!-- THE FOLLOWING IS ADSENSE CODE FOR TOP BANNER -->
+<script type="text/javascript"><!--
+google_ad_client = "ca-pub-8761395630506939";
+/* OPD - top banner */
+google_ad_slot = "2407538890";
+google_ad_width = 468;
+google_ad_height = 60;
+//-->
+</script>
+<script type="text/javascript"
+src="http://pagead2.googlesyndication.com/pagead/show_ads.js">
+</script>
+    
+  </div>
+  
+  <div id="sidebar1"><!-- InstanceBeginEditable name="EditRegion4" -->
+    <a  onmouseover="extAreaOver('mainphoto','morocco');extAreaOver('mainphoto','algeria');extAreaOver('mainphoto','tunisia');extAreaOver('mainphoto','libya');extAreaOver('mainphoto','egypt');extAreaOver('mainphoto','westernsahara');extAreaOver('mainphoto','mauritania');extAreaOver('mainphoto','senegal');extAreaOver('mainphoto','thegambia');extAreaOver('mainphoto','guineabissau');extAreaOver('mainphoto','guinea');extAreaOver('mainphoto','mali');extAreaOver('mainphoto','burkinafaso');extAreaOver('mainphoto','niger');extAreaOver('mainphoto','chad');extAreaOver('mainphoto','sudan');extAreaOver('mainphoto','eritrea');extAreaOver('mainphoto','djibouti');extAreaOver('mainphoto','ethiopia');extAreaOver('mainphoto','somalia');extAreaOver('mainphoto','sierryleone');extAreaOver('mainphoto','liberia');extAreaOver('mainphoto','cotedivoire');extAreaOver('mainphoto','ghana');extAreaOver('mainphoto','togo');extAreaOver('mainphoto','benin');extAreaOver('mainphoto','nigeria');extAreaOver('mainphoto','cameroon');extAreaOver('mainphoto','centralafricanrepublic');extAreaOver('mainphoto','equatorialguinea');extAreaOver('mainphoto','gabon');extAreaOver('mainphoto','republicofthecongo');extAreaOver('mainphoto','democraticrepublicofthecongo');extAreaOver('mainphoto','uganda');extAreaOver('mainphoto','kenya');extAreaOver('mainphoto','rwanda');extAreaOver('mainphoto','burundi');extAreaOver('mainphoto','tanzania');extAreaOver('mainphoto','angola');extAreaOver('mainphoto','zambia');extAreaOver('mainphoto','malawi');extAreaOver('mainphoto','mozambique');extAreaOver('mainphoto','namibia');extAreaOver('mainphoto','botswana');extAreaOver('mainphoto','zimbabwe');extAreaOver('mainphoto','madagascar');extAreaOver('mainphoto','lesotho');extAreaOver('mainphoto','swaziland');extAreaOver('mainphoto','southafrica');extAreaOver('mainphoto','sierraleone');" onmouseout="extAreaOut('mainphoto','morocco');extAreaOut('mainphoto','algeria');extAreaOut('mainphoto','tunisia');extAreaOut('mainphoto','libya');extAreaOut('mainphoto','egypt');extAreaOut('mainphoto','westernsahara');extAreaOut('mainphoto','mauritania');extAreaOut('mainphoto','senegal');extAreaOut('mainphoto','thegambia');extAreaOut('mainphoto','guineabissau');extAreaOut('mainphoto','guinea');extAreaOut('mainphoto','mali');extAreaOut('mainphoto','burkinafaso');extAreaOut('mainphoto','niger');extAreaOut('mainphoto','chad');extAreaOut('mainphoto','sudan');extAreaOut('mainphoto','eritrea');extAreaOut('mainphoto','djibouti');extAreaOut('mainphoto','ethiopia');extAreaOut('mainphoto','somalia');extAreaOut('mainphoto','sierryleone');extAreaOut('mainphoto','liberia');extAreaOut('mainphoto','cotedivoire');extAreaOut('mainphoto','ghana');extAreaOut('mainphoto','togo');extAreaOut('mainphoto','benin');extAreaOut('mainphoto','nigeria');extAreaOut('mainphoto','cameroon');extAreaOut('mainphoto','centralafricanrepublic');extAreaOut('mainphoto','equatorialguinea');extAreaOut('mainphoto','gabon');extAreaOut('mainphoto','republicofthecongo');extAreaOut('mainphoto','democraticrepublicofthecongo');extAreaOut('mainphoto','uganda');extAreaOut('mainphoto','kenya');extAreaOut('mainphoto','rwanda');extAreaOut('mainphoto','burundi');extAreaOut('mainphoto','tanzania');extAreaOut('mainphoto','angola');extAreaOut('mainphoto','zambia');extAreaOut('mainphoto','malawi');extAreaOut('mainphoto','mozambique');extAreaOut('mainphoto','namibia');extAreaOut('mainphoto','botswana');extAreaOut('mainphoto','zimbabwe');extAreaOut('mainphoto','madagascar');extAreaOut('mainphoto','lesotho');extAreaOut('mainphoto','swaziland');extAreaOut('mainphoto','southafrica');extAreaOut('mainphoto','sierraleone');" onclick="clickafrica.playclip()">Africa</a><br />
+  <a  onmouseover="extAreaOver('mainphoto','morocco');" onmouseout="extAreaOut('mainphoto','morocco');" onclick="clickmorocco.playclip()">Morocco</a><br />
+  <a  onmouseover="extAreaOver('mainphoto','algeria');" onmouseout="extAreaOut('mainphoto','algeria');" onclick="clickalgeria.playclip()">Algeria</a><br />
+  <a  onmouseover="extAreaOver('mainphoto','tunisia');" onmouseout="extAreaOut('mainphoto','tunisia');" onclick="clicktunisia.playclip()">Tunisia</a><br />
+  <a  onmouseover="extAreaOver('mainphoto','libya');" onmouseout="extAreaOut('mainphoto','libya');" onclick="clicklibya.playclip()">Libya</a><br />
+  <a  onmouseover="extAreaOver('mainphoto','egypt');" onmouseout="extAreaOut('mainphoto','egypt');" onclick="clickegypt.playclip()">Egypt</a><br />
+  <a  onmouseover="extAreaOver('mainphoto','westernsahara');" onmouseout="extAreaOut('mainphoto','westernsahara');" onclick="clickwesternsahara.playclip()">Western Sahara</a><br />
+  <a  onmouseover="extAreaOver('mainphoto','mauritania');" onmouseout="extAreaOut('mainphoto','mauritania');" onclick="clickmauritania.playclip()">Mauritania</a><br />
+  <a  onmouseover="extAreaOver('mainphoto','senegal');" onmouseout="extAreaOut('mainphoto','senegal');" onclick="clicksenegal.playclip()">Senegal</a><br />
+  <a  onmouseover="extAreaOver('mainphoto','thegambia');" onmouseout="extAreaOut('mainphoto','thegambia');" onclick="clickthegambia.playclip()">The Gambia</a><br />
+  <a  onmouseover="extAreaOver('mainphoto','guineabissau');" onmouseout="extAreaOut('mainphoto','guineabissau');" onclick="clickguineabissau.playclip()">Guinea-Bissau</a><br />
+  <a  onmouseover="extAreaOver('mainphoto','guinea');" onmouseout="extAreaOut('mainphoto','guinea');" onclick="clickguinea.playclip()">Guinea</a><br />
+  <a  onmouseover="extAreaOver('mainphoto','mali');" onmouseout="extAreaOut('mainphoto','mali');" onclick="clickmali.playclip()">Mali</a><br />
+  <a  onmouseover="extAreaOver('mainphoto','burkinafaso');" onmouseout="extAreaOut('mainphoto','burkinafaso');" onclick="clickburkinafaso.playclip()">Burkina Faso</a><br />
+  <a  onmouseover="extAreaOver('mainphoto','niger');" onmouseout="extAreaOut('mainphoto','niger');" onclick="clickniger.playclip()">Niger</a><br />
+  <a  onmouseover="extAreaOver('mainphoto','chad');" onmouseout="extAreaOut('mainphoto','chad');" onclick="clickchad.playclip()">Chad</a><br />
+  <a  onmouseover="extAreaOver('mainphoto','sudan');" onmouseout="extAreaOut('mainphoto','sudan');" onclick="clicksudan.playclip()">Sudan</a><br />
+  <a  onmouseover="extAreaOver('mainphoto','eritrea');" onmouseout="extAreaOut('mainphoto','eritrea');" onclick="clickeritrea.playclip()">Eritrea</a><br />
+  <a  onmouseover="extAreaOver('mainphoto','djibouti');" onmouseout="extAreaOut('mainphoto','djibouti');" onclick="clickdjibouti.playclip()">Djibouti</a><br />
+  <a  onmouseover="extAreaOver('mainphoto','ethiopia');" onmouseout="extAreaOut('mainphoto','ethiopia');" onclick="clickethiopia.playclip()">Ethiopia</a><br />
+  <a  onmouseover="extAreaOver('mainphoto','somalia');" onmouseout="extAreaOut('mainphoto','somalia');" onclick="clicksomalia.playclip()">Somalia</a><br />
+  <a  onmouseover="extAreaOver('mainphoto','sierraleone');" onmouseout="extAreaOut('mainphoto','sierraleone');" onclick="clicksierraleone.playclip()">Sierra Leone</a><br />
+  <a  onmouseover="extAreaOver('mainphoto','liberia');" onmouseout="extAreaOut('mainphoto','liberia');" onclick="clickliberia.playclip()">Liberia</a><br />
+  <a  onmouseover="extAreaOver('mainphoto','cotedivoire');" onmouseout="extAreaOut('mainphoto','cotedivoire');" onclick="clickcotedivoire.playclip()">Cote D&#39;Ivoire</a><br />
+  <a  onmouseover="extAreaOver('mainphoto','ghana');" onmouseout="extAreaOut('mainphoto','ghana');" onclick="clickghana.playclip()">Ghana</a><br />
+  <a  onmouseover="extAreaOver('mainphoto','togo');" onmouseout="extAreaOut('mainphoto','togo');" onclick="clicktogo.playclip()">Togo</a><br />
+  <a  onmouseover="extAreaOver('mainphoto','benin');" onmouseout="extAreaOut('mainphoto','benin');" onclick="clickbenin.playclip()">Benin</a><br />
+  <a  onmouseover="extAreaOver('mainphoto','nigeria');" onmouseout="extAreaOut('mainphoto','nigeria');" onclick="clicknigeria.playclip()">Nigeria</a><br />
+  <a  onmouseover="extAreaOver('mainphoto','cameroon');" onmouseout="extAreaOut('mainphoto','cameroon');" onclick="clickcameroon.playclip()">Cameroon</a><br />
+  <a  onmouseover="extAreaOver('mainphoto','centralafricanrepublic');" onmouseout="extAreaOut('mainphoto','centralafricanrepublic');" onclick="clickcentralafricanrepublic.playclip()">Central African Republic</a><br />
+  <a  onmouseover="extAreaOver('mainphoto','equatorialguinea');" onmouseout="extAreaOut('mainphoto','equatorialguinea');" onclick="clickequatorialguinea.playclip()">Equatorial Guinea</a><br />
+  <a  onmouseover="extAreaOver('mainphoto','gabon');" onmouseout="extAreaOut('mainphoto','gabon');" onclick="clickgabon.playclip()">Gabon</a><br />
+  <a  onmouseover="extAreaOver('mainphoto','republicofthecongo');" onmouseout="extAreaOut('mainphoto','republicofthecongo');" onclick="clickrepublicofthecongo.playclip()">Republic of the Congo</a><br />
+  <a  onmouseover="extAreaOver('mainphoto','democraticrepublicofthecongo');" onmouseout="extAreaOut('mainphoto','democraticrepublicofthecongo');" onclick="clickdemocraticrepublicofthecongo.playclip()">Democratic Republic of the Congo</a><br />
+  <a  onmouseover="extAreaOver('mainphoto','uganda');" onmouseout="extAreaOut('mainphoto','uganda');" onclick="clickuganda.playclip()">Uganda</a><br />
+  <a  onmouseover="extAreaOver('mainphoto','kenya');" onmouseout="extAreaOut('mainphoto','kenya');" onclick="clickkenya.playclip()">Kenya</a><br />
+  <a  onmouseover="extAreaOver('mainphoto','rwanda');" onmouseout="extAreaOut('mainphoto','rwanda');" onclick="clickrwanda.playclip()">Rwanda</a><br />
+  <a  onmouseover="extAreaOver('mainphoto','burundi');" onmouseout="extAreaOut('mainphoto','burundi');" onclick="clickburundi.playclip()">Burundi</a><br />
+  <a  onmouseover="extAreaOver('mainphoto','tanzania');" onmouseout="extAreaOut('mainphoto','tanzania');" onclick="clicktanzania.playclip()">Tanzania</a><br />
+  <a  onmouseover="extAreaOver('mainphoto','angola');" onmouseout="extAreaOut('mainphoto','angola');" onclick="clickangola.playclip()">Angola</a><br />
+  <a  onmouseover="extAreaOver('mainphoto','zambia');" onmouseout="extAreaOut('mainphoto','zambia');" onclick="clickzambia.playclip()">Zambia</a><br />
+  <a  onmouseover="extAreaOver('mainphoto','malawi');" onmouseout="extAreaOut('mainphoto','malawi');" onclick="clickmalawi.playclip()">Malawi</a><br />
+  <a  onmouseover="extAreaOver('mainphoto','mozambique');" onmouseout="extAreaOut('mainphoto','mozambique');" onclick="clickmozambique.playclip()">Mozambique</a><br />
+  <a  onmouseover="extAreaOver('mainphoto','madagascar');" onmouseout="extAreaOut('mainphoto','madagascar');" onclick="clickmadagascar.playclip()">Madagascar</a><br />
+  <a  onmouseover="extAreaOver('mainphoto','namibia');" onmouseout="extAreaOut('mainphoto','namibia');" onclick="clicknamibia.playclip()">Namibia</a><br />
+  <a  onmouseover="extAreaOver('mainphoto','botswana');" onmouseout="extAreaOut('mainphoto','botswana');" onclick="clickbotswana.playclip()">Botswana</a><br />
+  <a  onmouseover="extAreaOver('mainphoto','zimbabwe');" onmouseout="extAreaOut('mainphoto','zimbabwe');" onclick="clickzimbabwe.playclip()">Zimbabwe</a><br />
+  <a  onmouseover="extAreaOver('mainphoto','swaziland');" onmouseout="extAreaOut('mainphoto','swaziland');" onclick="clickswaziland.playclip()">Swaziland</a><br />
+  <a  onmouseover="extAreaOver('mainphoto','lesotho');" onmouseout="extAreaOut('mainphoto','lesotho');" onclick="clicklesotho.playclip()">Lesotho</a><br />
+  <a  onmouseover="extAreaOver('mainphoto','southafrica');" onmouseout="extAreaOut('mainphoto','southafrica');" onclick="clicksouthafrica.playclip()">South Africa</a><br />
+<!-- InstanceEndEditable --></div>
+  <div id="mainContent">
+  <!-- InstanceBeginEditable name="EditRegion3" -->
+    <h1>Map of Africa</h1>
+  <p>
+    <img src="../images/map_of_africa.jpg" width="899" height="851" border="0" usemap="#Map" id="mainphoto">
+  <map name="Map" id="Map">
+  <area shape="poly" id="thegambia" tooltip="The Gambia" alt="The Gambia" onclick="clickthegambia.playclip()" onmouseover="cvi_tip._show(event);" onmouseout="cvi_tip._hide(event);" onmousemove="cvi_tip._move(event);" href="#nogo" coords="62,276,74,276,74,276,74,276,74,276,78,276,78,276,78,276,78,276,78,276,82,276,82,276,82,276,82,276,82,276,82,280,86,280,86,276,86,276,94,276,94,280,94,280,94,280,86,280,86,280,82,280,82,280,82,280,82,280,82,280,82,280,78,276,78,276,78,276,78,276,78,280,74,280,74,280,74,280,74,280,66,280,66,280,62,280,62,280,62,280,62,280,62,276,62,276,62,276,62,276">
+    <!-- africa -->
+    <area shape="poly" id="sudan" tooltip="Sudan" alt="Sudan" onclick="clicksudan.playclip()" onmouseover="cvi_tip._show(event);" onmouseout="cvi_tip._hide(event);" onmousemove="cvi_tip._move(event);" href="#nogo" coords="624,382,624,386,620,386,620,386,616,386,600,390,596,386,588,390,580,378,580,378,576,378,576,382,576,382,568,382,568,382,564,382,564,382,548,370,548,370,548,366,548,366,548,362,544,362,540,362,540,362,540,358,540,350,528,346,528,346,528,342,528,342,520,338,520,338,516,330,516,330,508,330,508,330,508,326,508,322,508,318,500,306,504,306,504,302,500,302,500,302,496,286,496,286,488,286,488,286,496,282,496,278,496,278,496,278,500,270,500,270,500,266,500,266,500,262,504,258,504,258,516,258,516,206,524,206,524,206,524,186,660,186,660,190,664,218,680,226,676,230,668,238,664,238,664,242,664,242,660,242,648,286,644,286,644,290,640,298,636,306,636,310,636,310,636,310,628,310,628,310,624,338,624,338,616,338,616,342,616,342,624,346,640,366,644,370,644,370,644,370,644,378,644,378,644,378,628,378,624,382,624,382,624,382">
+    <area shape="poly" id="egypt" tooltip="Egypt" alt="Egypt" onclick="clickegypt.playclip()" onmouseover="cvi_tip._show(event);" onmouseout="cvi_tip._hide(event);" onmousemove="cvi_tip._move(event);" href="#nogo" coords="627,82,635,102,635,102,627,122,627,122,623,122,619,110,619,106,615,106,607,98,607,98,607,102,639,158,643,162,643,166,643,166,643,178,655,182,659,186,523,186,523,90,523,86,523,82,523,82,523,82,527,78,527,82,555,82,559,86,575,86,579,82,595,82,599,82,599,82,603,86,607,82,607,86,615,86,615,82,615,82,619,86,627,82,627,82,627,82">
+    
+    <area shape="poly" id="benin" tooltip="Benin" alt="Benin" onclick="clickbenin.playclip()" onmouseover="cvi_tip._show(event);" onmouseout="cvi_tip._hide(event);" onmousemove="cvi_tip._move(event);" href="#nogo" coords="288,297,288,301,288,305,288,309,288,317,288,317,284,321,284,321,284,325,284,325,280,325,280,329,280,357,268,361,264,349,264,325,264,317,260,317,260,309,260,305,260,305,264,301,264,301,268,301,268,301,276,301,276,297,276,289,280,289,288,297,288,297,288,297">
+    <area shape="poly" id="guinea" tooltip="Guinea" alt="Guinea" onclick="clickguinea.playclip()" onmouseover="cvi_tip._show(event);" onmouseout="cvi_tip._hide(event);" onmousemove="cvi_tip._move(event);" href="#nogo" coords="160,317,160,317,160,321,160,321,160,325,164,325,164,325,160,329,164,337,164,337,164,337,164,337,160,337,160,337,160,337,160,337,160,341,160,341,156,345,156,345,156,345,156,345,156,345,148,349,144,349,144,345,144,341,140,337,140,337,140,337,136,337,136,337,136,341,128,325,124,321,124,317,116,321,108,321,104,329,104,325,100,321,96,317,88,309,84,309,84,309,84,305,84,305,80,305,80,305,80,305,88,301,88,301,96,301,96,297,96,297,96,285,104,285,108,289,120,289,124,289,128,297,136,289,140,297,148,289,148,289,148,289,148,297,156,305,160,309,160,317,160,317">
+    
+    <area shape="poly" id="togo" tooltip="Togo" alt="Togo" onclick="clicktogo.playclip()" onmouseover="cvi_tip._show(event);" onmouseout="cvi_tip._hide(event);" onmousemove="cvi_tip._move(event);" href="#nogo" coords="248,305,260,305,260,309,260,317,264,317,264,349,264,349,268,361,264,361,260,361,260,361,256,357,256,349,256,341,256,337,256,337,248,321,256,317,248,309,248,309,248,305,248,305,248,305">
+    
+    <area shape="poly" id="cotedivoire" tooltip="Cote D&#39;Ivoire" alt="Cote D&#39;Ivoire" onclick="clickcotedivoire.playclip()" onmouseover="cvi_tip._show(event);" onmouseout="cvi_tip._hide(event);" onmousemove="cvi_tip._move(event);" href="#nogo" coords="164,381,164,365,164,365,160,357,156,357,156,357,156,357,156,357,156,349,156,349,156,345,156,345,160,341,160,341,160,337,160,337,160,337,160,337,164,337,164,337,164,337,164,337,160,329,164,325,164,325,160,325,160,321,160,321,160,317,164,309,164,309,168,317,176,309,180,309,180,309,180,309,180,309,180,317,184,317,184,309,188,317,188,317,196,317,196,317,196,321,200,321,208,321,216,321,220,321,220,337,216,357,220,369,220,369,216,369,216,369,216,369,216,369,196,369,164,381,164,381,164,381,164,381,164,381">
+    <area shape="poly" id="mali" tooltip="Mali" alt="Mali" onclick="clickmali.playclip()" onmouseover="cvi_tip._show(event);" onmouseout="cvi_tip._hide(event);" onmousemove="cvi_tip._move(event);" href="#nogo" coords="196,149,260,189,260,197,260,197,260,197,268,205,268,205,276,201,276,205,280,205,280,205,284,205,284,209,284,209,284,217,284,217,296,217,296,249,288,257,284,257,264,261,260,261,244,261,240,261,228,265,224,269,224,269,220,269,220,269,208,281,208,281,204,281,204,281,200,281,200,289,196,297,188,297,188,297,188,297,188,305,188,309,184,317,180,317,180,309,180,309,180,309,180,309,168,317,164,309,164,309,160,317,160,309,156,305,148,297,148,289,148,289,148,289,140,297,136,289,128,297,124,289,120,289,120,289,120,281,120,281,120,281,116,281,116,265,116,265,120,261,120,261,120,257,120,257,124,257,124,257,124,261,128,261,128,261,128,261,128,257,128,257,140,257,144,257,188,257,188,245,184,245,176,149,196,149,196,149,196,149">
+    <area shape="poly" id="senegal" tooltip="Senegal" alt="Senegal" onclick="clicksenegal.playclip()" onmouseover="cvi_tip._show(event);" onmouseout="cvi_tip._hide(event);" onmousemove="cvi_tip._move(event);" href="#nogo" coords="96,285,80,285,80,289,64,289,64,289,64,289,64,285,64,285,64,281,68,281,68,281,76,281,76,281,76,281,76,281,80,281,80,277,80,277,80,277,80,277,84,281,84,281,84,281,84,281,84,281,84,281,88,281,88,281,96,281,96,281,96,281,96,277,88,277,88,277,88,281,84,281,84,277,84,277,84,277,84,277,84,277,80,277,80,277,80,277,80,277,80,277,76,277,76,277,76,277,76,277,64,277,64,277,64,277,64,269,60,265,60,265,56,265,60,257,64,249,64,245,68,241,84,241,88,241,96,245,100,245,100,245,108,261,116,265,116,265,116,265,116,281,120,281,120,281,120,281,120,289,120,289,120,289,108,289,104,285,96,285,96,285,96,285">
+    <area shape="poly" id="liberia" tooltip="Liberia" alt="Liberia" onclick="clickliberia.playclip()" onmouseover="cvi_tip._show(event);" onmouseout="cvi_tip._hide(event);" onmousemove="cvi_tip._move(event);" href="#nogo" coords="136,341,136,337,136,337,140,337,140,337,140,337,144,341,144,345,144,349,148,349,156,345,156,345,156,345,156,345,156,345,156,349,156,349,156,357,156,357,156,357,156,357,160,357,164,365,164,365,164,381,120,349,128,341,136,341,136,341,136,341">
+    <area shape="poly" id="centralafricanrepublic" tooltip="Central African Republic" alt="Central African Republic" onclick="clickcentralafricanrepublic.playclip()" onmouseover="cvi_tip._show(event);" onmouseout="cvi_tip._hide(event);" onmousemove="cvi_tip._move(event);" href="#nogo" coords="428,406,424,398,416,386,416,382,408,378,408,362,408,362,416,358,420,346,420,346,420,346,424,346,436,342,436,346,436,346,436,346,444,342,456,342,456,342,460,330,460,330,460,326,476,326,488,318,488,310,488,310,496,306,500,306,500,306,500,306,508,318,508,322,508,326,508,330,508,330,516,330,516,330,520,338,520,338,528,342,528,342,528,346,528,346,540,350,540,358,540,362,540,362,544,362,548,362,548,366,548,366,548,370,548,370,544,370,528,370,528,370,528,370,528,378,528,378,520,370,508,378,508,378,504,378,500,378,500,382,496,386,476,382,476,378,468,378,464,370,464,370,456,382,456,382,456,390,448,390,440,390,436,390,436,390,428,402,428,406,428,406,428,406">
+    
+    <area shape="poly" id="republicofthecongo" tooltip="Republic of the Congo" alt="Republic of the Congo" onclick="clickrepublicofthecongo.playclip()" onmouseover="cvi_tip._show(event);" onmouseout="cvi_tip._hide(event);" onmousemove="cvi_tip._move(event);" href="#nogo" coords="396,482,388,482,388,482,380,486,380,482,376,470,376,470,376,470,380,470,380,466,380,466,380,462,376,462,380,458,380,458,384,458,384,458,384,450,388,450,388,450,388,450,396,458,396,458,396,458,400,450,400,450,404,458,404,458,404,458,404,458,408,438,408,438,408,438,404,430,404,430,400,430,400,426,404,426,408,422,408,422,404,418,404,410,400,410,396,418,396,418,396,418,396,406,396,406,424,410,424,410,424,406,428,402,436,390,436,390,440,390,448,390,456,390,456,390,444,438,436,446,428,450,424,462,424,466,424,470,408,482,408,482,408,478,400,482,400,482,396,482,396,482,396,482,396,482,396,482">
+    <area shape="poly" id="cameroon" tooltip="Cameroon" alt="Cameroon" onclick="clickcameroon.playclip()" onmouseover="cvi_tip._show(event);" onmouseout="cvi_tip._hide(event);" onmousemove="cvi_tip._move(event);" href="#nogo" coords="376,406,360,406,360,406,360,402,360,398,356,386,360,386,356,386,356,382,348,386,348,382,348,382,348,378,348,378,344,378,344,378,344,370,344,366,360,350,368,350,368,358,376,358,376,358,384,330,388,330,388,330,388,322,396,322,400,306,404,306,408,302,408,302,408,302,408,298,408,290,408,290,404,290,404,290,404,286,404,282,408,286,416,298,416,302,416,306,416,310,420,318,420,322,408,318,404,318,404,322,416,330,420,346,420,346,420,346,416,358,408,362,408,362,408,362,416,382,416,382,416,386,424,398,428,406,424,406,424,410,424,410,376,402,376,406,376,406,376,406">
+    <area shape="poly" id="angola" rel="angola2" tooltip="Angola" alt="Angola" onclick="clickangola.playclip()" onmouseover="cvi_tip._show(event);" onmouseout="cvi_tip._hide(event);" onmousemove="cvi_tip._move(event);" href="#nogo" coords="381,486,389,482,389,482,397,482,389,486,389,490,389,490,385,490,385,490,381,486,381,486,381,486">
+    
+    <area shape="poly" id="ghana" tooltip="Ghana" alt="Ghana" onclick="clickghana.playclip()" onmouseover="cvi_tip._show(event);" onmouseout="cvi_tip._hide(event);" onmousemove="cvi_tip._move(event);" href="#nogo" coords="216,321,220,321,216,309,220,305,220,305,240,305,244,305,248,305,248,309,248,309,256,317,248,321,256,337,256,337,256,341,256,349,256,357,260,361,260,365,224,377,220,369,216,357,220,337,220,321,216,321,216,321,216,321">
+    <area shape="poly" id="angola2" rel="angola" tooltip="Angola" alt="Angola" onclick="clickangola.playclip()" onmouseover="cvi_tip._show(event);" onmouseout="cvi_tip._hide(event);" onmousemove="cvi_tip._move(event);" href="#nogo" coords="385,498,389,498,397,498,429,498,437,498,441,518,445,518,445,518,465,518,465,510,465,506,465,506,477,506,481,506,477,510,481,510,489,510,489,510,489,510,489,518,489,522,489,526,489,530,489,538,497,542,497,550,497,550,509,550,517,550,517,558,517,562,517,566,517,566,517,566,517,570,517,570,517,570,497,570,497,610,505,626,477,626,477,626,457,626,457,622,401,622,397,618,397,618,385,622,385,622,381,622,381,622,381,606,385,602,389,578,389,578,397,570,397,570,397,570,401,566,405,558,401,546,397,530,397,530,401,526,401,522,385,498,385,498">
+    <area shape="poly" id="democraticrepublicofthecongo" tooltip="Democratic Republic of the Congo" alt="Democratic Republic of the Congo" onclick="clickdemocraticrepublicofthecongo.playclip()" onmouseover="cvi_tip._show(event);" onmouseout="cvi_tip._hide(event);" onmousemove="cvi_tip._move(event);" href="#nogo" coords="396,482,396,482,396,482,400,482,400,482,408,478,408,482,408,482,424,470,424,466,424,462,428,458,428,446,440,442,440,442,444,438,456,390,456,390,456,390,456,386,456,382,456,382,460,378,464,370,464,370,468,378,476,378,476,382,496,386,500,382,500,378,504,378,508,378,508,378,520,370,528,378,528,378,528,370,528,370,528,370,544,370,548,370,560,382,564,382,564,382,568,382,568,382,576,382,576,382,576,378,580,378,580,378,588,390,588,390,588,390,588,402,588,402,596,402,596,406,596,406,596,406,580,422,580,442,568,446,568,458,576,466,576,470,576,478,576,486,576,490,576,498,576,502,584,506,588,522,568,522,568,526,564,530,564,546,564,558,564,558,568,566,568,566,576,566,576,566,580,562,580,566,580,578,568,578,568,578,564,570,560,566,556,566,556,566,548,558,544,562,544,562,528,562,528,550,520,558,520,558,520,550,520,550,508,550,496,550,496,550,496,542,488,538,488,522,488,522,488,518,488,510,488,510,488,510,480,510,476,510,480,506,476,506,464,506,464,506,464,510,464,518,444,518,444,518,436,506,436,498,436,498,428,498,396,498,388,498,384,498,384,490,384,490,388,490,388,490,388,486,396,482,396,482,396,482">
+    <area shape="poly" id="equatorialguinea" rel="equatorialguinea2" tooltip="Equatorial Guinea" alt="Equatorial Guinea" onclick="clickequatorialguinea.playclip()" onmouseover="cvi_tip._show(event);" onmouseout="cvi_tip._hide(event);" onmousemove="cvi_tip._move(event);" href="#nogo" coords="344,398,340,398,340,390,340,390,344,390,344,390,344,386,344,386,348,390,344,390,344,398,344,398,344,398">
+    <area shape="poly" id="equatorialguinea2" rel="equatorialguinea" tooltip="Equatorial Guinea" alt="Equatorial Guinea" onclick="clickequatorialguinea.playclip()" onmouseover="cvi_tip._show(event);" onmouseout="cvi_tip._hide(event);" onmousemove="cvi_tip._move(event);" href="#nogo" coords="360,406,376,406,376,418,356,418,356,418,356,418,356,418,356,418,360,406,360,406,360,406,360,406">
+    <area shape="poly" id="uganda" tooltip="Uganda" alt="Uganda" onclick="clickuganda.playclip()" onmouseover="cvi_tip._show(event);" onmouseout="cvi_tip._hide(event);" onmousemove="cvi_tip._move(event);" href="#nogo" coords="576,446,580,442,580,422,596,406,596,406,596,406,596,402,588,402,588,402,588,390,588,390,588,390,596,386,604,390,616,386,620,386,620,386,624,386,624,386,628,390,628,398,640,406,640,410,640,410,620,442,584,442,580,446,580,446,576,446,576,446,576,446">
+    <area shape="poly" id="burundi" tooltip="Burundi" alt="Burundi" onclick="clickburundi.playclip()" onmouseover="cvi_tip._show(event);" onmouseout="cvi_tip._hide(event);" onmousemove="cvi_tip._move(event);" href="#nogo" coords="575,481,575,477,575,469,575,465,567,461,575,461,575,461,579,461,579,457,583,457,583,461,587,461,587,461,587,465,587,465,579,481,575,481,575,481,575,481">
+    
+    <area shape="poly" id="rwanda" tooltip="Rwanda" alt="Rwanda" onclick="clickrwanda.playclip()" onmouseover="cvi_tip._show(event);" onmouseout="cvi_tip._hide(event);" onmousemove="cvi_tip._move(event);" href="#nogo" coords="567,461,567,457,567,445,575,445,579,445,579,445,583,441,587,441,587,449,587,457,587,457,579,457,579,461,575,461,575,461,567,461,567,461,567,461">
+    <area shape="poly" id="mozambique" tooltip="Mozambique" alt="Mozambique" onclick="clickmozambique.playclip()" onmouseover="cvi_tip._show(event);" onmouseout="cvi_tip._hide(event);" onmousemove="cvi_tip._move(event);" href="#nogo" coords="617,726,605,726,605,726,597,682,597,682,609,666,609,666,609,662,609,662,609,658,617,650,617,650,617,646,609,642,617,630,617,618,609,610,597,606,589,606,585,606,585,598,617,586,621,586,625,590,629,590,629,590,629,590,629,602,629,606,629,606,637,618,641,622,641,618,641,610,641,606,645,606,645,606,649,590,645,590,637,578,629,566,629,558,645,558,649,558,649,558,649,558,649,558,657,562,665,562,665,558,669,550,669,550,677,558,681,558,701,546,701,546,701,550,697,558,701,566,701,570,697,570,701,582,701,590,701,590,705,590,705,590,701,598,701,598,701,602,701,602,637,650,637,658,637,658,641,662,641,662,641,666,641,678,641,678,645,678,641,690,645,698,645,698,641,702,617,710,609,718,609,722,617,722,617,722,617,726,617,726,617,726">
+    
+    <area shape="poly" id="gabon" tooltip="Gabon" alt="Gabon" onclick="clickgabon.playclip()" onmouseover="cvi_tip._show(event);" onmouseout="cvi_tip._hide(event);" onmousemove="cvi_tip._move(event);" href="#nogo" coords="376,406,376,402,396,406,396,406,396,418,396,418,396,418,400,410,404,410,404,418,408,422,408,422,404,426,400,426,400,430,404,430,404,430,408,438,408,438,408,438,404,458,404,458,404,458,404,458,400,450,400,450,396,458,396,458,396,458,388,450,388,450,388,450,384,450,384,458,384,458,380,458,380,458,376,462,380,462,380,466,380,466,380,470,376,470,376,470,376,470,360,458,360,458,360,458,356,458,348,446,356,446,356,446,348,442,344,438,348,438,356,426,360,426,360,426,356,422,356,422,356,418,376,418,376,406,376,406,376,406">
+    <area shape="poly" id="madagascar" tooltip="Madagascar" alt="Madagascar" onclick="clickmadagascar.playclip()" onmouseover="cvi_tip._show(event);" onmouseout="cvi_tip._hide(event);" onmousemove="cvi_tip._move(event);" href="#nogo" coords="745,610,749,606,749,606,757,606,757,606,757,606,761,606,765,606,765,606,765,606,765,602,769,602,769,602,777,602,769,598,777,590,777,598,781,598,781,590,781,590,781,586,781,586,781,586,785,586,781,582,781,582,785,582,785,582,785,582,785,582,785,582,789,578,789,578,797,570,797,566,797,566,797,566,801,570,801,570,805,570,809,598,809,602,805,606,805,606,801,602,801,602,801,602,801,606,805,610,805,610,801,622,801,626,777,702,769,706,769,706,761,710,757,710,749,710,749,710,749,710,745,710,745,710,745,710,741,706,741,706,741,702,737,702,737,702,737,698,737,698,737,686,729,678,729,666,737,666,737,666,745,650,745,646,745,642,741,642,741,638,741,630,741,622,741,622,745,618,745,610,745,610,745,610,745,610">
+    
+    <area shape="poly" id="botswana" tooltip="Botswana" alt="Botswana" onclick="clickbotswana.playclip()" onmouseover="cvi_tip._show(event);" onmouseout="cvi_tip._hide(event);" onmousemove="cvi_tip._move(event);" href="#nogo" coords="524,626,528,626,528,626,528,626,528,626,528,630,536,638,540,646,548,650,548,650,548,658,548,658,548,658,556,658,556,658,556,662,560,666,568,670,568,670,576,678,576,678,568,678,560,682,548,690,544,702,536,706,536,710,528,718,528,718,520,718,508,710,504,710,504,710,500,718,496,722,488,726,480,726,480,726,476,726,476,726,480,718,476,710,468,706,468,706,468,678,480,670,480,630,508,630,508,630,508,630,516,630,520,626,524,626,524,626,524,626,524,626">
+    <area shape="poly" id="kenya" tooltip="Kenya" alt="Kenya" onclick="clickkenya.playclip()" onmouseover="cvi_tip._show(event);" onmouseout="cvi_tip._hide(event);" onmousemove="cvi_tip._move(event);" href="#nogo" coords="708,450,704,450,704,450,704,458,700,458,700,458,696,462,696,466,688,478,688,478,688,482,684,482,684,482,684,482,664,470,664,466,668,466,664,462,624,442,620,442,640,410,640,410,640,406,628,398,628,390,624,382,628,378,656,382,668,390,688,390,700,382,704,386,716,386,704,398,704,442,708,450,708,450,708,450">
+    
+    <area shape="poly" id="zimbabwe" tooltip="Zimbabwe" alt="Zimbabwe" onclick="clickzimbabwe.playclip()" onmouseover="cvi_tip._show(event);" onmouseout="cvi_tip._hide(event);" onmousemove="cvi_tip._move(event);" href="#nogo" coords="584,602,584,606,588,606,596,606,608,610,616,618,616,630,608,642,616,646,616,650,616,650,608,658,608,662,608,662,608,666,608,666,596,682,596,678,588,678,584,678,580,678,576,678,576,678,568,670,568,670,560,666,556,662,556,658,556,658,548,658,548,658,548,658,548,650,548,650,540,646,536,638,528,630,528,626,536,630,536,630,540,626,540,630,544,630,548,630,560,618,568,610,568,610,568,610,568,606,576,602,584,602,584,602,584,602,584,602">
+    <area shape="poly" id="zambia" tooltip="Zambia" alt="Zambia" onclick="clickzambia.playclip()" onmouseover="cvi_tip._show(event);" onmouseout="cvi_tip._hide(event);" onmousemove="cvi_tip._move(event);" href="#nogo" coords="504,626,496,610,496,570,516,570,516,570,516,570,516,566,516,566,516,566,516,562,516,558,516,550,520,550,520,550,520,558,520,558,528,558,528,562,544,562,544,562,548,558,556,566,564,566,568,578,568,578,580,578,580,566,580,562,576,566,576,566,568,566,564,558,564,558,564,546,564,530,568,526,568,522,588,522,596,526,616,538,624,546,624,546,620,546,620,550,620,562,620,566,624,566,620,566,616,570,616,582,616,586,616,586,584,598,584,598,584,602,580,602,576,602,568,606,568,610,568,610,568,610,560,618,548,630,544,630,540,630,540,626,536,630,536,630,528,626,528,626,528,626,524,626,520,622,516,622,516,622,504,626,504,626,504,626">
+    <area shape="poly" id="lesotho" tooltip="Lesotho" alt="Lesotho" onclick="clicklesotho.playclip()" onmouseover="cvi_tip._show(event);" onmouseout="cvi_tip._hide(event);" onmousemove="cvi_tip._move(event);" href="#nogo" coords="560,770,560,770,560,766,568,762,576,758,576,758,564,746,556,750,548,762,548,762,556,766,560,770,560,770,560,770">
+    <area shape="poly" id="swaziland" tooltip="Swaziland" alt="Swaziland" onclick="clickswaziland.playclip()" onmouseover="cvi_tip._show(event);" onmouseout="cvi_tip._hide(event);" onmousemove="cvi_tip._move(event);" href="#nogo" coords="604,718,604,722,604,722,604,726,604,726,604,730,604,730,596,730,596,730,588,726,588,726,596,718,596,718,604,718,604,718,604,718">
+    <area shape="poly" id="tanzania" tooltip="Tanzania" alt="Tanzania" onclick="clicktanzania.playclip()" onmouseover="cvi_tip._show(event);" onmouseout="cvi_tip._hide(event);" onmousemove="cvi_tip._move(event);" href="#nogo" coords="587,441,623,441,663,461,667,465,663,465,663,469,683,481,679,497,679,501,683,505,687,505,687,505,683,509,683,517,683,517,683,517,687,517,683,525,687,537,699,545,679,557,675,557,667,549,667,549,663,557,663,561,655,561,647,557,647,557,647,557,647,557,643,557,627,557,627,541,623,541,623,537,619,537,615,537,595,525,587,521,583,505,575,501,575,497,575,489,575,485,575,481,579,481,587,465,587,465,587,461,587,461,583,461,583,457,587,457,587,457,587,457,587,449,587,441,587,441,587,441">
+    <area shape="poly" id="libya" tooltip="Libya" alt="Libya" onclick="clicklibya.playclip()" onmouseover="cvi_tip._show(event);" onmouseout="cvi_tip._hide(event);" onmousemove="cvi_tip._move(event);" href="#nogo" coords="524,185,524,205,524,205,516,205,516,209,424,165,424,169,404,177,400,169,380,165,380,165,376,161,376,161,364,157,364,157,364,157,360,149,360,145,356,141,356,137,360,137,360,137,360,129,356,125,360,101,356,97,356,89,360,89,360,85,360,85,360,81,360,77,376,69,376,65,376,61,388,65,404,65,408,65,416,69,416,69,420,69,420,77,424,81,460,89,460,89,464,89,468,85,468,85,468,81,468,77,468,77,468,69,488,65,500,65,504,65,504,65,504,69,504,69,508,69,516,69,524,77,524,77,524,77,528,77,524,81,524,81,524,81,524,85,524,89,524,185,524,185,524,185">
+    <area shape="poly" id="guineabissau" tooltip="Guinea-Bissau" alt="Guinea-Bissau" onclick="clickguineabissau.playclip()" onmouseover="cvi_tip._show(event);" onmouseout="cvi_tip._hide(event);" onmousemove="cvi_tip._move(event);" href="#nogo" coords="64,289,80,289,80,285,96,285,96,297,96,297,96,301,88,301,80,305,80,305,80,305,80,301,80,301,80,297,80,297,80,297,76,297,76,297,76,297,68,297,68,289,64,289,64,289,64,289">
+    <area shape="poly" id="chad" tooltip="Chad" alt="Chad" onclick="clickchad.playclip()" onmouseover="cvi_tip._show(event);" onmouseout="cvi_tip._hide(event);" onmousemove="cvi_tip._move(event);" href="#nogo" coords="404,282,400,278,400,266,420,242,424,206,424,202,420,198,416,170,424,170,424,166,516,210,516,258,504,258,504,258,500,262,500,266,500,266,500,270,500,270,496,278,496,278,496,278,496,282,488,286,488,286,496,286,496,290,500,298,500,302,500,302,504,302,504,306,500,306,500,306,500,306,496,306,488,310,488,310,488,318,476,326,460,326,460,330,460,330,456,342,456,342,444,342,436,346,436,346,436,346,436,342,424,346,420,346,420,346,416,330,404,322,404,318,408,318,420,322,420,318,416,310,416,306,416,302,416,298,408,286,404,282,404,282,404,282">
+    
+    <area shape="poly" id="nigeria" tooltip="Nigeria" alt="Nigeria" onclick="clicknigeria.playclip()" onmouseover="cvi_tip._show(event);" onmouseout="cvi_tip._hide(event);" onmousemove="cvi_tip._move(event);" href="#nogo" coords="404,282,404,286,404,290,404,290,408,290,408,290,408,298,408,302,408,302,408,302,404,306,400,306,396,322,388,322,388,330,388,330,384,330,376,358,376,358,368,358,368,350,360,350,344,366,344,370,344,378,344,378,340,378,340,378,340,378,340,378,340,378,340,382,328,382,328,378,324,378,324,382,324,382,316,382,316,382,308,378,308,370,308,370,308,366,308,366,304,366,300,362,296,358,296,358,288,358,288,358,280,358,280,330,280,326,284,326,284,326,284,322,284,322,288,318,288,318,288,310,288,306,288,302,288,290,296,278,300,278,308,278,320,278,324,282,324,286,328,286,336,282,340,282,344,286,348,286,356,286,360,282,376,282,384,282,384,282,396,278,400,278,400,278,404,282,404,282,404,282">
+    <area shape="poly" id="niger" tooltip="Niger" alt="Niger" onclick="clickniger.playclip()" onmouseover="cvi_tip._show(event);" onmouseout="cvi_tip._hide(event);" onmousemove="cvi_tip._move(event);" href="#nogo" coords="276,289,268,285,264,285,264,285,260,285,260,281,260,281,260,281,256,269,248,265,248,265,248,261,260,261,264,261,284,257,288,257,296,249,296,217,316,209,380,165,400,169,404,177,416,169,420,189,424,201,424,201,420,241,400,265,400,277,396,277,384,281,384,281,368,281,360,281,356,285,348,285,344,285,340,281,336,281,328,285,324,285,324,281,320,277,308,277,300,277,296,277,288,289,288,297,280,289,276,289,276,289,276,289">
+    <area shape="poly" id="sierraleone" tooltip="Sierra Leone" alt="Sierra Leone" onclick="clicksierraleone.playclip()" onmouseover="cvi_tip._show(event);" onmouseout="cvi_tip._hide(event);" onmousemove="cvi_tip._move(event);" href="#nogo" coords="104,329,108,321,116,321,124,317,128,321,128,325,136,341,128,341,120,349,116,345,108,345,116,345,116,341,104,341,100,337,104,337,104,329,104,329,104,329,104,329,104,329,104,329,104,329">
+    <area shape="poly" id="malawi" tooltip="Malawi" alt="Malawi" onclick="clickmalawi.playclip()" onmouseover="cvi_tip._show(event);" onmouseout="cvi_tip._hide(event);" onmousemove="cvi_tip._move(event);" href="#nogo" coords="629,558,629,566,637,578,645,590,649,590,645,606,645,606,641,606,641,610,641,618,641,622,629,606,629,606,629,602,629,590,629,590,629,590,625,590,621,586,617,586,617,582,617,570,621,566,625,566,621,566,621,562,621,550,621,546,625,546,625,546,621,538,625,538,625,542,629,542,629,558,629,558">
+    <area shape="poly" id="somalia" tooltip="Somalia" alt="Somalia" onclick="clicksomalia.playclip()" onmouseover="cvi_tip._show(event);" onmouseout="cvi_tip._hide(event);" onmousemove="cvi_tip._move(event);" href="#nogo" coords="708,450,704,442,704,398,716,382,724,382,728,378,736,378,748,378,780,342,780,342,768,342,736,326,724,310,724,310,728,302,728,302,740,310,748,310,760,306,764,310,768,310,776,306,780,306,788,302,796,302,804,302,808,298,820,298,820,302,816,302,816,310,816,310,816,318,816,322,804,338,804,342,800,342,804,342,796,358,796,362,708,446,708,446,708,450,708,450,708,450">
+    <area shape="poly" id="ethiopia" tooltip="Ethiopia" alt="Ethiopia" onclick="clickethiopia.playclip()" onmouseover="cvi_tip._show(event);" onmouseout="cvi_tip._hide(event);" onmousemove="cvi_tip._move(event);" href="#nogo" coords="724,306,724,310,724,310,736,326,768,342,780,342,780,342,748,378,728,378,724,382,724,382,716,382,716,386,704,386,704,382,700,382,696,386,688,390,668,390,656,382,644,378,644,378,644,370,644,370,644,370,640,366,624,346,616,342,616,342,616,338,624,338,624,338,628,310,628,310,636,310,636,310,636,310,636,306,640,298,644,290,644,286,648,286,656,270,656,270,660,270,660,266,660,266,664,270,668,266,668,266,668,266,676,266,680,266,680,266,680,266,680,266,684,266,688,266,688,266,688,266,696,266,696,270,700,270,704,278,704,278,708,282,716,286,716,286,720,290,720,290,716,302,716,306,720,306,724,306,724,306,724,306">
+    <area shape="poly" id="djibouti" tooltip="Djibouti" alt="Djibouti" onclick="clickdjibouti.playclip()" onmouseover="cvi_tip._show(event);" onmouseout="cvi_tip._hide(event);" onmousemove="cvi_tip._move(event);" href="#nogo" coords="724,306,720,306,716,306,716,302,720,290,720,290,724,290,724,286,728,290,728,298,720,302,724,302,728,302,728,302,724,306,724,306,724,306">
+    <area shape="poly" id="eritrea" tooltip="Eritrea" alt="Eritrea" onclick="clickeritrea.playclip()" onmouseover="cvi_tip._show(event);" onmouseout="cvi_tip._hide(event);" onmousemove="cvi_tip._move(event);" href="#nogo" coords="720,290,720,290,716,286,716,286,708,282,704,278,704,278,700,270,696,270,696,266,688,266,688,266,688,266,684,266,680,266,680,266,680,266,680,266,676,266,668,266,668,266,668,266,664,270,660,266,660,266,660,270,656,270,656,270,656,262,660,242,664,242,664,242,664,238,668,238,668,238,676,230,676,230,680,226,680,226,688,258,688,262,688,262,688,258,688,258,700,262,700,262,716,278,716,278,720,282,720,282,720,282,724,282,724,286,724,290,720,290,720,290,720,290,720,290,720,290">
+    <area shape="poly" id="tunisia" tooltip="Tunisia" alt="Tunisia" onclick="clicktunisia.playclip()" onmouseover="cvi_tip._show(event);" onmouseout="cvi_tip._hide(event);" onmousemove="cvi_tip._move(event);" href="#nogo" coords="376,61,376,65,376,69,360,77,360,81,360,85,360,85,360,89,356,89,348,77,344,69,344,69,340,61,340,61,336,61,336,49,336,49,340,45,340,41,340,21,344,21,344,17,356,17,356,17,360,17,360,17,364,21,364,21,368,17,368,17,368,21,364,25,364,25,364,25,364,29,368,29,368,29,376,37,368,41,360,45,360,49,364,57,364,57,368,57,368,57,368,57,376,61,376,61,376,61">
+    
+    <area shape="poly" id="algeria" tooltip="Algeria" alt="Algeria" onclick="clickalgeria.playclip()" onmouseover="cvi_tip._show(event);" onmouseout="cvi_tip._hide(event);" onmousemove="cvi_tip._move(event);" href="#nogo" coords="156,125,156,109,168,101,180,101,180,97,184,97,188,89,196,89,204,85,208,85,204,81,204,81,204,77,208,77,216,77,216,77,220,69,236,69,236,65,236,65,236,65,228,61,228,61,228,45,228,41,224,41,224,41,228,37,228,37,236,37,236,29,244,29,244,29,248,29,248,29,248,25,260,25,276,21,280,21,284,21,284,21,288,21,304,21,316,21,320,17,324,21,328,17,336,17,336,17,336,21,336,21,344,17,344,21,340,21,340,41,340,45,336,49,336,49,336,61,340,61,340,61,344,69,344,69,348,77,356,89,356,89,356,97,356,101,360,121,356,125,360,129,360,137,360,137,356,137,356,141,360,145,360,149,364,157,364,157,364,157,376,161,376,161,380,165,380,165,316,209,284,217,284,217,284,209,284,209,284,205,280,205,280,205,276,205,276,201,268,205,268,205,260,197,260,197,260,197,260,189,156,125,156,125,156,125">
+    <area shape="poly" id="burkinafaso" tooltip="Burkina Faso" alt="Burkina Faso" onclick="clickburkinafaso.playclip()" onmouseover="cvi_tip._show(event);" onmouseout="cvi_tip._hide(event);" onmousemove="cvi_tip._move(event);" href="#nogo" coords="248,305,244,305,240,305,220,305,220,305,216,309,220,321,216,321,216,321,208,321,200,321,196,321,196,317,196,317,188,317,188,317,184,309,188,309,188,301,188,297,188,297,196,297,200,289,200,281,204,281,204,281,208,281,208,281,220,269,220,269,224,269,224,269,228,265,240,261,244,261,248,261,248,265,248,265,256,269,260,281,260,281,260,281,260,285,264,285,264,285,268,285,276,297,276,301,268,301,268,301,264,301,264,301,260,305,260,305,260,305,248,305,248,305,248,305">
+    <area shape="poly" id="mauritania" tooltip="Mauritania" alt="Mauritania" onclick="clickmauritania.playclip()" onmouseover="cvi_tip._show(event);" onmouseout="cvi_tip._hide(event);" onmousemove="cvi_tip._move(event);" href="#nogo" coords="116,265,104,257,100,245,100,245,96,245,88,241,84,241,68,241,64,245,68,229,68,221,68,217,64,209,64,209,68,209,68,201,64,201,64,197,60,197,60,197,60,189,104,189,104,177,104,169,116,165,116,141,148,141,156,125,196,149,176,149,184,245,188,245,188,257,128,257,128,257,128,261,128,261,128,261,124,261,124,257,124,257,120,257,120,257,120,261,120,261,116,265,116,265">
+    <area shape="poly" id="westernsahara" tooltip="Western Sahara" alt="Western Sahara" onclick="clickwesternsahara.playclip()" onmouseover="cvi_tip._show(event);" onmouseout="cvi_tip._hide(event);" onmousemove="cvi_tip._move(event);" href="#nogo" coords="60,189,60,185,60,185,64,177,76,161,84,149,84,141,88,137,100,129,104,121,156,121,148,141,116,141,116,165,104,169,104,177,104,189,60,189,60,189,60,189">
+    <area shape="poly" id="morocco" tooltip="Morocco" alt="Morocco" onclick="clickmorocco.playclip()" onmouseover="cvi_tip._show(event);" onmouseout="cvi_tip._hide(event);" onmousemove="cvi_tip._move(event);" href="#nogo" coords="224,41,224,41,228,41,228,45,228,61,228,61,236,65,236,65,236,65,236,69,220,69,216,77,216,77,208,77,204,77,204,81,204,81,208,85,204,85,196,89,188,89,184,97,180,97,180,101,168,101,156,109,156,121,104,121,104,121,104,121,124,109,140,97,140,89,140,89,140,85,140,81,140,81,144,69,144,69,144,65,144,65,156,57,168,49,184,29,184,29,188,37,200,37,208,37,216,37,216,37,224,41,224,41">
+  
+  <area shape="poly" id="namibia" tooltip="Namibia" alt="Namibia" onclick="clicknamibia.playclip()" onmouseover="cvi_tip._show(event);" onmouseout="cvi_tip._hide(event);" onmousemove="cvi_tip._move(event);" href="#nogo" coords="469,706,469,746,461,750,445,750,445,746,445,746,445,742,441,742,437,742,437,746,429,746,421,738,417,726,417,722,417,718,417,710,417,706,411,692,410,686,410,682,409,682,409,682,406,674,381,626,381,622,381,622,385,622,385,622,397,618,397,618,397,618,401,622,457,622,457,626,477,626,477,626,517,622,517,622,521,622,525,626,525,626,525,626,521,626,517,630,509,630,509,630,509,630,481,630,481,670,469,678,469,706,469,706,469,706">
+  <area shape="poly" id="southafrica" tooltip="South Africa" alt="South Africa" onclick="clicksouthafrica.playclip()" onmouseover="cvi_tip._show(event);" onmouseout="cvi_tip._hide(event);" onmousemove="cvi_tip._move(event);" href="#nogo" coords="468,707,468,707,480,719,480,719,476,727,476,727,480,727,480,727,488,727,496,723,500,719,504,711,504,711,508,711,516,719,528,719,528,719,536,711,536,707,540,707,544,703,544,703,548,691,560,683,568,683,568,679,576,679,576,679,584,679,588,679,596,679,596,683,604,719,596,719,596,719,588,727,588,727,596,731,596,731,604,731,604,731,604,727,616,727,608,739,608,743,608,743,608,743,608,747,608,747,544,807,536,807,536,807,536,807,528,807,524,807,524,811,520,811,516,807,508,807,504,811,500,807,496,811,488,811,476,811,476,811,468,819,464,819,464,811,460,811,460,811,460,811,456,807,456,807,456,811,456,811,456,811,448,811,456,807,448,799,448,799,444,799,448,799,448,799,448,791,456,787,436,747,428,747,436,747,436,743,440,743,444,743,444,747,444,747,444,751,460,751,468,747,468,707,468,707,468,707"></map>
+  </p>
+  <p>&nbsp;</p>
+  <!-- InstanceEndEditable -->
+  <!-- end #mainContent -->
+</div>
+  <!-- This clearing element should immediately follow the #mainContent div in order to force the #container div to contain all child floats -->
+  <div id="footer">
+    <p align="center">Move your mouse over the objects to see their descriptions. Click to hear the pronunciation!</p>
+    <p align="center">If you can't hear the sound when you click, check your browser. You need Internet Explorer 9+, Firefox 3.5+, Chrome/Safari 3+ or Opera 10.5+!</p>
+    <p align="center">Thank you for using the Online Photo Dictionary! It's fun to use this picture dictionary when you're studying and learning English!</p>
+    <p align="center">Use it to learn new vocabulary, learn the spelling of English words and improve your listening skills by clicking on the image to hear the pronunciation!</p>
+    <p align="center">Useful for students of all levels - improve your ESL, EFL, TOEIC, TOEFL, EILTS scores too!</p>
+    <p align="center"><a href="../help/privacy.html">Click here for privacy policy</a></p>
+    <!-- NEXT LINE IS THE FACEBOOK COMMENT BOX CODE -->
+<p>
+    <div style="clear: both; width: 500px; margin: 0pt auto;"> 
+      <div class="fb-like" data-href="http://www.onlinephotodictionary.com" data-send="true" data-width="400" data-show-faces="false" data-colorscheme="dark"></div>
+      <div class="fb-comments" data-href="http://www.onlinephotodictionary.com" data-num-posts="2" data-width="470" data-colorscheme="dark"></div>
+    </div>
+</p>
+  </div>
+<!-- end #container --></div>
+
+<!-- script so that Google counts time for one-page visits -->
+<script type="text/javascript">
+(function (tos) {
+  window.setInterval(function () {
+    tos = (function (t) {
+      return t[0] == 50 ? (parseInt(t[1]) + 1) + ':00' : (t[1] || '0') + ':' + (parseInt(t[0]) + 10);
+    })(tos.split(':').reverse());
+    window.pageTracker ? pageTracker._trackEvent('Time', 'Log', tos) : _gaq.push(['_trackEvent', 'Time', 'Log', tos]);
+  }, 10000);
+})('00');
+</script>
+<!-- end of Google one-page visit script -->
+
+</body>
+<!-- InstanceEnd --></html>

@@ -1,0 +1,32 @@
+* {
+	margin: 0;
+	padding: 0;
+}
+
+.dashboard-image {
+	width: 1000px;
+	height: 750px;
+}
+
+.overlay {
+	position: absolute;
+	width: 1000px;
+	height: 750px;
+	background-color: green;
+	top: 0;
+	left: 0;
+	opacity: 0;
+	cursor: pointer;
+}
+
+.overlay:hover {
+	opacity: 0.5;
+}
+
+.radio {
+	clip-path: polygon(710px 288px, 906px 288px, 912px 289px, 916px 295px, 919px 305px, 919px 322px, 920px 339px, 920px 367px, 919px 386px, 919px 402px, 707px 402px, 700px 312px, 699px 295px, 704px 291px);
+}
+
+.horn {
+	clip-path: circle(50px at 486px 332px);
+}

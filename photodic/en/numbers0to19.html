@@ -1,0 +1,254 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"><!-- InstanceBegin template="/Templates/template-mapper.dwt" codeOutsideHTMLIsLocked="false" -->
+
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta name="Keywords" content="picture, dictionary, visual, photo, photos, audio, sound, pronunciation, spelling, hover, mouse, learn, English, words" />
+<meta name="Description" content="The Online Photo Dictionary is an interactive picture dictionary with photos and sound. Hover your mouse over each item to see its spelling and click it to hear its pronunciation!" />
+<!-- InstanceBeginEditable name="doctitle" -->
+<title>The Online Photo Dictionary: Numbers 0-19</title>
+<!-- InstanceEndEditable -->
+
+<link rel="stylesheet" type="text/css" href="../css/tooltip.css" />
+<link rel="stylesheet" type="text/css" href="../css/global.css"  />
+
+
+<script type="text/javascript" src="../js/cvi_tip_lib.js"></script>
+<script type="text/javascript" src="../js/cvi_map_lib.js"></script>
+<script type="text/javascript" src="../js/mapper.js"></script>
+
+<!-- InstanceBeginEditable name="head" -->
+
+<script type="text/javascript">
+
+	cvi_map.defaultOpacity = 0; //INT 0-100 (% opacity)
+	cvi_map.defaultAreacolor = '#00ff00'; //STR '#000000'-'#ffffff'
+	cvi_map.defaultBordercolor 	= '#0000ff'; 	//STR '#000000'-'#ffffff'
+	cvi_map.defaultNofade = true; //BOOLEAN
+	cvi_map.defaultNoborder = true; //BOOLEAN
+
+<!--
+function ById(v) {return(document.getElementById(v));}
+window.onload = function() {
+	cvi_map.add(ById('mainphoto'),{opacity: 40, areacolor: '#00FF00', noborder: true});
+}
+-->
+</script>
+
+
+<script>
+
+// Mouseover/ Click sound effect- by JavaScript Kit (www.javascriptkit.com)
+// Visit JavaScript Kit at http://www.javascriptkit.com/ for full source code
+
+//** Usage: Instantiate script by calling: var uniquevar=createsoundbite("soundfile1", "fallbackfile2", "fallebacksound3", etc)
+//** Call: uniquevar.playclip() to play sound
+
+var html5_audiotypes={ //define list of audio file extensions and their associated audio types. Add to it if your specified audio file isn't on this list:
+	"mp3": "audio/mpeg",
+	"mp4": "audio/mp4",
+	"ogg": "audio/ogg",
+	"wav": "audio/wav"
+}
+
+function createsoundbite(sound){
+	var html5audio=document.createElement('audio')
+	if (html5audio.canPlayType){ //check support for HTML5 audio
+		for (var i=0; i<arguments.length; i++){
+			var sourceel=document.createElement('source')
+			sourceel.setAttribute('src', arguments[i])
+			if (arguments[i].match(/\.(\w+)$/i))
+				sourceel.setAttribute('type', html5_audiotypes[RegExp.$1])
+			html5audio.appendChild(sourceel)
+		}
+		html5audio.load()
+		html5audio.playclip=function(){
+			html5audio.pause()
+			html5audio.currentTime=0
+			html5audio.play()
+		}
+		return html5audio
+	}
+	else{
+		return {playclip:function(){throw new Error("Your browser doesn't support HTML5 audio unfortunately")}}
+	}
+}
+
+
+//Initialize sound clips with 1 fallback file each:
+//Replace X with sound's name and use find and replace to fill out the remainder of commands -- syntax is: var clickX=createsoundbite("sounds/X.mp3, sounds/X.ogg")
+
+
+var clickzero=createsoundbite("sounds/zero.mp3", "sounds/zero.ogg")
+var clickone=createsoundbite("sounds/one.mp3", "sounds/one.ogg")
+var clicktwo=createsoundbite("sounds/two.mp3", "sounds/two.ogg")
+var clickthree=createsoundbite("sounds/three.mp3", "sounds/three.ogg")
+var clickfour=createsoundbite("sounds/four.mp3", "sounds/four.ogg")
+var clickfive=createsoundbite("sounds/five.mp3", "sounds/five.ogg")
+var clicksix=createsoundbite("sounds/six.mp3", "sounds/six.ogg")
+var clickseven=createsoundbite("sounds/seven.mp3", "sounds/seven.ogg")
+var clickeight=createsoundbite("sounds/eight.mp3", "sounds/eight.ogg")
+var clicknine=createsoundbite("sounds/nine.mp3", "sounds/nine.ogg")
+var clickten=createsoundbite("sounds/ten.mp3", "sounds/ten.ogg")
+var clickeleven=createsoundbite("sounds/eleven.mp3", "sounds/eleven.ogg")
+var clicktwelve=createsoundbite("sounds/twelve.mp3", "sounds/twelve.ogg")
+var clickthirteen=createsoundbite("sounds/thirteen.mp3", "sounds/thirteen.ogg")
+var clickfourteen=createsoundbite("sounds/fourteen.mp3", "sounds/fourteen.ogg")
+var clickfifteen=createsoundbite("sounds/fifteen.mp3", "sounds/fifteen.ogg")
+var clicksixteen=createsoundbite("sounds/sixteen.mp3", "sounds/sixteen.ogg")
+var clickseventeen=createsoundbite("sounds/seventeen.mp3", "sounds/seventeen.ogg")
+var clickeighteen=createsoundbite("sounds/eighteen.mp3", "sounds/eighteen.ogg")
+var clicknineteen=createsoundbite("sounds/nineteen.mp3", "sounds/nineteen.ogg")
+
+
+</script>
+
+
+<!-- Google Analytics code -->
+<script type="text/javascript">
+
+  var _gaq = _gaq || [];
+  _gaq.push(['_setAccount', 'UA-27459311-1']);
+  _gaq.push(['_trackPageview']);
+
+  (function() {
+    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+  })();
+
+</script>
+<style type="text/css">
+<!--
+body {
+	background-color: #000000;
+}
+-->
+</style>
+<!-- InstanceEndEditable -->
+</head>
+
+
+<!-- DON'T FORGET TO REMOVE SPACES FROM FILENAMES TO PLAY SOUNDS PROPERLY !!!! -->
+
+
+<body class="twoColFixLtHdr">
+
+<!-- THE FOLLOWING IS CODE FROM FACEBOOK -- A SCRIPT TO RUN THE COMMENTS BOX -->
+<div id="fb-root"></div>
+<script>(function(d, s, id) {
+  var js, fjs = d.getElementsByTagName(s)[0];
+  if (d.getElementById(id)) return;
+  js = d.createElement(s); js.id = id;
+  js.src = "//connect.facebook.net/en_US/all.js#xfbml=1&appId=485516258134980";
+  fjs.parentNode.insertBefore(js, fjs);
+}(document, 'script', 'facebook-jssdk'));</script>
+
+<div id="container">
+  <div id="header" >
+    <div id="icons"><a href="../index.html"><img src="../images/icon_set/onebit_01.png" width="48" height="48" /></a> <a href="../help/help.html"><img src="../images/icon_set/onebit_37.png" width="48" height="48" /></a></div>
+    <h1 align="center"><a href="frontpage.html"><img src="../images/Photo-Dictionary-logo.png" alt="The Online Photo Dictionary" width="650" height="67" /></a><br />
+    </h1>
+    <h1 align="center"><a href="../en/frontpage.html"><img src="../images/United_Kingdom.png" alt="English" width="60" height="45" hspace="5" vspace="10" /></a><a href="../jp/frontpage.html"><img src="../images/Japan2.png" alt="日本語" width="60" height="45" hspace="5" vspace="10" /></a></h1>
+
+<!-- THE FOLLOWING IS ADSENSE CODE FOR TOP BANNER -->
+<script type="text/javascript"><!--
+google_ad_client = "ca-pub-8761395630506939";
+/* OPD - top banner */
+google_ad_slot = "2407538890";
+google_ad_width = 468;
+google_ad_height = 60;
+//-->
+</script>
+<script type="text/javascript"
+src="http://pagead2.googlesyndication.com/pagead/show_ads.js">
+</script>
+    
+  </div>
+  
+  <div id="sidebar1"><!-- InstanceBeginEditable name="EditRegion4" -->
+    <a  onmouseover="extAreaOver('mainphoto','zero');" onmouseout="extAreaOut('mainphoto','zero');" onclick="clickzero.playclip()">zero</a><br />
+  <a  onmouseover="extAreaOver('mainphoto','one');" onmouseout="extAreaOut('mainphoto','one');" onclick="clickone.playclip()">one</a><br />
+  <a  onmouseover="extAreaOver('mainphoto','two');" onmouseout="extAreaOut('mainphoto','two');" onclick="clicktwo.playclip()">two</a><br />
+  <a  onmouseover="extAreaOver('mainphoto','three');" onmouseout="extAreaOut('mainphoto','three');" onclick="clickthree.playclip()">three</a><br />
+  <a  onmouseover="extAreaOver('mainphoto','four');" onmouseout="extAreaOut('mainphoto','four');" onclick="clickfour.playclip()">four</a><br />
+  <a  onmouseover="extAreaOver('mainphoto','five');" onmouseout="extAreaOut('mainphoto','five');" onclick="clickfive.playclip()">five</a><br />
+  <a  onmouseover="extAreaOver('mainphoto','six');" onmouseout="extAreaOut('mainphoto','six');" onclick="clicksix.playclip()">six</a><br />
+  <a  onmouseover="extAreaOver('mainphoto','seven');" onmouseout="extAreaOut('mainphoto','seven');" onclick="clickseven.playclip()">seven</a><br />
+  <a  onmouseover="extAreaOver('mainphoto','eight');" onmouseout="extAreaOut('mainphoto','eight');" onclick="clickeight.playclip()">eight</a><br />
+  <a  onmouseover="extAreaOver('mainphoto','nine');" onmouseout="extAreaOut('mainphoto','nine');" onclick="clicknine.playclip()">nine</a><br />
+  <a  onmouseover="extAreaOver('mainphoto','ten');" onmouseout="extAreaOut('mainphoto','ten');" onclick="clickten.playclip()">ten</a><br />
+  <a  onmouseover="extAreaOver('mainphoto','eleven');" onmouseout="extAreaOut('mainphoto','eleven');" onclick="clickeleven.playclip()">eleven</a><br />
+  <a  onmouseover="extAreaOver('mainphoto','twelve');" onmouseout="extAreaOut('mainphoto','twelve');" onclick="clicktwelve.playclip()">twelve</a><br />
+  <a  onmouseover="extAreaOver('mainphoto','thirteen');" onmouseout="extAreaOut('mainphoto','thirteen');" onclick="clickthirteen.playclip()">thirteen</a><br />
+  <a  onmouseover="extAreaOver('mainphoto','fourteen');" onmouseout="extAreaOut('mainphoto','fourteen');" onclick="clickfourteen.playclip()">fourteen</a><br />
+  <a  onmouseover="extAreaOver('mainphoto','fifteen');" onmouseout="extAreaOut('mainphoto','fifteen');" onclick="clickfifteen.playclip()">fifteen</a><br />
+  <a  onmouseover="extAreaOver('mainphoto','sixteen');" onmouseout="extAreaOut('mainphoto','sixteen');" onclick="clicksixteen.playclip()">sixteen</a><br />
+  <a  onmouseover="extAreaOver('mainphoto','seventeen');" onmouseout="extAreaOut('mainphoto','seventeen');" onclick="clickseventeen.playclip()">seventeen</a><br />
+  <a  onmouseover="extAreaOver('mainphoto','eighteen');" onmouseout="extAreaOut('mainphoto','eighteen');" onclick="clickeighteen.playclip()">eighteen</a><br />
+  <a  onmouseover="extAreaOver('mainphoto','nineteen');" onmouseout="extAreaOut('mainphoto','nineteen');" onclick="clicknineteen.playclip()">nineteen</a><br />
+<!-- InstanceEndEditable --></div>
+  <div id="mainContent">
+  <!-- InstanceBeginEditable name="EditRegion3" -->
+      <h1>Numbers 0 - 19</h1>
+    <p><img src="../images/numbers0to19.jpg" name="mainphoto" width="1000" height="750" border="0" usemap="#Map" id="mainphoto" /></p>
+    <p>
+      <map name="Map" id="Map">
+        <area shape="circle" coords="400,99,76" onmouseover="cvi_tip._show(event);" onmouseout="cvi_tip._hide(event);" onmousemove="cvi_tip._move(event);" href="#nogo" tooltip="five" alt="five" onclick="clickfive.playclip()" id="five" />
+  <area shape="circle" coords="148,470,83" onmouseover="cvi_tip._show(event);" onmouseout="cvi_tip._hide(event);" onmousemove="cvi_tip._move(event);" href="#nogo" tooltip="one" alt="one" onclick="clickone.playclip()" id="one" />
+  <area shape="circle" coords="431,360,55" onmouseover="cvi_tip._show(event);" onmouseout="cvi_tip._hide(event);" onmousemove="cvi_tip._move(event);" href="#nogo" tooltip="zero" alt="zero" onclick="clickzero.playclip()" id="zero" />
+  <area shape="circle" coords="129,162,107" onmouseover="cvi_tip._show(event);" onmouseout="cvi_tip._hide(event);" onmousemove="cvi_tip._move(event);" href="#nogo" tooltip="nineteen" alt="nineteen" onclick="clicknineteen.playclip()" id="nineteen" />
+  <area shape="circle" coords="534,241,36" onmouseover="cvi_tip._show(event);" onmouseout="cvi_tip._hide(event);" onmousemove="cvi_tip._move(event);" href="#nogo" tooltip="three" alt="three" onclick="clickthree.playclip()" id="three" />
+  <area shape="circle" coords="391,225,143" onmouseover="cvi_tip._show(event);" onmouseout="cvi_tip._hide(event);" onmousemove="cvi_tip._move(event);" href="#nogo" tooltip="six" alt="six" onclick="clicksix.playclip()" id="six" />
+  <area shape="circle" coords="928,501,48" onmouseover="cvi_tip._show(event);" onmouseout="cvi_tip._hide(event);" onmousemove="cvi_tip._move(event);" href="#nogo" tooltip="two" alt="two" onclick="clicktwo.playclip()" id="two" />
+  <area shape="poly" coords="827,546,896,564,858,732,791,715" onmouseover="cvi_tip._show(event);" onmouseout="cvi_tip._hide(event);" onmousemove="cvi_tip._move(event);" href="#nogo" tooltip="eighteen" alt="eighteen" onclick="clickeighteen.playclip()" id="eighteen" />
+  <area shape="circle" coords="816,268,75" onmouseover="cvi_tip._show(event);" onmouseout="cvi_tip._hide(event);" onmousemove="cvi_tip._move(event);" href="#nogo" tooltip="fifteen" alt="fifteen" onclick="clickfifteen.playclip()" id="fifteen" />
+  <area shape="circle" coords="666,158,106" onmouseover="cvi_tip._show(event);" onmouseout="cvi_tip._hide(event);" onmousemove="cvi_tip._move(event);" href="#nogo" tooltip="twelve" alt="twelve" onclick="clicktwelve.playclip()" id="twelve" />
+  <area shape="circle" coords="829,82,69" onmouseover="cvi_tip._show(event);" onmouseout="cvi_tip._hide(event);" onmousemove="cvi_tip._move(event);" href="#nogo" tooltip="thirteen" alt="thirteen" onclick="clickthirteen.playclip()" id="thirteen" />
+  <area shape="circle" coords="910,144,26" onmouseover="cvi_tip._show(event);" onmouseout="cvi_tip._hide(event);" onmousemove="cvi_tip._move(event);" href="#nogo" tooltip="seventeen" alt="seventeen" onclick="clickseventeen.playclip()" id="seventeen" />
+  <area shape="rect" coords="19,335,306,415" onmouseover="cvi_tip._show(event);" onmouseout="cvi_tip._hide(event);" onmousemove="cvi_tip._move(event);" href="#nogo" tooltip="sixteen" alt="sixteen" onclick="clicksixteen.playclip()" id="sixteen" />
+  <area shape="circle" coords="607,491,52" onmouseover="cvi_tip._show(event);" onmouseout="cvi_tip._hide(event);" onmousemove="cvi_tip._move(event);" href="#nogo" tooltip="fourteen" alt="fourteen" onclick="clickfourteen.playclip()" id="fourteen" />
+  <area shape="circle" coords="139,640,60" onmouseover="cvi_tip._show(event);" onmouseout="cvi_tip._hide(event);" onmousemove="cvi_tip._move(event);" href="#nogo" tooltip="eight" alt="eight" onclick="clickeight.playclip()" id="eight" />
+  <area shape="circle" coords="427,593,161" onmouseover="cvi_tip._show(event);" onmouseout="cvi_tip._hide(event);" onmousemove="cvi_tip._move(event);" href="#nogo" tooltip="ten" alt="ten" onclick="clickten.playclip()" id="ten" />
+  <area shape="circle" coords="689,630,53" onmouseover="cvi_tip._show(event);" onmouseout="cvi_tip._hide(event);" onmousemove="cvi_tip._move(event);" href="#nogo" tooltip="four" alt="four" onclick="clickfour.playclip()" id="four" />
+  <area shape="circle" coords="641,349,90" onmouseover="cvi_tip._show(event);" onmouseout="cvi_tip._hide(event);" onmousemove="cvi_tip._move(event);" href="#nogo" tooltip="eleven" alt="eleven" onclick="clickeleven.playclip()" id="eleven" />
+  <area shape="circle" coords="767,471,55" onmouseover="cvi_tip._show(event);" onmouseout="cvi_tip._hide(event);" onmousemove="cvi_tip._move(event);" href="#nogo" tooltip="nine" alt="nine" onclick="clicknine.playclip()" id="nine" />
+  <area shape="circle" coords="895,384,50" onmouseover="cvi_tip._show(event);" onmouseout="cvi_tip._hide(event);" onmousemove="cvi_tip._move(event);" href="#nogo" tooltip="seven" alt="seven" onclick="clickseven.playclip()" id="seven" />
+      </map>
+    </p>
+  <!-- InstanceEndEditable -->
+  <!-- end #mainContent -->
+</div>
+  <!-- This clearing element should immediately follow the #mainContent div in order to force the #container div to contain all child floats -->
+  <div id="footer">
+    <p align="center">Move your mouse over the objects to see their descriptions. Click to hear the pronunciation!</p>
+    <p align="center">If you can't hear the sound when you click, check your browser. You need Internet Explorer 9+, Firefox 3.5+, Chrome/Safari 3+ or Opera 10.5+!</p>
+    <p align="center">Thank you for using the Online Photo Dictionary! It's fun to use this picture dictionary when you're studying and learning English!</p>
+    <p align="center">Use it to learn new vocabulary, learn the spelling of English words and improve your listening skills by clicking on the image to hear the pronunciation!</p>
+    <p align="center">Useful for students of all levels - improve your ESL, EFL, TOEIC, TOEFL, EILTS scores too!</p>
+    <p align="center"><a href="../help/privacy.html">Click here for privacy policy</a></p>
+    <!-- NEXT LINE IS THE FACEBOOK COMMENT BOX CODE -->
+<p>
+    <div style="clear: both; width: 500px; margin: 0pt auto;"> 
+      <div class="fb-like" data-href="http://www.onlinephotodictionary.com" data-send="true" data-width="400" data-show-faces="false" data-colorscheme="dark"></div>
+      <div class="fb-comments" data-href="http://www.onlinephotodictionary.com" data-num-posts="2" data-width="470" data-colorscheme="dark"></div>
+    </div>
+</p>
+  </div>
+<!-- end #container --></div>
+
+<!-- script so that Google counts time for one-page visits -->
+<script type="text/javascript">
+(function (tos) {
+  window.setInterval(function () {
+    tos = (function (t) {
+      return t[0] == 50 ? (parseInt(t[1]) + 1) + ':00' : (t[1] || '0') + ':' + (parseInt(t[0]) + 10);
+    })(tos.split(':').reverse());
+    window.pageTracker ? pageTracker._trackEvent('Time', 'Log', tos) : _gaq.push(['_trackEvent', 'Time', 'Log', tos]);
+  }, 10000);
+})('00');
+</script>
+<!-- end of Google one-page visit script -->
+
+</body>
+<!-- InstanceEnd --></html>

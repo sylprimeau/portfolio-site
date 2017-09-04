@@ -1,0 +1,139 @@
+body {
+  font-family: 'Varela Round', sans-serif;
+  background-color: black;
+  margin: 0;
+  color: aqua;
+}
+
+#inner {
+  max-width: 400px;
+  height: 500px;
+  margin: auto;
+  background-color: black;
+}
+
+#logo {
+  width: 80%;
+  height: 100px;
+  background-color: black;
+  color: #ff0000;
+  margin: 30px auto 0 auto;
+  text-align: center;
+  font-size: 225%;
+}
+
+.settings {
+  background-color: black;
+  width: 120px;
+  height: 60px;
+  margin-bottom: 50px;
+}
+
+#setting-break {
+  float: left;
+  margin-left: 30px;
+}
+
+#setting-session {
+  float: right;
+  margin-right: 30px;
+}
+
+.label {
+  background-color: black;
+  height: 30px;
+  width: 120px;
+  font-size: 12px;
+  text-align: center;
+}
+
+.plus-minus {
+  height: 30px;
+  width: 30px;
+  background-color: black;
+  text-align: center;
+  line-height: 30px;
+  font-size: 200%;
+}
+
+.plus-minus:hover {
+  cursor:pointer;
+}
+
+#dec-break,
+#dec-session {
+  float: left;
+  background-color: black;
+}
+
+#inc-break,
+#inc-session {
+  float: right;
+  background-color: black;
+}
+
+.setting-time {
+  height: 30px;
+  width: 60px;
+  background-color: black;
+  color: #99ee99;
+  float: left;
+  text-align: center;
+  font-size: 200%;
+  line-height: 30px;
+}
+
+#timer-border {
+  clear: both;
+  height: 300px;
+  width: 300px;
+  margin: auto;
+  background-color: black;
+  border: 2px solid aqua;
+  border-radius: 50%;
+}
+
+#timer-border:hover {
+  cursor: pointer;
+}
+
+#time-remaining {
+  height: 250px;
+  width: 250px;
+  margin: auto;
+  position: relative;
+  top: 20px;
+  font-size: 400%;
+  line-height: 250px;
+  text-align: center;
+  border-radius: 50%;
+}
+
+#reset {
+  color: #dddddd;
+  height: 30px;
+  width: 50px;
+  text-align: center;
+  line-height: 30px;
+  margin: 20px auto;
+}
+
+.noselect {
+  /* prevents text from being selected on buttons */
+  -webkit-touch-callout: none;
+  /* iOS Safari */
+  -webkit-user-select: none;
+  /* Chrome/Safari/Opera */
+  -khtml-user-select: none;
+  /* Konqueror */
+  -moz-user-select: none;
+  /* Firefox */
+  -ms-user-select: none;
+  /* Internet Explorer/Edge */
+  user-select: none;
+  /* Non-prefixed version, currently not supported by any browser */
+}
+
+#reset:hover {
+  cursor:pointer;
+}
