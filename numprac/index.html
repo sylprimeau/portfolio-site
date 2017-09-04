@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+	<title>
+		ESL Tool Chest - Tools to Build Your English Skills
+	</title>
+	<link rel="stylesheet" type="text/css" href="numprac.css">
+</head>
+
+<body>
+	<div id="wrapper">
+		<div id="content">
+			<div id="wrapperLanguage" class="wrapper">
+				<h1>Choose language</h1>
+				<button class="btnMenu" id="btnEnglish" onclick="chooseLanguage('en')">English</button>
+				<button class="btnMenu" id="btnJapanese">Japanese
+					<br><span style="font-size:15px">coming soon</span></button>
+				<button class="btnMenu" id="btnFrench">French
+					<br><span style="font-size:15px">coming soon</span></button>
+				<button class="btnMenu" id="btnSpanish">Spanish
+					<br><span style="font-size:15px">coming soon</span></button>
+				<button class="btnMenu" id="btnChinese">Mandarin
+					<br><span style="font-size:15px">coming soon</span></button>
+				<button class="btnMenu" id="btnGerman">German
+					<br><span style="font-size:15px">coming soon</span></button>
+			</div>
+
+			<!-- Use this when you want to give the option of learning too
+<div id="wrapperMode" class="wrapper" style="display:none">
+	<h1>Would you like to learn some numbers or test your listening?</h1>
+    <button class="btnMenu" id="btnLearn" onclick="chooseMode('learn')">Learn</button>
+	<button class="btnMenu" id="btnTest" onclick="chooseMode('test')">Test</button>
+</div>
+-->
+
+			<div id="wrapperRange" class="wrapper" style="display:none">
+				<h1 id="headerRange">Select difficulty level</h1>
+				<button class="btnMenu" id="btnL1" onclick="chooseLevel('1')">Super Duper Easy
+					<br><span style="font-size:15px">touch device OK!</span></button>
+				<button class="btnMenu" id="btnL2" onclick="chooseLevel('2')">Super Easy
+					<br><span style="font-size:15px">touch device OK!</span></button>
+				<button class="btnMenu" id="btnL3" onclick="chooseLevel('3')">Pretty Easy
+					<br><span style="font-size:15px">touch device OK!</span></button>
+				<button class="btnMenu" id="btnL4" onclick="chooseLevel('4')">Easy</button>
+				<button class="btnMenu" id="btnL5" onclick="chooseLevel('5')">Slightly Challenging</button>
+				<button class="btnMenu" id="btnL6" onclick="chooseLevel('6')">Challenging</button>
+				<button class="btnMenu" id="btnL7" onclick="chooseLevel('7')">Very Challenging</button>
+				<button class="btnMenu" id="btnL8" onclick="chooseLevel('8')">Kinda Hard</button>
+				<button class="btnMenu" id="btnL9" onclick="chooseLevel('9')">Hard</button>
+				<button class="btnMenu" id="btnL10" onclick="chooseLevel('10')">Really Hard</button>
+				<button class="btnMenu" id="btnL11" onclick="chooseLevel('11')">Insane</button>
+				<button class="btnMenu" id="btnL12" onclick="chooseLevel('12')">Impossible!</button>
+			</div>
+
+			<div id="wrapperStart" class="wrapper" style="display:none">
+				<button class="btnMenu" id="btnStart" onclick="start()">Start</button>
+			</div>
+
+			<div id="wrapperTest" class="wrapper" style="display:none">
+				<!--	<audio id="myAudio"></audio><br> -->
+				<div id="levelLabel">Level:</div>
+				<div id="scoreboard">Score: 0 Trial#: 1</div>
+				<div id="guess"></div>
+				<button id="btn1" class="btnNumber" value="1" onclick="tap1()">1</button>
+				<button id="btn2" class="btnNumber" value="2" onclick="tap2()">2</button>
+				<button id="btn3" class="btnNumber" value="3" onclick="tap3()">3</button>
+				<br>
+				<button id="btn4" class="btnNumber" value="4" onclick="tap4()">4</button>
+				<button id="btn5" class="btnNumber" value="5" onclick="tap5()">5</button>
+				<button id="btn6" class="btnNumber" value="6" onclick="tap6()">6</button>
+				<br>
+				<button id="btn7" class="btnNumber" value="7" onclick="tap7()">7</button>
+				<button id="btn8" class="btnNumber" value="8" onclick="tap8()">8</button>
+				<button id="btn9" class="btnNumber" value="9" onclick="tap9()">9</button>
+				<br>
+				<button id="btnClear" class="btnNumber" onclick="clearinput()">Clear</button>
+				<button id="btn0" class="btnNumber" value="0" onclick="tap0()">0</button>
+				<button id="btnCheck" class="btnNumber" onclick="checknumber()">Check!</button>
+				<br>
+				<button id="btnStartOver" class="btnNumber" onclick="startOver()">Start Over</button>
+				<br>
+				<script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+			</div>
+
+			<div id="wrapperLearn" class="wrapper" style="display:none">
+				<span id="headerLearn">This is the learning module</span>
+			</div>
+
+			<script src="numprac.js"></script>
+		</div>
+	</div>
+</body>
+
+</html>
