@@ -9,8 +9,8 @@
 	--second-text-color: black;
 	--neutral-text-color: #aaa;
 	
-	--button-hover: #040;
-	--form-button-hover: #742e25;
+	--project-button-hover: #1e5a62;
+	--form-button-hover: #9b3d31;
 	
 	--modal-bg-color: #fff;
 	--project-header-color: #aaa;
@@ -289,13 +289,13 @@
 
 	nav {
 		position: absolute;
-		width: 370px;
+		text-align: center;
+		width: 500px;
 		padding: 2vh;
 		font-size: 3vh;
 		font-family: 'Comfortaa', sans-serif;
 		left: 50%;
 		transform: translateX(-50%);
-/*		z-index: 2;*/
 	}
 
 	nav > ul > li {
@@ -470,11 +470,9 @@
 		box-sizing: border-box;
 		border: 1px solid #ccc;
 		background-color: var(--modal-bg-color);
-		/* container width=110vh height=86vh */
 		width: 36vh; 
 		height: 28vh;
 		cursor: pointer;
-		z-index: 9;
 		transition: top 0.5s 0s, left 0.5s 0s, width 0.5s 0s, height 0.5s 0s, z-index 0.1s 1s, opacity 1s 0.3s, visibility 1s 0.3s;
 		overflow: hidden;
 	}
@@ -494,6 +492,17 @@
 		transform: translate(-50%);
 		width: 42vh;
 		filter: brightness(60%);
+		transition: all 0.5s;
+	}
+
+	.project:not(.expanded):hover > img {
+		filter: brightness(100%);
+		transition: all 0.5s;
+	}
+
+	.project.hide {
+		visibility: hidden;
+		opacity: 0;
 		transition: all 0.5s;
 	}
 
@@ -524,29 +533,11 @@
 		filter: brightness(100%);
 	}
 
-	.project:not(.expanded):hover > img {
-		filter: brightness(100%);
-		transition: all 0.5s;
-	}
-
-/*
-	.project.expanded > .hover-desc {
-		opacity: 0;
-		visibility: hidden;
-		z-index: 0;
-	}
-*/
-
-	.project.hide {
-		visibility: hidden;
-		opacity: 0;
-		transition: all 0.5s;
-	}
-
 	.description {
 		position: relative;
+		top: -1vh;
 		color: var(--second-text-color);
-		height: 40vh;
+		height: 28vh;
 		width: 95vh;
 		font-size: 3.2vh;
 		margin: 5vh auto;
@@ -560,18 +551,17 @@
 	
 	.project-link {
 		position: absolute;
-		bottom: 4vh;
+		bottom: 6vh;
 		left: 50%;
 		transform: translate(-50%);
 		height: 6vh;
 		width: 50vh;
 		background-color: var(--main-bg-color);
+		color: var(--main-text-color);
 		font-family: Roboto;
 		font-weight: 100;
 		font-size: 3.3vh;
-		color: var(--main-text-color);
 		border: 0;
-		cursor: pointer;
 		transition: background-color 0.25s;
 		opacity: 0;
 		visibility: hidden;
@@ -580,22 +570,31 @@
 	.project.expanded .project-link {
 		visibility: visible;
 		opacity: 1;
-		transition: all 0.5s 0.5s;
+		transition: visibility 0.5s 0.5s, opacity 0.5s 0.5s, background-color 0.25s;
 	}
 
-	.project-link:hover {
-		background-color: var(--button-hover);
+	.project.expanded .project-link:hover {
+		background-color: var(--project-button-hover);
 		transition: all 0.25s;
+		cursor: pointer;
 	}
 
 	.click-close {
 		position: absolute;
-		bottom: -25px;
+		bottom: -1.5vh;
 		color: var(--neutral-text-color);
 		font-size: 2.5vh;
 		font-weight: 300;
 		left: 50%;
 		transform: translate(-50%);
+		opacity: 0;
+		visibility: hidden;
+	}
+	
+	.project.expanded .click-close {
+		visibility: visible;
+		opacity: 1;
+		transition: visibility 0.5s 0.5s, opacity 0.5s 0.5s;
 	}
 
 	.project1 {
