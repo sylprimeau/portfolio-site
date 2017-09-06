@@ -94,7 +94,7 @@
 	.splash {
 		height: 100vh;
 	}
-
+	
 	.splash > .content-wrapper {
 		height: 100%;
 	}
@@ -110,6 +110,29 @@
 		pointer-events: none;
 	}
 
+	.splash::after {
+		content: "";
+		height: 4vh;
+		width: 4vh;
+		border-right: solid 3px var(--main-highlight-color);
+		border-bottom: solid 3px var(--main-highlight-color);
+		transform: translate(-50%, -10vh) rotate(45deg);
+		position: absolute;
+		bottom: 0vh;
+		left: 50%;
+		animation-name: bounce;
+		animation-duration: 2s;
+		animation-iteration-count: 4;
+		opacity: 0;
+	}
+	
+	@keyframes bounce {
+		0% {transform: translate(-50%, -10vh) rotate(45deg); opacity: 0}
+		20% {transform: translate(-50%, -10vh) rotate(45deg); opacity: 1}
+		90% {transform: translate(-50%, -1vh) rotate(45deg); opacity: 1}
+		100% {transform: translate(-50%, -1vh) rotate(45deg); opacity: 0}
+	}
+
 	.name {
 		font-size: 3em;
 		color: var(--main-text-color);
@@ -121,14 +144,14 @@
 	}
 
 	.skills {
-		color: var(--main-highlight-color);
+		color: var(--second-highlight-color);
 		position: relative;
 		top: -3em;
 		font-size: 1em;
 	}
 
 	.diamond {
-		color: var(--second-highlight-color);
+		color: var(--main-highlight-color);
 		font-size: 0.7em;
 		position: relative;
 		top: -0.1em;
@@ -258,9 +281,14 @@
 }
 
 
-
-
 /* ----------------------- media query ----------------------- */
+/* ----------------------- media query ----------------------- */
+/* ----------------------- media query ----------------------- */
+/* ----------------------- media query ----------------------- */
+/* ----------------------- media query ----------------------- */
+/* ----------------------- media query ----------------------- */
+/* ----------------------- media query ----------------------- */
+
 
 @media screen and (min-width: 701px) {
 
@@ -288,6 +316,7 @@
 	/* ---------- Nav bar start ---------- */
 
 	nav {
+/*		display: none;*/
 		position: absolute;
 		text-align: center;
 		width: 500px;
@@ -296,6 +325,7 @@
 		font-family: 'Comfortaa', sans-serif;
 		left: 50%;
 		transform: translateX(-50%);
+		z-index: 2;
 	}
 
 	nav > ul > li {
@@ -381,15 +411,22 @@
 	/* ---------- splash start ---------- */
 
 	/* hiding it hides the headline even after spinning out */
+	
+	.splash {
+		position: absolute;
+		top: 0;
+		height: 100%;
+	}
+	
 	.splash.hide {
 		visibility: visible;
 		opacity: 1;
 	}
 	
 	.splash .headline {
-		z-index: 1;
 		position: absolute;
 		width: 100vh;
+		height: 24vh;
 		top: 50%;
 		left: 50%;
 		transform: translate(-50%, -50%) rotate(0deg);
@@ -401,51 +438,66 @@
 	}
 
 	.splash .name {
+		position: absolute;
+		width: 100%;
+		top: 0;
+		height: 75%;
+		left: 50%;
+		transform: translate(-50%);
 		font-weight: 100;
 		font-size: 15vh;
 		color: var(--main-text-color);
 	}
 
 	.splash .skills {
+		position: absolute;
+		top: 75%;
+		height: 25%;
+		width: 100%;
+		left: 50%;
+		transform: translate(-50%);
 		font-weight: 100;
 		font-size: 5vh;
 		color: var(--second-highlight-color);
-	/*	transition: font-size 0.5s;*/
-		position: relative;
-		top: -4vh;
 	}
 
 	.splash .diamond {
 		color: var(--main-highlight-color);
 		font-size: 3vh;
 		position: relative;
-		top: -0.4vh;
-	/*	transition: font-size 0.5s;*/
+		top: -0.5vh;
 	}
 
-	.splash .vertical {
-		color: var(--main-highlight-color);
-		width: 90vh;
+	.headline.vertical {
+		width: 50vh;
+		height: 12vh;
 		opacity: 0.5;
-		left: 3%;
-		transform: translate(-65%, -50%) rotate(-90deg);
+		left: 0%;
+		transform: translate(-75%, -50%) rotate(-90deg);
 		pointer-events: auto;
+		transition: all 0.5s;
 	}
 
-	.splash .vertical .name {
+	.headline.vertical .name {
+		color: var(--main-highlight-color);
+		height: 75%;
 		font-size: 7.5vh;
+		transition: all 0.5s;
 	}
 
-	.splash .vertical .skills {
+	.headline.vertical .skills {
+		top: 75%;
+		height: 25%;
 		font-size: 2.5vh;
-		top: -2vh;
+		transition: all 0.5s;
 	}
 
-	.splash .vertical .diamond {
-		font-size: 1.5vh;
+	.headline.vertical .diamond {
+		font-size: 1vh;
+		transition: all 0.5s;
 	}
 
-	.splash .vertical:hover {
+	.headline.vertical:hover {
 		opacity: 1;
 		transition: opacity 0.25s;
 	}
