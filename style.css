@@ -226,6 +226,20 @@
 
 	/* ------------------------ contact start ------------------------ */
 
+	.contact .social-media {
+		width: 100%;
+	}
+	
+	.icons {
+		height: 2em;
+		text-align: center;
+	}
+	
+	.icons > img {
+		height: 100%;
+		border-radius: 10%;
+	}
+	
 	form {
 		width: 90%;
 		margin: 1em;
@@ -736,15 +750,18 @@
 
 	.contact .social-media {
 		width: 100%;
-		height: 2em;
 	}
 	
-	.social-media > .icon {
+	.icons {
+		height: 2em;
+		text-align: center;
+	}
+	
+	.icons > img {
 		height: 100%;
-/*		filter: contrast(50%);*/
 		border-radius: 10%;
 	}
-
+	
 	form {
 		float: right;
 		width: 55%;
