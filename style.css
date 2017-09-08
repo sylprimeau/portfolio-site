@@ -240,17 +240,11 @@ nav {
 }
 
 .github:active {
-	width: 2em;
 	background-image: url(images/icons/Github-color.png);
-	background-repeat: no-repeat;
-	background-size: contain;
 }
 
 .linkedin:active {
-	width: 2em;
 	background-image: url(images/icons/Linkedin-color.png);
-	background-repeat: no-repeat;
-	background-size: contain;
 }
 
 form {
@@ -288,12 +282,6 @@ textarea {
 	width: 100%;
 }
 
-.copyright {
-	text-align: center;
-	margin: 0.5em;
-	font-size: 0.8em;
-}
-
 /* ----------------------- media query ----------------------- */
 /* ----------------------- media query ----------------------- */
 /* ----------------------- media query ----------------------- */
@@ -317,7 +305,7 @@ textarea {
 	
 	h2 {
 		font-size: 2em;
-		padding: 0.5em;
+		padding: 0;
 	}
 	
 	h3 {
@@ -330,8 +318,8 @@ textarea {
 	}
 	
 	p {
-		margin: 0;
-		font-size: 1.3em;
+		margin: 1em;
+		font-size: 1.2em;
 	}
 
 	/* ---------- Nav bar start ---------- */
@@ -460,6 +448,7 @@ textarea {
 		transform: translate(-50%);
 /*		font-weight: 100;*/
 		font-size: 1.5em;
+	  margin: 0;
 /*		color: var(--second-highlight-color);*/
 	}
 
@@ -648,7 +637,7 @@ textarea {
 	.click-close {
 		display: block;
 		position: absolute;
-		bottom: 0.5em;
+		bottom: -1vh;
 		color: var(--neutral-text-color);
 		font-size: 2.5vh;
 		font-weight: 300;
@@ -717,7 +706,7 @@ textarea {
 
 	.about {
 		overflow: visible;
-		font-size: 1em;
+/*		font-size: 1em;*/
 	}
 
 	.about.hide {
@@ -726,21 +715,22 @@ textarea {
 	}
 
 	.profile-pic {
-		float: left;
-		margin: 1vh 3vh 3vh 0;
-		width: 150px;
-		box-shadow: 3px 3px 15px rgba(0,0,0,0.7);
+/*		float: left;*/
+/*		margin-bottom: 0em;*/
+/*		top: 1.6em;*/
+		width: 8em;
+/*		box-shadow: 3px 3px 15px rgba(0,0,0,0.7);*/
 	}
 
 	.skills-list {
-		display: block;
+/*		display: block;*/
 	/*	margin-left: 2em;*/
-		clear: both;
+/*		clear: both;*/
 	}
 
 	.skills-list > ul {
-		margin-left: 1em;
-		font-size: 0.8em;
+/*		margin-left: 1em;*/
+/*		font-size: 0.8em;*/
 	}
 
 	/*
@@ -763,14 +753,24 @@ textarea {
 
 	.contact .social-media {
 		width: 100%;
-		height: 2em;
+/*		height: 2em;*/
 	}
 	
 	.social-media > .icon {
-		height: 100%;
+/*		height: 100%;*/
 /*		filter: contrast(50%);*/
-		border-radius: 10%;
-	}
+/*		border-radius: 10%;*/
+	}	
+
+.github:hover {
+	background-image: url(images/icons/Github-color.png);
+	transition: all 0.5s;
+}
+
+.linkedin:hover {
+	background-image: url(images/icons/Linkedin-color.png);
+	transition: all 0.5s;
+}
 
 	form {
 		float: right;
@@ -778,46 +778,46 @@ textarea {
 	}
 
 	form div + div {
-		margin-top: 0.5em;
+/*		margin-top: 0.5em;*/
 	}
 
 	label {
 		font-weight: 100;
-		font-size: 1em;
-		display: block;
-		width: 100%;
-		text-align: left;
-		color: var(--second-highlight-color)
+/*		font-size: 1em;*/
+/*		display: block;*/
+/*		width: 100%;*/
+/*		text-align: left;*/
+/*		color: var(--second-highlight-color)*/
 	}
 
 	input,
 	textarea {
-		font: 1em sans-serif;
-		width: 100%;
-		box-sizing: border-box;
+/*		font: 1em sans-serif;*/
+/*		width: 100%;*/
+/*		box-sizing: border-box;*/
 	/*	border-radius: 0.2em;*/
-		border: 1px solid #999;
-		background-color: var(--modal-bg-color);
+/*		border: 1px solid #999;*/
+/*		background-color: var(--modal-bg-color);*/
 	}
 
 	textarea {
 		/* align label with top of box */
 		vertical-align: top;
-		height: 10em;
+/*		height: 10em;*/
 		/* let user resize box */
-		resize: vertical;
+		resize: none;
 	}
 
 	.button {
 		display: block;
-		background-color: var(--main-highlight-color);
-		color: var(--main-text-color);
-		font-family: 'Roboto', sans-serif;
+/*		background-color: var(--main-highlight-color);*/
+/*		color: var(--main-text-color);*/
+/*		font-family: 'Roboto', sans-serif;*/
 		font-size: 1em;
-		font-weight: 100;
+/*		font-weight: 100;*/
 	/*	border-radius: 0.2em;*/
-		border: 0;
-		padding: .4em 0;
+/*		border: 0;*/
+/*		padding: .4em 0;*/
 		cursor: pointer;
 		transition: background-color 0.15s;
 	}
@@ -831,17 +831,9 @@ textarea {
 	}
 
 	#form-button {
-		margin: 1em auto;
-		width: 100%;
-		max-width: 500px;
-	}
-
-	.copyright {
-		position: absolute;
-		bottom: 0vh;
-		left: 50%;
-		transform: translate(-50%);
-		font-size: 2.5vh;
+/*		margin: 1em auto;*/
+/*		width: 100%;*/
+/*		max-width: 500px;*/
 	}
 
 	/* ---------- contact container end ---------- */
