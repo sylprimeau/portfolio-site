@@ -19,3 +19,6 @@ ExpiresDefault "access 1 month"
 RewriteEngine On
 RewriteCond %{HTTPS} !=on
 RewriteRule ^(.*)$ https://%{HTTP_HOST}%{REQUEST_URI} [L,R=301] 
+
+# compress with gzip #
+AddOutputFilterByType DEFLATE text/html text/plain application/javascript text/css
