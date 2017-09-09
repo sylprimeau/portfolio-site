@@ -5,7 +5,6 @@
 	<meta charset="UTF-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<link rel="stylesheet" href="style.css" type="text/css">
-	<link href="https://fonts.googleapis.com/css?family=Comfortaa:300|Roboto:100|Roboto:300" rel="stylesheet">
 	<title>Syl Primeau - Front End Web Developer</title>
 </head>
 
@@ -35,7 +34,7 @@
 					<button type="button" class="project-link">Open live project</button>
 				</a>
 				<article class="description">
-					<p>This calculator project, part of the Free Code Camp Front End Certification curriculum, taught me a lot about CSS and JavaScript. To make it look and act as realistically as possible, extra care was taken to ensure an error-free experience. For example, entering "3 x + 4 =" results in "7", not "12" or "error".</p>
+					<p>This calculator project, part of the Free Code Camp Front End Certification curriculum, taught me a lot about CSS and JavaScript. To make it look and act as realistically as possible, extra care was taken to ensure an error-free experience. For example, entering "3 &times; &plus; 4 =" results in "7", not "12" or "error".</p>
 				</article>
 				<p class="click-close">Click anywhere to close</p>
 			</div>
@@ -198,6 +197,14 @@
 	</section>
 
 	<script src="script.js"></script>
+	<script src="https://ajax.googleapis.com/ajax/libs/webfont/1.5.18/webfont.js"></script>
+	<script>
+		 WebFont.load({
+				google: {
+					families: ['Comfortaa:300', 'Roboto:100,300']
+				}
+			});
+	</script>
 
 </body>
 
