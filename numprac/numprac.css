@@ -1,63 +1,83 @@
+* {
+	margin: 0;
+	padding: 0;
+}
+
 body {
 	background-color: lightgray;
+	font-size: 2vh;
 }
 
 .wrapper {
-  text-align: center;
-	width: 500px;
-	height: 800px;
+	background-color: darkgreen;
+	width: 100vw;
+	max-width: 80vh;
+	height: 100vh;
 	margin-left: auto;
 	margin-right: auto;
 }
 
-.btnMenu {
-	background-repeat: no-repeat;
-	background-position: 20% 50%;
-	background-color: mediumblue;
-	font-size: 18px;
-	box-shadow: 2px 2px 8px #888888;
-	color: gray;
-	margin: 5px auto;
-	height: 70px;
-	width: 300px;
-	padding-left: 120px;
+.levels {
+/*	display: none;*/
+}
+
+.level-btn {
+	display: block;
+	width: 15em;
+	height: 2.5em;
+	margin-top: 0.7em;
+}
+
+.start-btn {
+	display: none;
+}
+
+.interface {
+	display: none;
+}
+
+.curr-level {
+	height: 30px;
+	width: 400px;
+	margin-left: auto;
+	margin-right: auto;
+	background-color: blue;
 	text-align: left;
-/*	border-radius: 10px;*/
-}
-
-.btnMenu:hover {
-	border: 30px;
-}
-
-#btnEnglish {
-	background-image: url(flags/uk.png);
+	font-size: 25px;
 	color: white;
-	opacity: 1;
+	padding-left: 10px;
 }
 
-#btnJapanese {
-	background-image: url(flags/japan.png);
+.score {
+	height: 30px;
+	width: 400px;
+	margin-left: auto;
+	margin-right: auto;
+	background-color: skyblue;
+	text-align: left;
+	font-size: 25px;
+	padding-left: 10px;
 }
 
-#btnFrench {
-	background-image: url(flags/france.png);
+.number-display {
+	height: 100px;
+	width: 400px;
+	margin-left: auto;
+	margin-right: auto;
+	background-color: black;
+	color: yellow;
+	text-align: center;
+	line-height: 100px;
+	font-size: 80px;
+	margin-top: 20px;
 }
 
-#btnSpanish {
-	background-image: url(flags/spain.png);
-}
 
-#btnChinese {
-	background-image: url(flags/china.png);
-}
 
-#btnGerman {
-	background-image: url(flags/germany.png);
-}
 
-#btnTest {
-    top: 50%;
-}
+
+
+
 
 .btnNumber {
 	background-color: mediumblue;
@@ -74,47 +94,5 @@ body {
 #btnStartOver {
 	width: 360px;
 	height: 50px;
-	margin-top: 20px;
-}
-
-#btnStart {
-	margin-left: auto;
-	margin-right: auto;
-	margin-top: 200px;
-}
-
-#levelLabel {
-	height: 30px;
-	width: 400px;
-	margin-left: auto;
-	margin-right: auto;
-	background-color: blue;
-	text-align: left;
-	font-size: 25px;
-	color: white;
-	padding-left: 10px;
-}
-
-#scoreboard {
-	height: 30px;
-	width: 400px;
-	margin-left: auto;
-	margin-right: auto;
-	background-color: skyblue;
-	text-align: left;
-	font-size: 25px;
-	padding-left: 10px;
-}
-
-#guess {
-	height: 100px;
-	width: 400px;
-	margin-left: auto;
-	margin-right: auto;
-	background-color: black;
-	color: yellow;
-	text-align: center;
-	line-height: 100px;
-	font-size: 80px;
 	margin-top: 20px;
 }
