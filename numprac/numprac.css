@@ -3,96 +3,138 @@
 	padding: 0;
 }
 
-body {
-	background-color: lightgray;
-	font-size: 2vh;
+::-webkit-scrollbar {
+	width: 0;
 }
 
-.wrapper {
-	background-color: darkgreen;
-	width: 100vw;
-	max-width: 80vh;
-	height: 100vh;
-	margin-left: auto;
-	margin-right: auto;
+body {
+	background-color: #333;
+	font-size: 16px;
 }
 
 .levels {
-/*	display: none;*/
+	display: none;
 }
 
 .level-btn {
 	display: block;
-	width: 15em;
-	height: 2.5em;
-	margin-top: 0.7em;
+	width: 80%;
+	height: 3em;
+	margin: 2vh auto;
 }
 
 .start-btn {
 	display: none;
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+	width: 80%;
+	height: 3em;
 }
 
-.interface {
-	display: none;
+.wrapper {
+/*	display: none;*/
+	height: 100vh;
 }
 
-.curr-level {
-	height: 30px;
-	width: 400px;
-	margin-left: auto;
-	margin-right: auto;
+.scoreboard {
+	height: 20%;
+}
+
+.curr-level, .streak, .score {
 	background-color: blue;
-	text-align: left;
-	font-size: 25px;
+	margin: 0 auto;
+	height: 33.3%;
+	font-size: 5vh;
+	line-height: 7vh;
+	padding-left: 0.5em;
 	color: white;
-	padding-left: 10px;
+}
+
+.streak {
+	background-color: teal;
 }
 
 .score {
-	height: 30px;
-	width: 400px;
-	margin-left: auto;
-	margin-right: auto;
 	background-color: skyblue;
-	text-align: left;
-	font-size: 25px;
-	padding-left: 10px;
+}
+
+.interface {
+/*	background-color: darkgreen;*/
+	height: 80%;
+	width: 320px;
+	margin: auto;
+	border: 0.1px solid transparent;
 }
 
 .number-display {
-	height: 100px;
-	width: 400px;
-	margin-left: auto;
-	margin-right: auto;
-	background-color: black;
-	color: yellow;
+	background-color: white;
+	color: black;
+	font-size: 3em;
+	line-height: 1.5em;
+	height: 1.5em;
+	width: 95%;
+	margin: 5% auto;
 	text-align: center;
-	line-height: 100px;
-	font-size: 80px;
-	margin-top: 20px;
 }
 
+.number-pad {
+	width: 248px;
+	height: 332px;
+	margin: 0 auto;
+/*	position: absolute;*/
+/*	left: 50%;*/
+/*	transform: translate(-50%);*/
+}
 
-
-
-
-
-
-
-.btnNumber {
+.number-btn {
+	float: left;
 	background-color: mediumblue;
-	font-size: 24px;
-/*	box-shadow: 5px 5px 5px #888888;*/
-	text-align: center;
 	color: white;
-	margin-top: 5px;
+	font-size: 4em;
 	height: 80px;
-	width: 100px;
-/*	border-radius: 10px;*/
+	width: 80px;
+	border-radius: 50%;
+	border: 0.05em solid lightblue;
+	box-sizing: border-box;
+	margin: 1px 1px;
 }
 
-#btnStartOver {
+.clear-btn, .check-btn {
+	font-size: 1.4em;
+}
+
+.start-over-btn {
+	display: none;
 	width: 360px;
 	height: 50px;
 	margin-top: 20px;
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
