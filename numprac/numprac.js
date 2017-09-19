@@ -48,7 +48,7 @@ window.onload = init;
 function init() {
 	updateScoreboard(currLevel, streak, score);
 	setListeners();
-	sayNumber();
+	sayRndNumber();
 }
 
 function updateScoreboard() {
@@ -94,7 +94,7 @@ function checkNumber() {
 	updateScoreboard();
 	setTimeout(function() {
 		clearDisplay();
-		sayNumber();
+		sayRndNumber();
 	}, 1500);
 }
 
@@ -133,7 +133,7 @@ function updateDisplay(value) {
 	display.innerHTML = value;
 }
 
-function sayNumber() {
+function sayRndNumber() {
 	rndNum = getRndNum(levelRanges[currLevel].min, levelRanges[currLevel].max);
 	playNumber(rndNum);
 }
