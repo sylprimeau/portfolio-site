@@ -79,30 +79,43 @@ body {
 	text-align: center;
 }
 
-.number-pad {
+.number-display.incorrect {
+	color: red;
+}
+
+.number-pad, .number-pad * {
 	width: 248px;
 	height: 332px;
 	margin: 0 auto;
-/*	position: absolute;*/
-/*	left: 50%;*/
-/*	transform: translate(-50%);*/
+}
+
+.number-pad.disabled, .number-pad.disabled * {
+	opacity: 0.7;
+	pointer-events: none;
+	cursor: not-allowed;
 }
 
 .number-btn {
 	float: left;
 	background-color: mediumblue;
 	color: white;
-	font-size: 4em;
-	height: 80px;
-	width: 80px;
-	border-radius: 50%;
-	border: 0.05em solid lightblue;
+	font-size: 3em;
+	height: 70px;
+	width: 70px;
+/*	border-radius: 50%;*/
+/*	border: 0.05em solid lightblue;*/
+	border: none;
 	box-sizing: border-box;
-	margin: 1px 1px;
+	margin: 6px;
 }
 
 .clear-btn, .check-btn {
-	font-size: 1.4em;
+	font-size: 1.2em;
+	background-color: green;
+}
+
+.clear-btn {
+	background-color: red;
 }
 
 .start-over-btn {

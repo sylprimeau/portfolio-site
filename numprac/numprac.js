@@ -26,7 +26,7 @@ var levelRanges = {
 	12: {min: 100000000000, max: 999999999999}
 }
 
-var currLevel = 1;
+var currLevel = 2;
 var trialNum = 0;
 var streak = 0;
 var score = 0;
@@ -39,6 +39,7 @@ var userGuess = "";
 var currLevelLabel = 	document.querySelector(".curr-level");
 var streakLabel = document.querySelector(".streak");
 var scoreLabel = document.querySelector(".score");
+var numberPad = document.querySelector(".number-pad");
 var numberButton = document.querySelectorAll(".number-btn");
 var display = document.querySelector(".number-display");
 
@@ -77,6 +78,7 @@ function checkNumber() {
 	if (isMatch(userGuess, rndNum)) {
 		calculatePoints();
 		addPoints();
+		display.innerHTML = "Correct!";
 		streak += 1;
 		if (streak > 4) {
 			currLevel += 1;
@@ -85,11 +87,20 @@ function checkNumber() {
 	} else {
 		calculatePoints();
 		deductPoints();
+//		display.innerHTML = "Incorrect";
+		reviewIncorrect();
 		streak = 0;
 	}
 	updateScoreboard();
-	clearDisplay();
-	sayNumber();
+	setTimeout(function() {
+		clearDisplay();
+		sayNumber();
+	}, 1500);
+}
+
+function reviewIncorrect() {
+	display.classList.add("incorrect");
+	display.innerHTML = rndNum;
 }
 
 function isMatch(a, b) {
@@ -114,6 +125,7 @@ function deductPoints() {
 
 function clearDisplay() {
 	userGuess = "";
+	display.classList.remove("incorrect");
 	updateDisplay(userGuess);
 }
 
@@ -133,17 +145,14 @@ function getRndNum(min, max) {
 }
 
 function playNumber(number) {
+	numberPad.classList.add("disabled");
 	if (number > 0 && number < 999) {
 		sounds = new Array(new Audio("numbers/en/" + number + ".mp3"));
-		i = -1;
-		playSnd();
 	}
 	if (number > 999 && number < 1000000) {
 		var quotient = Math.floor(number / 1000);
 		var remainder = number % 1000;
 		sounds = new Array(new Audio("numbers/en/" + quotient + ".mp3"), new Audio("numbers/en/thousand.mp3"), new Audio("numbers/en/" + remainder + ".mp3"));
-		i = -1;
-		playSnd();
 	}
 	if (number > 999999 && number < 1000000000) {
 		var millionquotient = Math.floor(number / 1000000);
@@ -151,8 +160,6 @@ function playNumber(number) {
 		var quotient = Math.floor(millionremainder / 1000);
 		var remainder = millionremainder % 1000;
 		sounds = new Array(new Audio("numbers/en/" + millionquotient + ".mp3"), new Audio("numbers/en/million.mp3"), new Audio("numbers/en/" + quotient + ".mp3"), new Audio("numbers/en/thousand.mp3"), new Audio("numbers/en/" + remainder + ".mp3"));
-		i = -1;
-		playSnd();
 	}
 	if (number > 999999999 && number < 1000000000000) {
 		var billionquotient = Math.floor(number / 1000000000);
@@ -162,34 +169,29 @@ function playNumber(number) {
 		var quotient = Math.floor(millionremainder / 1000);
 		var remainder = millionremainder % 1000;
 		sounds = new Array(new Audio("numbers/en/" + billionquotient + ".mp3"), new Audio("numbers/en/billion.mp3"), new Audio("numbers/en/" + millionquotient + ".mp3"), new Audio("numbers/en/million.mp3"), new Audio("numbers/en/" + quotient + ".mp3"), new Audio("numbers/en/thousand.mp3"), new Audio("numbers/en/" + remainder + ".mp3"));
-		i = -1;
-		playSnd();
 	}
+	i = -1;
+	playSnd();
 }
 
 function playSnd() {
 	i++;
 	if (i == sounds.length) {
-//		document.getElementById("guess").style.fontSize = "80px";
-//		document.getElementById("guess").style.color = "yellow";
-//		document.getElementById('guess').innerHTML = "";
-		playing = 0;
+		numberPad.classList.remove("disabled");
 		return;
 	}
-	sounds[i].addEventListener('ended', playSnd);
 	sounds[i].play();
+	sounds[i].addEventListener('ended', playSnd);
 }
 
 
 
 
 
-// This confirms before leaving game. Disabled while I'm testing...
-//	window.onbeforeunload = function() {return "Do you really want to leave the game in progress?"};
+
 
 // Lets you enter numbers with the keyboard
 document.addEventListener("keydown", function (event) {
-	if (playing == 0) {
 		if (event.keyCode == 49) {
 			enterednumber = document.getElementById("guess").innerHTML + 1;
 			document.getElementById("guess").innerHTML = enterednumber;
@@ -223,97 +225,7 @@ document.addEventListener("keydown", function (event) {
 		} else if (event.keyCode == 13) {
 			isMatch();
 		}
-	}
 }, true);
-
-//Enter numbers by clicking or tapping
-function tap1() {
-	if (playing == 0) {
-		enterednumber = document.getElementById("guess").innerHTML + 1;
-		document.getElementById("btn1").blur();
-		document.getElementById("guess").innerHTML = enterednumber;
-	}
-}
-
-function tap2() {
-	if (playing == 0) {
-		enterednumber = document.getElementById("guess").innerHTML + 2;
-		document.getElementById("btn2").blur();
-		document.getElementById("guess").innerHTML = enterednumber;
-	}
-}
-
-function tap3() {
-	if (playing == 0) {
-		enterednumber = document.getElementById("guess").innerHTML + 3;
-		document.getElementById("btn3").blur();
-		document.getElementById("guess").innerHTML = enterednumber;
-	}
-}
-
-function tap4() {
-	if (playing == 0) {
-		enterednumber = document.getElementById("guess").innerHTML + 4;
-		document.getElementById("btn4").blur();
-		document.getElementById("guess").innerHTML = enterednumber;
-	}
-}
-
-function tap5() {
-	if (playing == 0) {
-		enterednumber = document.getElementById("guess").innerHTML + 5;
-		document.getElementById("btn5").blur();
-		document.getElementById("guess").innerHTML = enterednumber;
-	}
-}
-
-function tap6() {
-	if (playing == 0) {
-		enterednumber = document.getElementById("guess").innerHTML + 6;
-		document.getElementById("btn6").blur();
-		document.getElementById("guess").innerHTML = enterednumber;
-	}
-}
-
-function tap7() {
-	if (playing == 0) {
-		enterednumber = document.getElementById("guess").innerHTML + 7;
-		document.getElementById("btn7").blur();
-		document.getElementById("guess").innerHTML = enterednumber;
-	}
-}
-
-function tap8() {
-	if (playing == 0) {
-		enterednumber = document.getElementById("guess").innerHTML + 8;
-		document.getElementById("btn8").blur();
-		document.getElementById("guess").innerHTML = enterednumber;
-	}
-}
-
-function tap9() {
-	if (playing == 0) {
-		enterednumber = document.getElementById("guess").innerHTML + 9;
-		document.getElementById("btn9").blur();
-		document.getElementById("guess").innerHTML = enterednumber;
-	}
-}
-
-function tap0() {
-	if (playing == 0) {
-		enterednumber = document.getElementById("guess").innerHTML + 0;
-		document.getElementById("btn0").blur();
-		document.getElementById("guess").innerHTML = enterednumber;
-	}
-}
-
-function clearinput() {
-	if (playing == 0) {
-		document.getElementById("guess").innerHTML = "";
-	}
-}
-
-//alert("Language: " + setLanguage + "\nMin: " + min + "\nMax: " + max + "\nScore = " + score);
 
 
 
