@@ -26,7 +26,7 @@ var levelRanges = {
 	12: {min: 100000000000, max: 999999999999}
 }
 
-var currLevel = 2;
+var currLevel = 4;
 var trialNum = 0;
 var streak = 0;
 var score = 0;
@@ -35,6 +35,8 @@ var minRange = 0;
 var maxRange = 0;
 var rndNum = 0;
 var userGuess = "";
+var filesToPlay = [];
+var i = 0;
 
 var currLevelLabel = 	document.querySelector(".curr-level");
 var streakLabel = document.querySelector(".streak");
@@ -42,12 +44,19 @@ var scoreLabel = document.querySelector(".score");
 var numberPad = document.querySelector(".number-pad");
 var numberButton = document.querySelectorAll(".number-btn");
 var display = document.querySelector(".number-display");
+var audio = document.querySelector(".audio");
+var startBtn = document.querySelector(".start-btn");
 
 window.onload = init;
 
 function init() {
 	updateScoreboard(currLevel, streak, score);
 	setListeners();
+}
+
+function startGame() {
+	updateScoreboard(currLevel, streak, score);
+	clearDisplay();
 	sayRndNumber();
 }
 
@@ -61,6 +70,7 @@ function setListeners() {
 	numberButton.forEach(function(elem) {
 		elem.addEventListener("click", getUserInput);
 	});
+	startBtn.addEventListener("click", startGame);
 }
 
 function getUserInput() {
@@ -147,19 +157,19 @@ function getRndNum(min, max) {
 function playNumber(number) {
 	numberPad.classList.add("disabled");
 	if (number > 0 && number < 999) {
-		sounds = new Array(new Audio("numbers/en/" + number + ".mp3"));
+		filesToPlay = ["numbers/en/" + number + ".mp3"];
 	}
 	if (number > 999 && number < 1000000) {
 		var quotient = Math.floor(number / 1000);
 		var remainder = number % 1000;
-		sounds = new Array(new Audio("numbers/en/" + quotient + ".mp3"), new Audio("numbers/en/thousand.mp3"), new Audio("numbers/en/" + remainder + ".mp3"));
+		filesToPlay = ["numbers/en/" + quotient + ".mp3", "numbers/en/thousand.mp3", "numbers/en/" + remainder + ".mp3"];
 	}
 	if (number > 999999 && number < 1000000000) {
 		var millionquotient = Math.floor(number / 1000000);
 		var millionremainder = number % 1000000;
 		var quotient = Math.floor(millionremainder / 1000);
 		var remainder = millionremainder % 1000;
-		sounds = new Array(new Audio("numbers/en/" + millionquotient + ".mp3"), new Audio("numbers/en/million.mp3"), new Audio("numbers/en/" + quotient + ".mp3"), new Audio("numbers/en/thousand.mp3"), new Audio("numbers/en/" + remainder + ".mp3"));
+		filesToPlay = new Array(new Audio("numbers/en/" + millionquotient + ".mp3"), new Audio("numbers/en/million.mp3"), new Audio("numbers/en/" + quotient + ".mp3"), new Audio("numbers/en/thousand.mp3"), new Audio("numbers/en/" + remainder + ".mp3"));
 	}
 	if (number > 999999999 && number < 1000000000000) {
 		var billionquotient = Math.floor(number / 1000000000);
@@ -168,22 +178,55 @@ function playNumber(number) {
 		var millionremainder = billionremainder % 1000000;
 		var quotient = Math.floor(millionremainder / 1000);
 		var remainder = millionremainder % 1000;
-		sounds = new Array(new Audio("numbers/en/" + billionquotient + ".mp3"), new Audio("numbers/en/billion.mp3"), new Audio("numbers/en/" + millionquotient + ".mp3"), new Audio("numbers/en/million.mp3"), new Audio("numbers/en/" + quotient + ".mp3"), new Audio("numbers/en/thousand.mp3"), new Audio("numbers/en/" + remainder + ".mp3"));
+		filesToPlay = new Array(new Audio("numbers/en/" + billionquotient + ".mp3"), new Audio("numbers/en/billion.mp3"), new Audio("numbers/en/" + millionquotient + ".mp3"), new Audio("numbers/en/million.mp3"), new Audio("numbers/en/" + quotient + ".mp3"), new Audio("numbers/en/thousand.mp3"), new Audio("numbers/en/" + remainder + ".mp3"));
 	}
-	i = -1;
+	i = 0;
 	playSnd();
 }
 
+
 function playSnd() {
-	i++;
-	if (i == sounds.length) {
-		numberPad.classList.remove("disabled");
-		return;
+	audio.src = filesToPlay[i];
+	audio.play();
+	if (i < filesToPlay.length - 1) {
+		i += 1;
+		audio.addEventListener("ended", playSnd);
+	} else {
+		audio.removeEventListener("ended", playSnd);
+		audio.addEventListener("ended", activateNumPad);
 	}
-	sounds[i].play();
-	sounds[i].addEventListener('ended', playSnd);
 }
 
+function activateNumPad() {
+	numberPad.classList.remove("disabled");
+	audio.removeEventListener("ended", activateNumPad);
+}
+
+
+//function playSnd() {
+//	audio.src = filesToPlay[i];
+//	audio.play();
+////	audio.addEventListener('ended', function() {
+////		i += 1;
+////		playFile();
+////	});
+//	for (i = 1; i < filesToPlay.length; i++) {
+//		audio.addEventListener("ended", function() {
+//			playFile(filesToPlay[i]);
+//		});
+//	}
+//}
+//
+//function playFile(soundFile) {
+//	audio.src = soundFile;
+//	audio.play();
+//	if (i == filesToPlay.length) {
+//		numberPad.classList.remove("disabled");
+//		filesToPlay = [];
+//		return;
+//	}
+//}
+	
 
 
 
