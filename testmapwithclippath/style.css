@@ -1,21 +1,26 @@
+:root {
+	--image-width: 800px;
+	--image-height: 600px;
+}
+
 * {
 	margin: 0;
 	padding: 0;
 }
 
 .dashboard-image {
-	width: 1000px;
-	height: 750px;
+	width: var(--image-width);
+	height: var(--image-height);
 }
 
 .overlay {
 	position: absolute;
-	width: 1000px;
-	height: 750px;
+	width: var(--image-width);
+	height: var(--image-height);
 	background-color: green;
 	top: 0;
 	left: 0;
-	opacity: 0;
+	opacity: 0.5;
 	cursor: pointer;
 }
 
@@ -24,9 +29,10 @@
 }
 
 .radio {
-	clip-path: polygon(710px 288px, 906px 288px, 912px 289px, 916px 295px, 919px 305px, 919px 322px, 920px 339px, 920px 367px, 919px 386px, 919px 402px, 707px 402px, 700px 312px, 699px 295px, 704px 291px);
+	clip-path: polygon(70% 38%, 92% 38%, 92% 52%, 70% 52%);
 }
 
+/* using hard values doesn't allow for scaling. use %  */
 .horn {
 	clip-path: circle(50px at 486px 332px);
 }

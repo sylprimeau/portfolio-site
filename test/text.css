@@ -1,0 +1,66 @@
+* {
+	margin: 0;
+}
+
+h1 {
+	color: red;
+	text-align: center;
+}
+
+h1:hover {
+	color: yellow;
+/*	transition: color 2s;*/
+}
+
+p {
+	background-color: blue;
+	color: white;
+	text-align: center;
+}
+
+div {
+/*	background-color: grey;*/
+	height: 50px;
+	width: 150px;
+	transition: width 0.3s;
+}
+
+.green {
+	background-color: gray;
+}
+
+.red {
+	background-color: red;
+}
+
+.yellow {
+	background-color: skyblue;
+}
+
+.purple {
+	background-color: rebeccapurple;
+}
+
+.black {
+	background-color:maroon;
+}
+
+.blue {
+	background-color: blue;
+}
+
+.pink {
+	background-color: pink;
+}
+
+.brown {
+	background-color: brown;
+}
+
+.orange {
+	background-color: orange;
+}
+
+div:hover {
+	width: 50%;
+}

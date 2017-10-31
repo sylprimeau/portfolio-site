@@ -208,6 +208,8 @@ nav {
 	background-color: var(--main-bg-color);
 	color: var(--second-highlight-color);
 	border: 0;
+	text-align: center;
+	line-height: 2.5em;
 }
 
 .description {
@@ -694,7 +696,7 @@ textarea {
 
 	/* ---------- contact container start ---------- */
 	
-	.contact section {
+	.contact .text {
 		width: 40%;
 		float: left;
 	}
