@@ -23,7 +23,7 @@
 <title>
 Qwurks!
 </title>
-<link rel="stylesheet" type="text/css" href="css/main.css">
+<!--<link rel="stylesheet" type="text/css" href="css/main.css">-->
 <link rel="stylesheet" type="text/css" href="css/dae.css">
 <meta charset="UTF-8"> 
 </head>

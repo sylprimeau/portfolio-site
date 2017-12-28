@@ -502,9 +502,9 @@
     {
         "question": "Did anybody else find this site through the DAE reddit?",
         "explanation": "The guy that made this site put a link on reddit so I thought I'd check it out. It's pretty good! I like that you can see what percentage voted yes and no. But you should add nested comments and email notifications for when someone replies to your comment or votes on your question. :)",
-        "yesnum": 6,
+        "yesnum": 10,
         "nonum": 1,
-        "totalvotes": 7,
+        "totalvotes": 11,
         "submituser": "SaraBB",
         "comments": [],
         "index": 31
