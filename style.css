@@ -525,13 +525,14 @@ textarea {
 
 	.project > img {
 		width: 42vh;
-		filter: brightness(60%);
+		filter: brightness(80%);
 		transition: all 0.5s;
 	}
 
 	.project:not(.expanded):hover > img {
 		filter: brightness(100%);
-		width: 47vh;
+		width: 45vh;
+		max-width: 45vh;
 		transition: all 0.5s;
 	}
 	
@@ -612,6 +613,7 @@ textarea {
 	.click-close {
 		display: block;
 		position: absolute;
+		margin-left: 0;
 		bottom: -1vh;
 		color: var(--neutral-text-color);
 		font-size: 2.5vh;
