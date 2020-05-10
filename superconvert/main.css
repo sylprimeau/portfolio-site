@@ -1,0 +1,276 @@
+body {
+	background-color: #ffffff;
+	margin: 0;
+	padding: 0;
+    width: 100%;
+}
+
+#wrapper {
+	padding-left: 15px;
+	width: 100%;
+	margin-left: auto;
+	margin-right: auto;
+}
+
+#topbar {
+	display: block;
+	position: relative;
+	height: 60px;
+	width: 100%;
+	background: #555555;
+	text-align: center;
+	margin-bottom: 15px;
+	padding-bottom: 15px;
+	font-family: 'Lora', serif;
+}
+
+#menu {
+	width: 200px;
+	height: 20px;
+	background-color: white;
+	position: absolute;
+	top: 30px;
+	left: 30px;
+	z-index: 10;
+	overflow: hidden;
+}
+
+#menubar {
+    width: 100%;
+    height: 20px;
+    background-color: darkgreen;
+    color: white;
+    position: absolute;
+    top: 70px;
+    z-index: 10;
+    overflow: hidden;
+}
+
+.menuItem {
+	margin-top: 10px;
+}
+
+#saveButton {
+	visibility: hidden;
+}
+
+#inputboxlabel {
+	color: white;
+}
+
+#inputbox {
+	width: 300px;
+	height: 35px;
+	display: inline-block;
+/*	border: solid grey 3px; */
+	border-radius: 5px; 
+	font-size: 35px;
+	text-align: center;
+}
+
+.outer {
+	width: 15%;
+	height: 115px;
+	background: red;
+/*	border: solid white 4px;
+	border-radius: 20px; */
+	position: relative;
+	text-align: center;
+	font-size: 25px;
+	float: left;
+	margin: 10px;
+	box-shadow: 5px 5px 5px #888888;
+}
+
+.inner {
+	width: 100%;
+	height: 80px;
+	background: #999999;
+	color: #ffffff;
+	position: absolute;
+	bottom: 0;
+/*	border: solid black 0 5px 5px 5px;
+	border-bottom-left-radius: 15px;
+	border-bottom-right-radius: 15px; */
+	text-align: center;
+	font-size: 60px;
+	line-height: 80px; /* vertically aligns text (only works when one line) */
+	overflow: hidden;
+}
+
+.custMenu {
+	clear: both;
+	width: 100%;
+	height: 100%;
+	font-size: 15px;
+	color: white;
+	background: #222222;
+/*	border-radius: 15px; */
+	position: absolute;
+	bottom: 0;
+	visibility: hidden;
+	text-align: center;
+}
+
+.colorpick {
+	width: 60px;
+	height: 30px;
+	margin-left: auto;
+	margin-right: auto;
+}
+.selectfrom {
+	width: 100px;
+	margin-left: auto;
+	margin-right: auto;
+}
+.selectto {
+	width: 100px;
+	margin-left: auto;
+	margin-right: auto;
+}
+
+
+
+
+@media screen and (max-width: 700px) { /*320 is the viewport width of iPhone 5S */
+
+#wrapper {
+	padding-left: 1px;
+	width: 100%;
+	margin-left: auto;
+	margin-right: auto;
+}
+
+.outer {
+	width: 48%;
+	height: 70px;
+	background: red;
+	position: relative;
+	text-align: center;
+	font-size: 17px;
+	float: left;
+	margin: 2px;
+	box-shadow: 5px 5px 5px #888888;
+}
+
+.inner {
+	width: 100%;
+	height: 48px;
+	line-height: 48px; /* vertically aligns text (only works when one line) */
+	background: black;
+	color: white;
+	position: absolute;
+	bottom: 0;
+	text-align: center;
+	font-size: 45px;
+	overflow: hidden;
+}
+
+#inputboxlabel {
+	color: white;
+}
+
+#inputbox {
+	width: 140px;
+	height: 30px;
+	display: inline-block;
+	font-size: 30px;
+	text-align: center;
+}
+
+#menu {
+	width: 50px;
+	height: 40px;
+	background-color: white;
+	position: absolute;
+	top: 20px;
+	left: 10px;
+	z-index: 10;
+	overflow: hidden;
+}
+
+#menu:hover {
+	width: 200px;
+}
+
+.menuItem {
+	width: 200px;
+}
+
+} /* end of media screen max-width 319 */
+
+
+
+
+
+
+
+
+
+@media screen and (min-width: 701px) and (max-width: 1000px) { /*320 is the viewport width of iPhone 5S */
+
+#wrapper {
+	padding-left: 1px;
+	width: 100%;
+	margin-left: auto;
+	margin-right: auto;
+}
+
+.outer {
+	width: 24%;
+	height: 70px;
+	background: red;
+	position: relative;
+	text-align: center;
+	font-size: 17px;
+	float: left;
+	margin: 2px;
+	box-shadow: 5px 5px 5px #888888;
+}
+
+.inner {
+	width: 100%;
+	height: 48px;
+	line-height: 48px; /* vertically aligns text (only works when one line) */
+	background: black;
+	color: white;
+	position: absolute;
+	bottom: 0;
+	text-align: center;
+	font-size: 45px;
+	overflow: hidden;
+}
+
+#inputboxlabel {
+	color: white;
+}
+
+#inputbox {
+	width: 140px;
+	height: 30px;
+	display: inline-block;
+	font-size: 30px;
+	text-align: center;
+}
+
+#menu {
+	width: 50px;
+	height: 40px;
+	background-color: white;
+	position: absolute;
+	top: 20px;
+	left: 10px;
+	z-index: 10;
+	overflow: hidden;
+}
+
+#menu:hover {
+	width: 200px;
+}
+
+.menuItem {
+	width: 200px;
+}
+
+} /* end of media screen max-width 319 */
+

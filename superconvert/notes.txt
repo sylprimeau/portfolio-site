@@ -1,0 +1,47 @@
+
+to center, create a wrapper that is exacltly big enough for 5 wide, 4 wide, 3 wide, etc., based on width of devices
+
+
+Converter!
+
+- about page so that Google can index!
+- add help file! (how to save custom screen, how to delete cells) 
+- make room for adsense!
+- put categories under menu. it's taking up too much space
+- add cooking preset screen with common conversions for cooking
+- gallons/mile to/from liters/kilometers & kilometers/liter
+- kJ to calories
+
+
+- login to save presets across devices (otherwise uses cookies) (or also last used layout)
+- allow to add more to group?
+
+
+
+
+Features to think about for future versions:
+============================================
+- pages with ALL possible conversions for a certain set so user only has to scroll down (color coded, of course)
+- even better? pages with ALL conversions but sections are accordioned (weight, volume, etc.)
+
+
+
+Ver 11
+======
+- user can hide cells by using same "from" and "to" units
+
+
+Ver 4
+=====
+- now loads up default values for first-time visitor
+- saves custom changes to cookie and loads custom values on re-visit
+- customize label colors, from units and to units
+- users can enter number immediately after loading without having to click in box
+
+
+
+
+
+change src to trg
+change x to y
+change number to x

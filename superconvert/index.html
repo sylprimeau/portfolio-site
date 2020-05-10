@@ -1,0 +1,506 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+	<title>SuperConvert - The Best Unit Converter On The Internet</title>
+
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	
+	<link rel="stylesheet" type="text/css" href="main.css">
+	<link href='http://fonts.googleapis.com/css?family=Lora' rel='stylesheet' type='text/css'>
+	<link rel="icon" href="favicon.ico" type="image/png">
+	
+	<meta name="description" content="SuperConvert: Make multiple unit conversions simultaneously and see results instantly in a colorful, customizable layout!">
+	<meta name="keywords" content="unit converter, convert, conversion, length, distance, weight, mass, volume, temperature, millimeters, centimeters, meters, kilometers, inches, feet, yards, miles, milligrams, grams, kilograms, tonnes, ounces, pounds, lb, lbs, tons, milliliters, liters, fluid ounces, cups, quarts, pints, gallons, Celcius, Fahrenheit, Kelvin, degrees">
+	<meta property="og:image" content="https://www.sylprimeau.com/images/superconvert.jpg" />
+
+	<script src="scripts.js" defer></script>
+
+	<!-- Google analytics script starts -->
+	<script>
+		(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+		(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+		m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+		})(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+		ga('create', 'UA-69512111-1', 'auto');
+		ga('send', 'pageview');
+
+	</script>
+	<!-- Google analytics script ends -->
+
+</head>
+
+<body>
+<noscript>
+    <p>SuperConvert uses JavaScript. Please enable it in your browser settings.</p>
+</noscript>
+<div id="topbar">
+	<div id="menu">
+		<div onclick="showMenu()">Select Preset</div>
+		<div id="customButton" class="menuItem" onclick="loadCustom()">Your Home</div>
+		<div id="defaultButton" class="menuItem" onclick="loadDefault()">Useful Conversions</div>
+		<div id="toUSButton" class="menuItem" onclick="loadToUS()">Metric to US Conversions</div>
+		<div id="toMetricButton" class="menuItem" onclick="loadToMetric()">US to Metric Conversions</div>
+		<div id="custButton" class="menuItem" onclick="showCustMenu()">Customize Your Home Screen</div>
+		<div id="saveButton" class="menuItem" onclick="saveCustom()">Save settings</div>
+	</div>
+	<div id="inputboxlabel">Number to convert from:</div>
+	<input maxlength="8" id="inputbox" value=1 onkeyup="convert()" onclick="setFocus()">
+</div>
+
+<div id="wrapper">
+	<div class="outer" id="outer0">
+	<div class="unitLabel" id="unitLabel0"></div>
+	<div class="inner" id="inner0"></div>
+	<div class="custMenu" id="custMenu0">
+		<input type="color" class="colorpick" id="color0" value="#ff0000"><br>
+		<select class="selectfrom" id="fromUnits0">
+			<script src="include_unitgroups.js"></script>
+		</select> &#10132;
+		<select class="selectto" id="toUnits0">
+			<script src="include_unitgroups.js"></script>
+		</select>
+		<div class="custMessage">Hide cell by selecting same "from" and "to" units</div>
+	</div>
+	</div>
+
+	<div class="outer" id="outer1">
+	<div class="unitLabel" id="unitLabel1"></div>
+	<div class="inner" id="inner1"></div>
+	<div class="custMenu" id="custMenu1">
+		<input type="color" class="colorpick" id="color1" value="#ff0000"><br>
+		<select class="selectfrom" id="fromUnits1">
+			<script src="include_unitgroups.js"></script>
+		</select> &#10132;
+		<select class="selectto" id="toUnits1">
+			<script src="include_unitgroups.js"></script>
+		</select>
+		<div class="custMessage">Hide cell by selecting same "from" and "to" units</div>
+	</div>
+	</div>
+
+	<div class="outer" id="outer2">
+	<div class="unitLabel" id="unitLabel2"></div>
+	<div class="inner" id="inner2"></div>
+	<div class="custMenu" id="custMenu2">
+		<input type="color" class="colorpick" id="color2" value="#ff0000"><br>
+		<select class="selectfrom" id="fromUnits2">
+			<script src="include_unitgroups.js"></script>
+		</select> &#10132;
+		<select class="selectto" id="toUnits2">
+			<script src="include_unitgroups.js"></script>
+		</select>
+		<div class="custMessage">Hide cell by selecting same "from" and "to" units</div>
+	</div>
+	</div>
+
+	<div class="outer" id="outer3">
+	<div class="unitLabel" id="unitLabel3"></div>
+	<div class="inner" id="inner3"></div>
+	<div class="custMenu" id="custMenu3">
+		<input type="color" class="colorpick" id="color3" value="#ff0000"><br>
+		<select class="selectfrom" id="fromUnits3">
+			<script src="include_unitgroups.js"></script>
+		</select> &#10132;
+		<select class="selectto" id="toUnits3">
+			<script src="include_unitgroups.js"></script>
+		</select>
+		<div class="custMessage">Hide cell by selecting same "from" and "to" units</div>
+	</div>
+	</div>
+
+	<div class="outer" id="outer4">
+	<div class="unitLabel" id="unitLabel4"></div>
+	<div class="inner" id="inner4"></div>
+	<div class="custMenu" id="custMenu4">
+		<input type="color" class="colorpick" id="color4" value="#ff0000"><br>
+		<select class="selectfrom" id="fromUnits4">
+			<script src="include_unitgroups.js"></script>
+		</select> &#10132;
+		<select class="selectto" id="toUnits4">
+			<script src="include_unitgroups.js"></script>
+		</select>
+		<div class="custMessage">Hide cell by selecting same "from" and "to" units</div>
+	</div>
+	</div>
+
+	<div class="outer" id="outer5">
+	<div class="unitLabel" id="unitLabel5"></div>
+	<div class="inner" id="inner5"></div>
+	<div class="custMenu" id="custMenu5">
+		<input type="color" class="colorpick" id="color5" value="#ff0000"><br>
+		<select class="selectfrom" id="fromUnits5">
+			<script src="include_unitgroups.js"></script>
+		</select> &#10132;
+		<select class="selectto" id="toUnits5">
+			<script src="include_unitgroups.js"></script>
+		</select>
+		<div class="custMessage">Hide cell by selecting same "from" and "to" units</div>
+	</div>
+	</div>
+
+	<div class="outer" id="outer6">
+	<div class="unitLabel" id="unitLabel6"></div>
+	<div class="inner" id="inner6"></div>
+	<div class="custMenu" id="custMenu6">
+		<input type="color" class="colorpick" id="color6" value="#ff0000"><br>
+		<select class="selectfrom" id="fromUnits6">
+			<script src="include_unitgroups.js"></script>
+		</select> &#10132;
+		<select class="selectto" id="toUnits6">
+			<script src="include_unitgroups.js"></script>
+		</select>
+		<div class="custMessage">Hide cell by selecting same "from" and "to" units</div>
+	</div>
+	</div>
+
+	<div class="outer" id="outer7">
+	<div class="unitLabel" id="unitLabel7"></div>
+	<div class="inner" id="inner7"></div>
+	<div class="custMenu" id="custMenu7">
+		<input type="color" class="colorpick" id="color7" value="#ff0000"><br>
+		<select class="selectfrom" id="fromUnits7">
+			<script src="include_unitgroups.js"></script>
+		</select> &#10132;
+		<select class="selectto" id="toUnits7">
+			<script src="include_unitgroups.js"></script>
+		</select>
+		<div class="custMessage">Hide cell by selecting same "from" and "to" units</div>
+	</div>
+	</div>
+
+	<div class="outer" id="outer8">
+	<div class="unitLabel" id="unitLabel8"></div>
+	<div class="inner" id="inner8"></div>
+	<div class="custMenu" id="custMenu8">
+		<input type="color" class="colorpick" id="color8" value="#ff0000"><br>
+		<select class="selectfrom" id="fromUnits8">
+			<script src="include_unitgroups.js"></script>
+		</select> &#10132;
+		<select class="selectto" id="toUnits8">
+			<script src="include_unitgroups.js"></script>
+		</select>
+		<div class="custMessage">Hide cell by selecting same "from" and "to" units</div>
+	</div>
+	</div>
+
+	<div class="outer" id="outer9">
+	<div class="unitLabel" id="unitLabel9"></div>
+	<div class="inner" id="inner9"></div>
+	<div class="custMenu" id="custMenu9">
+		<input type="color" class="colorpick" id="color9" value="#ff0000"><br>
+		<select class="selectfrom" id="fromUnits9">
+			<script src="include_unitgroups.js"></script>
+		</select> &#10132;
+		<select class="selectto" id="toUnits9">
+			<script src="include_unitgroups.js"></script>
+		</select>
+		<div class="custMessage">Hide cell by selecting same "from" and "to" units</div>
+	</div>
+	</div>
+
+	<div class="outer" id="outer10">
+	<div class="unitLabel" id="unitLabel10"></div>
+	<div class="inner" id="inner10"></div>
+	<div class="custMenu" id="custMenu10">
+		<input type="color" class="colorpick" id="color10" value="#ff0000"><br>
+		<select class="selectfrom" id="fromUnits10">
+			<script src="include_unitgroups.js"></script>
+		</select> &#10132;
+		<select class="selectto" id="toUnits10">
+			<script src="include_unitgroups.js"></script>
+		</select>
+		<div class="custMessage">Hide cell by selecting same "from" and "to" units</div>
+	</div>
+	</div>
+
+	<div class="outer" id="outer11">
+	<div class="unitLabel" id="unitLabel11"></div>
+	<div class="inner" id="inner11"></div>
+	<div class="custMenu" id="custMenu11">
+		<input type="color" class="colorpick" id="color11" value="#ff0000"><br>
+		<select class="selectfrom" id="fromUnits11">
+			<script src="include_unitgroups.js"></script>
+		</select> &#10132;
+		<select class="selectto" id="toUnits11">
+			<script src="include_unitgroups.js"></script>
+		</select>
+		<div class="custMessage">Hide cell by selecting same "from" and "to" units</div>
+	</div>
+	</div>
+
+	<div class="outer" id="outer12">
+	<div class="unitLabel" id="unitLabel12"></div>
+	<div class="inner" id="inner12"></div>
+	<div class="custMenu" id="custMenu12">
+		<input type="color" class="colorpick" id="color12" value="#ff0000"><br>
+		<select class="selectfrom" id="fromUnits12">
+			<script src="include_unitgroups.js"></script>
+		</select> &#10132;
+		<select class="selectto" id="toUnits12">
+			<script src="include_unitgroups.js"></script>
+		</select>
+		<div class="custMessage">Hide cell by selecting same "from" and "to" units</div>
+	</div>
+	</div>
+
+	<div class="outer" id="outer13">
+	<div class="unitLabel" id="unitLabel13"></div>
+	<div class="inner" id="inner13"></div>
+	<div class="custMenu" id="custMenu13">
+		<input type="color" class="colorpick" id="color13" value="#ff0000"><br>
+		<select class="selectfrom" id="fromUnits13">
+			<script src="include_unitgroups.js"></script>
+		</select> &#10132;
+		<select class="selectto" id="toUnits13">
+			<script src="include_unitgroups.js"></script>
+		</select>
+		<div class="custMessage">Hide cell by selecting same "from" and "to" units</div>
+	</div>
+	</div>
+
+	<div class="outer" id="outer14">
+	<div class="unitLabel" id="unitLabel14"></div>
+	<div class="inner" id="inner14"></div>
+	<div class="custMenu" id="custMenu14"> 
+		<input type="color" class="colorpick" id="color14" value="#ff0000"><br>
+		<select class="selectfrom" id="fromUnits14">
+			<script src="include_unitgroups.js"></script>
+		</select> &#10132;
+		<select class="selectto" id="toUnits14">
+			<script src="include_unitgroups.js"></script>
+		</select>
+		<div class="custMessage">Hide cell by selecting same "from" and "to" units</div>
+	</div>
+	</div>
+
+	<div class="outer" id="outer15">
+	<div class="unitLabel" id="unitLabel15"></div>
+	<div class="inner" id="inner15"></div>
+	<div class="custMenu" id="custMenu15"> 
+		<input type="color" class="colorpick" id="color15" value="#ff0000"><br>
+		<select class="selectfrom" id="fromUnits15">
+			<script src="include_unitgroups.js"></script>
+		</select> &#10132;
+		<select class="selectto" id="toUnits15">
+			<script src="include_unitgroups.js"></script>
+		</select>
+		<div class="custMessage">Hide cell by selecting same "from" and "to" units</div>
+	</div>
+	</div>
+
+	<div class="outer" id="outer16">
+	<div class="unitLabel" id="unitLabel16"></div>
+	<div class="inner" id="inner16"></div>
+	<div class="custMenu" id="custMenu16"> 
+		<input type="color" class="colorpick" id="color16" value="#ff0000"><br>
+		<select class="selectfrom" id="fromUnits16">
+			<script src="include_unitgroups.js"></script>
+		</select> &#10132;
+		<select class="selectto" id="toUnits16">
+			<script src="include_unitgroups.js"></script>
+		</select>
+		<div class="custMessage">Hide cell by selecting same "from" and "to" units</div>
+	</div>
+	</div>
+
+	<div class="outer" id="outer17">
+	<div class="unitLabel" id="unitLabel17"></div>
+	<div class="inner" id="inner17"></div>
+	<div class="custMenu" id="custMenu17"> 
+		<input type="color" class="colorpick" id="color17" value="#ff0000"><br>
+		<select class="selectfrom" id="fromUnits17">
+			<script src="include_unitgroups.js"></script>
+		</select> &#10132;
+		<select class="selectto" id="toUnits17">
+			<script src="include_unitgroups.js"></script>
+		</select>
+		<div class="custMessage">Hide cell by selecting same "from" and "to" units</div>
+	</div>
+	</div>
+
+	<div class="outer" id="outer18">
+	<div class="unitLabel" id="unitLabel18"></div>
+	<div class="inner" id="inner18"></div>
+	<div class="custMenu" id="custMenu18"> 
+		<input type="color" class="colorpick" id="color18" value="#ff0000"><br>
+		<select class="selectfrom" id="fromUnits18">
+			<script src="include_unitgroups.js"></script>
+		</select> &#10132;
+		<select class="selectto" id="toUnits18">
+			<script src="include_unitgroups.js"></script>
+		</select>
+		<div class="custMessage">Hide cell by selecting same "from" and "to" units</div>
+	</div>
+	</div>
+
+	<div class="outer" id="outer19">
+	<div class="unitLabel" id="unitLabel19"></div>
+	<div class="inner" id="inner19"></div>
+	<div class="custMenu" id="custMenu19"> 
+		<input type="color" class="colorpick" id="color19" value="#ff0000"><br>
+		<select class="selectfrom" id="fromUnits19">
+			<script src="include_unitgroups.js"></script>
+		</select> &#10132;
+		<select class="selectto" id="toUnits19">
+			<script src="include_unitgroups.js"></script>
+		</select>
+		<div class="custMessage">Hide cell by selecting same "from" and "to" units</div>
+	</div>
+	</div>
+
+	<div class="outer" id="outer20">
+	<div class="unitLabel" id="unitLabel20"></div>
+	<div class="inner" id="inner20"></div>
+	<div class="custMenu" id="custMenu20"> 
+		<input type="color" class="colorpick" id="color20" value="#ff0000"><br>
+		<select class="selectfrom" id="fromUnits20">
+			<script src="include_unitgroups.js"></script>
+		</select> &#10132;
+		<select class="selectto" id="toUnits20">
+			<script src="include_unitgroups.js"></script>
+		</select>
+		<div class="custMessage">Hide cell by selecting same "from" and "to" units</div>
+	</div>
+	</div>
+
+	<div class="outer" id="outer21">
+	<div class="unitLabel" id="unitLabel21"></div>
+	<div class="inner" id="inner21"></div>
+	<div class="custMenu" id="custMenu21"> 
+		<input type="color" class="colorpick" id="color21" value="#ff0000"><br>
+		<select class="selectfrom" id="fromUnits21">
+			<script src="include_unitgroups.js"></script>
+		</select> &#10132;
+		<select class="selectto" id="toUnits21">
+			<script src="include_unitgroups.js"></script>
+		</select>
+		<div class="custMessage">Hide cell by selecting same "from" and "to" units</div>
+	</div>
+	</div>
+
+	<div class="outer" id="outer22">
+	<div class="unitLabel" id="unitLabel22"></div>
+	<div class="inner" id="inner22"></div>
+	<div class="custMenu" id="custMenu22"> 
+		<input type="color" class="colorpick" id="color22" value="#ff0000"><br>
+		<select class="selectfrom" id="fromUnits22">
+			<script src="include_unitgroups.js"></script>
+		</select> &#10132;
+		<select class="selectto" id="toUnits22">
+			<script src="include_unitgroups.js"></script>
+		</select>
+		<div class="custMessage">Hide cell by selecting same "from" and "to" units</div>
+	</div>
+	</div>
+
+	<div class="outer" id="outer23">
+	<div class="unitLabel" id="unitLabel23"></div>
+	<div class="inner" id="inner23"></div>
+	<div class="custMenu" id="custMenu23"> 
+		<input type="color" class="colorpick" id="color23" value="#ff0000"><br>
+		<select class="selectfrom" id="fromUnits23">
+			<script src="include_unitgroups.js"></script>
+		</select> &#10132;
+		<select class="selectto" id="toUnits23">
+			<script src="include_unitgroups.js"></script>
+		</select>
+		<div class="custMessage">Hide cell by selecting same "from" and "to" units</div>
+	</div>
+	</div>
+
+	<div class="outer" id="outer24">
+	<div class="unitLabel" id="unitLabel24"></div>
+	<div class="inner" id="inner24"></div>
+	<div class="custMenu" id="custMenu24"> 
+		<input type="color" class="colorpick" id="color24" value="#ff0000"><br>
+		<select class="selectfrom" id="fromUnits24">
+			<script src="include_unitgroups.js"></script>
+		</select> &#10132;
+		<select class="selectto" id="toUnits24">
+			<script src="include_unitgroups.js"></script>
+		</select>
+		<div class="custMessage">Hide cell by selecting same "from" and "to" units</div>
+	</div>
+	</div>
+
+	<div class="outer" id="outer25">
+	<div class="unitLabel" id="unitLabel25"></div>
+	<div class="inner" id="inner25"></div>
+	<div class="custMenu" id="custMenu25"> 
+		<input type="color" class="colorpick" id="color25" value="#ff0000"><br>
+		<select class="selectfrom" id="fromUnits25">
+			<script src="include_unitgroups.js"></script>
+		</select> &#10132;
+		<select class="selectto" id="toUnits25">
+			<script src="include_unitgroups.js"></script>
+		</select>
+		<div class="custMessage">Hide cell by selecting same "from" and "to" units</div>
+	</div>
+	</div>
+
+	<div class="outer" id="outer26">
+	<div class="unitLabel" id="unitLabel26"></div>
+	<div class="inner" id="inner26"></div>
+	<div class="custMenu" id="custMenu26"> 
+		<input type="color" class="colorpick" id="color26" value="#ff0000"><br>
+		<select class="selectfrom" id="fromUnits26">
+			<script src="include_unitgroups.js"></script>
+		</select> &#10132;
+		<select class="selectto" id="toUnits26">
+			<script src="include_unitgroups.js"></script>
+		</select>
+		<div class="custMessage">Hide cell by selecting same "from" and "to" units</div>
+	</div>
+	</div>
+
+	<div class="outer" id="outer27">
+	<div class="unitLabel" id="unitLabel27"></div>
+	<div class="inner" id="inner27"></div>
+	<div class="custMenu" id="custMenu27"> 
+		<input type="color" class="colorpick" id="color27" value="#ff0000"><br>
+		<select class="selectfrom" id="fromUnits27">
+			<script src="include_unitgroups.js"></script>
+		</select> &#10132;
+		<select class="selectto" id="toUnits27">
+			<script src="include_unitgroups.js"></script>
+		</select>
+		<div class="custMessage">Hide cell by selecting same "from" and "to" units</div>
+	</div>
+	</div>
+
+	<div class="outer" id="outer28">
+	<div class="unitLabel" id="unitLabel28"></div>
+	<div class="inner" id="inner28"></div>
+	<div class="custMenu" id="custMenu28"> 
+		<input type="color" class="colorpick" id="color28" value="#ff0000"><br>
+		<select class="selectfrom" id="fromUnits28">
+			<script src="include_unitgroups.js"></script>
+		</select> &#10132;
+		<select class="selectto" id="toUnits28">
+			<script src="include_unitgroups.js"></script>
+		</select>
+		<div class="custMessage">Hide cell by selecting same "from" and "to" units</div>
+	</div>
+	</div>
+
+	<div class="outer" id="outer29">
+	<div class="unitLabel" id="unitLabel29"></div>
+	<div class="inner" id="inner29"></div>
+	<div class="custMenu" id="custMenu29"> 
+		<input type="color" class="colorpick" id="color29" value="#ff0000"><br>
+		<select class="selectfrom" id="fromUnits29">
+			<script src="include_unitgroups.js"></script>
+		</select> &#10132;
+		<select class="selectto" id="toUnits29">
+			<script src="include_unitgroups.js"></script>
+		</select>
+		<div class="custMessage">Hide cell by selecting same "from" and "to" units</div>
+	</div>
+	</div>
+
+</div>
+</body>
+</html>
